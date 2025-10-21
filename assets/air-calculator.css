@@ -1,0 +1,195 @@
+.air-calculator-wrapper{padding:40px 20px;max-width:1200px;margin:0 auto;font-family:Arial,sans-serif}
+.air-calculator-wrapper *{box-sizing:border-box}
+.calc-title{text-align:center;margin-bottom:10px}
+.calc-description{text-align:center;margin-bottom:30px;color:#666}
+.disclaimer-box{padding:20px;max-width:600px;margin:40px auto;border:1px solid #ccc;border-radius:8px;background:#fef3c7}
+.disclaimer-title,.disclaimer-text{color:#92400e}
+.disclaimer-button{margin-top:10px;padding:10px 20px;background:#92400e;color:#fff;border:0;border-radius:5px;cursor:pointer}
+.calculator-container{max-width:700px;margin:0 auto;padding:20px}
+.form-group{margin-bottom:20px}
+.form-label{display:block;margin-bottom:8px;font-weight:700}
+.form-select,.form-input,.small-input{width:100%;padding:10px;font-size:16px;border-radius:5px;border:1px solid #ccc}
+.room-card{border:2px solid #e5e7eb;padding:20px;margin-bottom:20px;border-radius:8px;background:#f9fafb}
+.room-title{margin:0 0 15px;color:#374151}
+.field-group{margin-bottom:15px}
+.small-label{display:block;margin-bottom:5px;font-weight:700;font-size:14px}
+.calculate-button{width:100%;padding:15px;font-size:18px;font-weight:700;background:#7c3aed;color:#fff;border:0;border-radius:8px;cursor:pointer;margin-bottom:30px}
+.calculate-button:hover{background:#6d28d9}
+.results-container{background:#fff;border:2px solid #e5e7eb;border-radius:8px;padding:20px}
+.results-title{margin-top:0;color:#374151}
+.result-item{margin-bottom:20px;padding-bottom:20px}
+.result-item-bordered{border-bottom:1px solid #e5e7eb}
+.result-name{font-size:16px;color:#1f2937;font-weight:700}
+.result-btu{color:#059669;font-weight:700;margin-left:10px}
+.model-info{margin-top:10px;padding-left:15px}
+.model-line{margin:5px 0}
+.total-load-box{font-size:18px;font-weight:700;margin-top:20px;padding:15px;background:#f3f4f6;border-radius:5px}
+.total-load-value{color:#059669}
+.outdoor-title{margin-top:20px;margin-bottom:15px}
+.outdoor-card{padding:15px;margin-top:10px;border-radius:8px}
+.outdoor-card-green{background:#d1fae5;border-left:6px solid #10b981}
+.outdoor-card-yellow{background:#fef9c3;border-left:6px solid #facc15}
+.outdoor-card-orange{background:#fee2e2;border-left:6px solid #f97316}
+.outdoor-model{font-size:16px;font-weight:700}
+.outdoor-specs,.outdoor-load{font-size:14px}
+.error-card{background:#fee2e2;color:#b91c1c;padding:15px;border-left:6px solid #dc2626;border-radius:6px;margin-top:20px}
+/* --- compact trigger + modal overlay --- */
+.ahc-shell{display:flex;gap:12px;align-items:center}
+.ahc-launch{appearance:none;border:0;border-radius:8px;background:#7c3aed;color:#fff;padding:10px 14px;font-weight:700;cursor:pointer}
+.ahc-launch:hover{background:#6d28d9}
+.ahc-modal{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center}
+.ahc-modal[hidden]{display:none}
+.ahc-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.45)}
+.ahc-dialog{position:relative;width:clamp(320px,92vw,720px);max-height:90vh;background:#fff;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.25);overflow:auto}
+.ahc-hdr{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid #eee}
+.ahc-title{margin:0;font-size:1rem;font-weight:700}
+.ahc-x{background:transparent;border:0;font-size:20px;cursor:pointer;line-height:1;padding:8px}
+.ahc-body{padding:12px}
+/* --- Theme color overrides for Rocking-P-Ranch --- */
+.disclaimer-box {
+  background-color: #f3e8ff;      /* light lavender background */
+  border: 1px solid #7e22ce;      /* matches theme purple */
+  color: #4b006e;                 /* deep purple text */
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.disclaimer-title {
+  color: #4b006e;
+  font-weight: 700;
+}
+
+.disclaimer-text {
+  color: #4b006e;
+}
+
+.disclaimer-button {
+  background-color: #7e22ce;      /* purple button */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.disclaimer-button:hover {
+  background-color: #6b21a8;      /* darker hover tone */
+}
+/* =============================
+   THEME COLOR & MODAL ENHANCEMENTS
+   ============================= */
+
+/* --- Disclaimer Box & Button --- */
+.disclaimer-box {
+  background-color: #f3e8ff;       /* soft lavender background */
+  border: 1px solid #7e22ce;       /* purple accent border */
+  color: #4b006e;                  /* deep purple text */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.disclaimer-title {
+  color: #4b006e;
+  font-weight: 700;
+}
+
+.disclaimer-text {
+  color: #4b006e;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.disclaimer-button {
+  background-color: #7e22ce;       /* theme purple */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.disclaimer-button:hover {
+  background-color: #6b21a8;       /* darker hover tone */
+  transform: translateY(-1px);
+}
+
+/* --- Modal Overlay & Dialog --- */
+.ahc-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+.ahc-modal[hidden] {
+  display: none;
+}
+
+.ahc-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(75, 0, 110, 0.6);  /* translucent purple overlay */
+}
+
+/* --- Dialog Container --- */
+.ahc-dialog {
+  position: relative;
+  width: clamp(340px, 92vw, 740px);
+  max-height: 90vh;
+  background: #fff;
+  border-radius: 12px;
+  overflow: auto;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+  animation: modalFadeIn 0.25s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Modal Header & Close Button --- */
+.ahc-hdr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid #ede9fe;
+  background-color: #f5f3ff;        /* light purple tint */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.ahc-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #4b006e;
+}
+
+.ahc-x {
+  background: transparent;
+  border: none;
+  color: #7e22ce;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 4px 8px;
+  transition: background-color 0.15s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.ahc-x:hover {
+  background-color: #ede9fe;        /* faint purple hover background */
+  transform: scale(1.1);
+}
+
+
