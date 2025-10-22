@@ -1,33 +1,42 @@
 (function () {
-  // Utilities (no JSX, no eval)
-  var $$ = function (root, sel) { return root.querySelector(sel); };
-  var $$$ = function (root, sel) { return Array.prototype.slice.call(root.querySelectorAll(sel)); };
+  // ---------- Helpers ----------
+  var $$  = function (root, sel) { return (root || document).querySelector(sel); };
+  var $$$ = function (root, sel) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
   var num = function (v, d) { var n = (v === '' || v == null) ? NaN : Number(v); return isFinite(n) ? n : (d != null ? d : 0); };
+  function clampInt(v, min, max) {
+    var n = parseInt(v, 10);
+    if (isNaN(n)) n = 0;
+    if (min != null && n < min) n = min;
+    if (max != null && n > max) n = max;
+    return n;
+  }
 
+  // ---------- Data (Phase 1 hard-coded) ----------
   var indoorUnitModels = {
     36000: { "High Wall": "AFEB36HP230V1CH" },
     7000:  { "High Wall": "AFEB07HP230V1CH" },
-    9000:  { "High Wall": "AFEB09HP230V1CH", "4-Way Ceiling Cassette": "AFEB09HP230V1CC", "Slim Duct": "AFEB09HP230V1SD", "Floor/Ceiling": "AFEB09HP230V1FL" },
-    12000: { "High Wall": "AFEB12HP230V1CH", "4-Way Ceiling Cassette": "AFEB12HP230V1CC", "Slim Duct": "AFEB12HP230V1SD", "Floor/Ceiling": "AFEB12HP230V1FL" },
-    18000: { "High Wall": "AFEB18HP230V1CH", "4-Way Ceiling Cassette": "AFEB18HP230V1CC", "Slim Duct": "AFEB18HP230V1SD", "Floor/Ceiling": "AFEB18HP230V1FL" },
-    24000: { "High Wall": "AFEB24HP230V1CH", "4-Way Ceiling Cassette": "AFEB24HP230V1CC", "Slim Duct": "AFEB24HP230V1SD", "Floor/Ceiling": "AFEB24HP230V1FL" }
+    9000:  { "High Wall": "AFEB09HP230V1CH", "4-Way Ceiling Cassette":"AFEB09HP230V1CC", "Slim Duct":"AFEB09HP230V1SD", "Floor/Ceiling":"AFEB09HP230V1FL" },
+    12000: { "High Wall": "AFEB12HP230V1CH", "4-Way Ceiling Cassette":"AFEB12HP230V1CC", "Slim Duct":"AFEB12HP230V1SD", "Floor/Ceiling":"AFEB12HP230V1FL" },
+    18000: { "High Wall": "AFEB18HP230V1CH", "4-Way Ceiling Cassette":"AFEB18HP230V1CC", "Slim Duct":"AFEB18HP230V1SD", "Floor/Ceiling":"AFEB18HP230V1FL" },
+    24000: { "High Wall": "AFEB24HP230V1CH", "4-Way Ceiling Cassette":"AFEB24HP230V1CC", "Slim Duct":"AFEB24HP230V1SD", "Floor/Ceiling":"AFEB24HP230V1FL" }
   };
 
   var outdoorCombinations = {
     South: [
-      { model: "ASPR18HPMULO", capacity: 18000, maxRatio: 1.33, ports: 2 },
-      { model: "ASPR24HPMULO", capacity: 24000, maxRatio: 1.5,  ports: 3 },
-      { model: "ASPR36HPMULO", capacity: 36000, maxRatio: 1.5,  ports: 4 },
-      { model: "ASPR42HPMULO", capacity: 42000, maxRatio: 1.42, ports: 5 }
+      { model:"ASPR18HPMULO", capacity:18000, maxRatio:1.33, ports:2 },
+      { model:"ASPR24HPMULO", capacity:24000, maxRatio:1.5,  ports:3 },
+      { model:"ASPR36HPMULO", capacity:36000, maxRatio:1.5,  ports:4 },
+      { model:"ASPR42HPMULO", capacity:42000, maxRatio:1.42, ports:5 }
     ],
     North: [
-      { model: "ASUM18HPMULO", capacity: 18000, maxRatio: 1.33, ports: 2 },
-      { model: "ASUM24HPMULO", capacity: 24000, maxRatio: 1.5,  ports: 3 },
-      { model: "ASUM36HPMULO", capacity: 36000, maxRatio: 1.5,  ports: 4 },
-      { model: "ASUM42HPMULO", capacity: 42000, maxRatio: 1.42, ports: 5 }
+      { model:"ASUM18HPMULO", capacity:18000, maxRatio:1.33, ports:2 },
+      { model:"ASUM24HPMULO", capacity:24000, maxRatio:1.5,  ports:3 },
+      { model:"ASUM36HPMULO", capacity:36000, maxRatio:1.5,  ports:4 },
+      { model:"ASUM42HPMULO", capacity:42000, maxRatio:1.42, ports:5 }
     ]
   };
 
+  // ---------- Core calc helpers ----------
   function getClosestBTU(value) {
     var options = Object.keys(indoorUnitModels).map(function (k) { return Number(k); });
     return options.reduce(function (prev, curr) {
@@ -44,11 +53,12 @@
         var color = "green";
         if (loadPercent > 1.1 && loadPercent <= 1.2) color = "yellow";
         else if (loadPercent > 1.2) color = "orange";
-        return Object.assign({}, c, { loadPercent: loadPercent, color: color });
+        return { model: c.model, capacity: c.capacity, ports: c.ports, loadPercent: loadPercent, color: color };
       })
       .sort(function (a, b) { return Math.abs(1 - a.loadPercent) - Math.abs(1 - b.loadPercent); });
   }
 
+  // ---------- UI builders ----------
   function render(root) {
     var title = root.getAttribute('data-title') || 'Air Handling Calculator';
     var desc  = root.getAttribute('data-description') || '';
@@ -57,15 +67,17 @@
       title ? '<h2 class="calc-title">'+ title +'</h2>' : '',
       desc  ? '<p class="calc-description">'+ desc +'</p>' : '',
       '<div class="calculator-container">',
-        // Disclaimer
+
+        // Disclaimer gate
         '<div class="disclaimer-box" data-role="disclaimer">',
           '<h3 class="disclaimer-title">🔒 Disclaimer</h3>',
           '<p class="disclaimer-text">This sizing tool is for preliminary estimates only and does not replace a proper Manual J load calculation. Always verify with a licensed HVAC professional.</p>',
           '<button class="disclaimer-button" data-action="accept">Accept and Continue</button>',
         '</div>',
 
-        // Main UI (hidden until disclaimer accepted)
+        // App body (hidden until disclaimer accepted)
         '<div data-role="app" style="display:none;">',
+
           '<div class="form-group">',
             '<label class="form-label">System Type</label>',
             '<select class="form-select" data-field="mode">',
@@ -90,87 +102,97 @@
           '<div data-role="rooms"></div>',
 
           '<button class="calculate-button" data-action="calculate">Calculate System Requirements</button>',
+          '<button class="reset-button" type="button" data-action="reset">Clear Form</button>',
+
 
           '<div class="results-container" data-role="results" style="display:none;"></div>',
         '</div>',
+
       '</div>'
     ].join('');
   }
 
+  // Compact room row template (Name | Area | H | Win | Door | Insul) + Unit Type (Multi only)
   function roomTemplate(index, mode) {
     var showUnit = (mode === 'Multi');
     return [
       '<div class="room-card" data-room-index="'+ index +'">',
-        '<h4 class="room-title">Room '+ (index+1) +'</h4>',
-        showUnit ? (
-          '<div class="field-group">'+
-            '<label class="small-label">Unit Type</label>'+
-            '<select class="small-input" data-input="unitType">'+
-              '<option value="High Wall">High Wall</option>'+
-              '<option value="Slim Duct">Slim Duct</option>'+
-              '<option value="Floor/Ceiling">Floor/Ceiling</option>'+
-              '<option value="4-Way Ceiling Cassette">4-Way Ceiling Cassette</option>'+
-            '</select>'+
+        '<div class="ahc-row compact">',
+
+          '<div>',
+            '<label class="ahc-mini-label">Room</label>',
+            '<input class="ahc-mini-inp" list="ahc-roomnames" data-input="roomName" placeholder="Living Room" maxlength="40" />',
+          '</div>',
+
+          '<div>',
+            '<label class="ahc-mini-label">Area (ft²)</label>',
+            '<input class="ahc-mini-inp" data-input="area" type="number" inputmode="numeric" min="0" max="100000" step="1" placeholder="0" />',
+          '</div>',
+
+          '<div>',
+            '<label class="ahc-mini-label">H (ft)</label>',
+            '<input class="ahc-mini-inp" data-input="ceilingHeight" type="text" inputmode="numeric" maxlength="2" placeholder="8" />',
+          '</div>',
+
+          '<div>',
+            '<label class="ahc-mini-label">Win</label>',
+            '<input class="ahc-mini-inp" data-input="windows" type="text" inputmode="numeric" maxlength="2" placeholder="0" />',
+          '</div>',
+
+          '<div>',
+            '<label class="ahc-mini-label">Door</label>',
+            '<input class="ahc-mini-inp" data-input="doors" type="text" inputmode="numeric" maxlength="2" placeholder="0" />',
+          '</div>',
+
+          '<div>',
+            '<label class="ahc-mini-label">Insul</label>',
+            '<select class="ahc-mini-sel" data-input="insulation">',
+              '<option value="Good">Good</option>',
+              '<option value="Fair">Fair</option>',
+              '<option value="Poor">Poor</option>',
+            '</select>',
+          '</div>',
+
+        '</div>',
+        (showUnit ? (
+          '<div style="margin-top:6px;">' +
+            '<span class="ahc-mini-label">Unit Type</span>' +
+            '<select class="ahc-mini-sel" data-input="unitType">' +
+              '<option>High Wall</option><option>Slim Duct</option><option>Floor/Ceiling</option><option>4-Way Ceiling Cassette</option>' +
+            '</select>' +
           '</div>'
-        ) : '',
-        '<div class="field-group">',
-          '<label class="small-label">Room Name</label>',
-          '<input class="small-input" data-input="roomName" placeholder="e.g., Living Room" />',
-        '</div>',
-        '<div class="field-group">',
-          '<label class="small-label">Area (sq ft)</label>',
-          '<input class="small-input" data-input="area" type="number" placeholder="e.g., 250" />',
-        '</div>',
-        '<div class="field-group">',
-          '<label class="small-label">Ceiling Height (ft)</label>',
-          '<input class="small-input" data-input="ceilingHeight" type="number" placeholder="e.g., 8" />',
-        '</div>',
-        '<div class="field-group">',
-          '<label class="small-label">Number of Windows</label>',
-          '<input class="small-input" data-input="windows" type="number" placeholder="e.g., 2" />',
-        '</div>',
-        '<div class="field-group">',
-          '<label class="small-label">Number of Doors</label>',
-          '<input class="small-input" data-input="doors" type="number" placeholder="e.g., 1" />',
-        '</div>',
-        '<div class="field-group">',
-          '<label class="small-label">Insulation Level</label>',
-          '<select class="small-input" data-input="insulation">',
-            '<option value="Good">Good</option>',
-            '<option value="Fair">Fair</option>',
-            '<option value="Poor">Poor</option>',
-          '</select>',
-        '</div>',
+        ) : ''),
       '</div>'
     ].join('');
   }
 
-  function createEmptyRoom() {
-    return {
-      unitType: "High Wall",
-      roomName: "",
-      area: "",
-      ceilingHeight: "",
-      windows: "",
-      doors: "",
-      orientation: "N",
-      insulation: "Good"
-    };
+  // Datalist for quick room names (once)
+  function ensureRoomNameDatalist() {
+    if (document.getElementById('ahc-roomnames')) return;
+    var dl = document.createElement('datalist');
+    dl.id = 'ahc-roomnames';
+    dl.innerHTML = [
+      'Living Room','Dining Room','Kitchen','Master Bedroom','Bedroom','Office',
+      'Family Room','Den','Basement','Garage','Sunroom','Bonus Room'
+    ].map(function(n){ return '<option value="'+n+'"></option>'; }).join('');
+    document.body.appendChild(dl);
   }
 
+  // ---------- Instance mounting ----------
   function mountInstance(root) {
     render(root);
 
-    var disclaimer = $$ (root, '[data-role="disclaimer"]');
-    var app        = $$ (root, '[data-role="app"]');
-    var roomsHost  = $$ (root, '[data-role="rooms"]');
-    var resultsBox = $$ (root, '[data-role="results"]');
-    var btnAccept  = $$ (root, '[data-action="accept"]');
-    var btnCalc    = $$ (root, '[data-action="calculate"]');
-    var selMode    = $$ (root, '[data-field="mode"]');
-    var zoneSel    = $$ (root, '[data-field="zone"]');
+    var disclaimer    = $$ (root, '[data-role="disclaimer"]');
+    var app           = $$ (root, '[data-role="app"]');
+    var roomsHost     = $$ (root, '[data-role="rooms"]');
+    var resultsBox    = $$ (root, '[data-role="results"]');
+    var btnAccept     = $$ (root, '[data-action="accept"]');
+    var btnCalc       = $$ (root, '[data-action="calculate"]');
+    var selMode       = $$ (root, '[data-field="mode"]');
+    var zoneSel       = $$ (root, '[data-field="zone"]');
     var roomCountWrap = $$ (root, '[data-role="room-count"]');
     var inpRoomCount  = $$ (root, '[data-field="roomCount"]');
+    var btnReset      = $$ (root, '[data-action="reset"]'); // Clear button
 
     var state = {
       mode: 'Single',
@@ -179,39 +201,78 @@
       rooms: [createEmptyRoom()]
     };
 
+    function createEmptyRoom() {
+      return {
+        unitType: "High Wall",
+        roomName: "",
+        area: "",
+        ceilingHeight: "",
+        windows: "",
+        doors: "",
+        orientation: "N",
+        insulation: "Good"
+      };
+    }
+
+    // Enforce compact input limits (Area 0..100000; H/Win/Door 0..99 and 2 chars)
+    function attachRoomInputLimits() {
+      $$$ (roomsHost, '[data-room-index]').forEach(function (card) {
+        var area = $$ (card, '[data-input="area"]');
+        var h    = $$ (card, '[data-input="ceilingHeight"]');
+        var win  = $$ (card, '[data-input="windows"]');
+        var dor  = $$ (card, '[data-input="doors"]');
+
+        if (area) {
+          area.addEventListener('input', function(){
+            var v = clampInt(area.value, 0, 100000);
+            area.value = String(v).replace(/[^\d]/g,'');
+          });
+        }
+        [h, win, dor].forEach(function(inp){
+          if (!inp) return;
+          inp.addEventListener('input', function(){
+            var s = (inp.value||'').replace(/[^\d]/g,'').slice(0,2);
+            var v = clampInt(s, 0, 99);
+            inp.value = String(v);
+          });
+        });
+      });
+    }
+
     function drawRooms() {
       roomsHost.innerHTML = '';
       for (var i = 0; i < state.roomCount; i++) {
         roomsHost.insertAdjacentHTML('beforeend', roomTemplate(i, state.mode));
       }
-      // Fill defaults
+      // hydrate existing state
       $$$ (roomsHost, '[data-room-index]').forEach(function (card, idx) {
         if (!state.rooms[idx]) state.rooms[idx] = createEmptyRoom();
-        // hydrate
         var r = state.rooms[idx];
-        var v = function (q) { return $$(card, q); };
-        if (state.mode === 'Multi') v('[data-input="unitType"]').value = r.unitType;
-        v('[data-input="roomName"]').value     = r.roomName;
-        v('[data-input="area"]').value         = r.area;
-        v('[data-input="ceilingHeight"]').value= r.ceilingHeight;
-        v('[data-input="windows"]').value      = r.windows;
-        v('[data-input="doors"]').value        = r.doors;
-        v('[data-input="insulation"]').value   = r.insulation;
+        var set = function (q, val) { var el = $$ (card, q); if (el != null) el.value = val; };
+        if (state.mode === 'Multi') set('[data-input="unitType"]', r.unitType);
+        set('[data-input="roomName"]',      r.roomName);
+        set('[data-input="area"]',          r.area);
+        set('[data-input="ceilingHeight"]', r.ceilingHeight);
+        set('[data-input="windows"]',       r.windows);
+        set('[data-input="doors"]',         r.doors);
+        set('[data-input="insulation"]',    r.insulation);
       });
+
+      ensureRoomNameDatalist();
+      attachRoomInputLimits();
     }
 
     function syncFromDOM() {
-      // Persist current inputs back to state
       $$$ (roomsHost, '[data-room-index]').forEach(function (card, idx) {
         var r = state.rooms[idx] || createEmptyRoom();
-        var g = function (q) { var el = $$(card, q); return el ? el.value : ''; };
-        if (state.mode === 'Multi') r.unitType = g('[data-input="unitType"]');
-        r.roomName      = g('[data-input="roomName"]');
-        r.area          = g('[data-input="area"]');
-        r.ceilingHeight = g('[data-input="ceilingHeight"]');
-        r.windows       = g('[data-input="windows"]');
-        r.doors         = g('[data-input="doors"]');
-        r.insulation    = g('[data-input="insulation"]');
+        var get = function (q) { var el = $$ (card, q); return el ? el.value : ''; };
+        if (state.mode === 'Multi') r.unitType = get('[data-input="unitType"]');
+        r.roomName      = get('[data-input="roomName"]');
+        r.area          = get('[data-input="area"]');
+        r.ceilingHeight = get('[data-input="ceilingHeight"]');
+        r.windows       = get('[data-input="windows"]');
+        r.doors         = get('[data-input="doors"]');
+        r.insulation    = get('[data-input="insulation"]');
         state.rooms[idx] = r;
       });
     }
@@ -243,10 +304,10 @@
         if (form.insulation === "Fair") insulationFactor = 1.1;
         else if (form.insulation === "Poor") insulationFactor = 1.2;
 
-        var roomLoad = area * height * 5;
+        var roomLoad   = area * height * 5;
         var windowLoad = windows * 100;
-        var doorLoad = doors * 50;
-        var totalLoad = Math.round((roomLoad + windowLoad + doorLoad) * insulationFactor);
+        var doorLoad   = doors * 50;
+        var totalLoad  = Math.round((roomLoad + windowLoad + doorLoad) * insulationFactor);
         if (!isFinite(totalLoad)) totalLoad = 0;
         total += totalLoad;
 
@@ -270,7 +331,6 @@
         }
       });
 
-      // Render results
       var html = ['<h3 class="results-title">Results</h3>'];
       results.forEach(function (r, i) {
         html.push(
@@ -290,14 +350,14 @@
       });
 
       if (state.mode === 'Multi') {
-        html.push(
-          '<div class="total-load-box"><strong>Total System Load:</strong> <span class="total-load-value">'+ total +' BTU</span></div>'
-        );
+        html.push('<div class="total-load-box"><strong>Total System Load:</strong> <span class="total-load-value">'+ total +' BTU</span></div>');
         var options = getAllValidOutdoorOptions(state.zone, total, state.roomCount);
         if (options.length) {
           html.push('<h4 class="outdoor-title">Recommended Outdoor Units:</h4>');
           options.forEach(function (opt) {
-            var colorClass = opt.color === 'green' ? 'outdoor-card-green' : opt.color === 'yellow' ? 'outdoor-card-yellow' : opt.color === 'orange' ? 'outdoor-card-orange' : '';
+            var colorClass = opt.color === 'green' ? 'outdoor-card-green'
+                           : opt.color === 'yellow' ? 'outdoor-card-yellow'
+                           : opt.color === 'orange' ? 'outdoor-card-orange' : '';
             html.push(
               '<div class="outdoor-card '+ colorClass +'">',
                 '<div class="outdoor-model">'+ opt.model +'</div>',
@@ -315,7 +375,30 @@
       resultsBox.style.display = '';
     }
 
-    // Events
+    // ----- Reset / Clear -----
+    function resetAll() {
+      // Reset state
+      state.mode = 'Single';
+      state.roomCount = 1;
+      state.zone = 'South';
+      state.rooms = [createEmptyRoom()];
+
+      // Reset UI controls
+      selMode.value = 'Single';
+      zoneSel.value = 'South';
+      inpRoomCount.value = 2; // default when switching to Multi later
+
+      // Clear results & redraw
+      resultsBox.innerHTML = '';
+      resultsBox.style.display = 'none';
+      drawRooms();
+
+      // Return to disclaimer gate
+      app.style.display = 'none';
+      disclaimer.style.display = '';
+    }
+
+    // ----- Event listeners -----
     btnAccept.addEventListener('click', function () {
       disclaimer.style.display = 'none';
       app.style.display = '';
@@ -342,28 +425,33 @@
 
     btnCalc.addEventListener('click', calculate);
 
-    // Initialize default UI
+    if (btnReset) {
+      btnReset.addEventListener('click', resetAll);
+    }
+
+    // Initialize defaults
     updateModeUI();
   }
 
+  // Mount all instances in a context
   function initAll(context) {
-    var scope = context || document;
-    $$$ (scope, '[data-air-calculator]').forEach(function (root) {
-      // Avoid double-mount
+    $$$ (context || document, '[data-air-calculator]').forEach(function (root) {
       if (root.__airCalcMounted) return;
       root.__airCalcMounted = true;
       mountInstance(root);
     });
   }
 
+  // DOM ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function(){ initAll(); });
   } else { initAll(); }
 
-  // Theme Editor lifecycle
+  // Theme editor lifecycle
   document.addEventListener('shopify:section:load', function (e) { initAll(e.target); });
 })();
-// --- simple open/close for the modal shell ---
+
+// ---------- Modal open/close ----------
 document.addEventListener('click', function (e) {
   var openBtn = e.target.closest('[data-ahc-open]');
   if (openBtn) {
@@ -376,4 +464,3 @@ document.addEventListener('click', function (e) {
     if (modalEl) modalEl.hidden = true;
   }
 });
-

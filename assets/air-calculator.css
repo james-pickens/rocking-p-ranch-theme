@@ -191,5 +191,146 @@
   background-color: #ede9fe;        /* faint purple hover background */
   transform: scale(1.1);
 }
+/* ===== Compact AHC layout ===== */
+.ahc-card { padding: 10px; margin-bottom: 10px; }
+
+.ahc-row.compact { 
+  display: grid;
+  grid-template-columns: 2.2fr 1.1fr 0.8fr 0.8fr 0.9fr 1.1fr; /* Name | Area | H | Win | Door | Insul */
+  gap: 8px;
+  align-items: end;
+}
+
+.ahc-mini-label { 
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0 0 4px;
+  color: #374151;
+}
+
+.ahc-mini-inp, .ahc-mini-sel {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+.ahc-mini-sel {
+  padding-right: 22px; /* room for dropdown chevron */
+}
+
+@media (max-width: 560px) {
+  .ahc-row.compact { 
+    grid-template-columns: 1.6fr 1fr 0.7fr 0.7fr 0.8fr 1fr;
+    gap: 6px;
+  }
+}
+
+/* tighten overall spacing */
+.field-group, .room-card { margin-bottom: 10px; }
+.calculator-container { padding: 12px; }
+/* =============================
+   THEMED RESULTS + OUTDOOR CARDS
+   ============================= */
+
+/* Results wrapper */
+.results-container {
+  background: #f5f3ff;           /* light lavender */
+  border: 2px solid #7e22ce;     /* theme purple */
+  border-radius: 12px;
+}
+.results-title { color: #4b006e; }
+.result-item-bordered { border-bottom-color: #ede9fe; }
+
+/* Total load callout */
+.total-load-box {
+  background: #ede9fe;           /* slightly deeper lavender */
+  border: 1px solid #7e22ce;
+  border-radius: 8px;
+}
+
+/* Outdoor cards — keep 3 “intensity” levels, but in theme colors */
+.outdoor-card {
+  background: #f5f3ff;
+  border-left: 6px solid #7e22ce;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+/* Light / medium / strong tints mapped from green/yellow/orange to purple family */
+.outdoor-card-green  { background: #f3e8ff; border-left-color: #7e22ce; } /* best fit */
+.outdoor-card-yellow { background: #ede9fe; border-left-color: #6b21a8; } /* close fit */
+.outdoor-card-orange { background: #e9d5ff; border-left-color: #581c87; } /* borderline/high */
+
+.outdoor-model { color: #4b006e; font-weight: 700; }
+.outdoor-specs, .outdoor-load { color: #3b0764; }
+
+/* =============================
+   THEMED RESULT TEXT
+   ============================= */
+.result-btu {
+  color: #7e22ce;               /* theme purple for BTU numbers */
+  font-weight: 700;
+}
+
+.total-load-value {
+  color: #7e22ce;   /* theme purple for total load number */
+  font-weight: 700;
+}
+
+/* ============================================================
+   MATCH "CALCULATE" + "LAUNCH" BUTTONS TO ACCEPT BUTTON STYLE
+   ============================================================ */
+
+.ahc-launch,
+.calculate-button {
+  background-color: #7e22ce;   /* theme purple */
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 25px;
+  cursor: pointer;
+  transition: background-color 0.25s ease-in-out, transform 0.1s ease;
+  text-align: center;
+  display: inline-block;
+}
+
+.ahc-launch:hover,
+.calculate-button:hover {
+  background-color: #6b21a8;   /* slightly darker purple hover */
+  transform: translateY(-1px);
+}
+
+/* Ensure focus outline matches theme accessibility */
+.ahc-launch:focus,
+.calculate-button:focus {
+  outline: 2px solid #7e22ce;
+  outline-offset: 2px;
+}
+
+/* ==========================================
+   CLEAR BUTTON — SECONDARY THEME STYLE
+   ========================================== */
+.reset-button {
+  background-color: #ffffff;
+  color: #7e22ce;
+  border: 2px solid #7e22ce;
+  border-radius: 8px;
+  padding: 12px 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.reset-button:hover {
+  background-color: #7e22ce;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
 
 
