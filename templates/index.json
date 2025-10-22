@@ -1,1 +1,2467 @@
-{"sections":{"promotion_banner_VCkmzP":{"type":"promotion-banner","blocks":{"subheading_xKzbww":{"type":"subheading","settings":{"subheading":"Flash Sale now on!","subheading_icon":"none"}},"timer_6FyFrY":{"type":"timer","settings":{"type":"evergreen","number_size":"h1","duration":"every_month","time":"2025\/06\/28 03:45 PM"}},"text_QWap4d":{"type":"text","settings":{"text":"<p>All orders revive a 3% discount! <\/p>","text_color":"base-text"}},"code_FWe4HN":{"type":"code","disabled":true,"settings":{"discount_code":"FLASH30","button_label":"Use Code: FLASH30","button_style":"btn--primary","button_icon":"none"}}},"block_order":["subheading_xKzbww","timer_6FyFrY","text_QWap4d","code_FWe4HN"],"disabled":true,"settings":{"container":"fixed","color_scheme":"scheme-cc9da964-50f9-4f46-bebb-f2e158bae3af","layout":"horizontal","content_alignment":"center","content_alignment_mobile":"center","padding_top":40,"padding_bottom":0}},"image_with_text_slider_9GkxWB":{"type":"image-with-text-slider","blocks":{"image_slide_Gjjhyt":{"type":"image-slide","settings":{"color_scheme":"scheme-cc9da964-50f9-4f46-bebb-f2e158bae3af","image":"shopify:\/\/shop_images\/GWINSingleZoneBundle.png","desktop_content_position":"top-left","desktop_content_alignment":"left","mobile_content_alignment":"left","subheading":"","heading":"GWIN HVAC","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h1","text":"<p>The Best HVAC System You Can Buy.<\/p><p>Learn more →<\/p>","text_size":"text-inherit","button_label":"Shop Now","button_link":"shopify:\/\/collections","button_style":"btn--primary","button_icon":"none","enable_preload_image":false}},"image_slide_JtmiXF":{"type":"image-slide","disabled":true,"settings":{"color_scheme":"scheme-1","desktop_content_position":"top-left","desktop_content_alignment":"left","mobile_content_alignment":"left","subheading":"Add a tagline","heading":"Image slide","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"hd2","text":"<p>Tell your brand's story through images<\/p>","text_size":"text-base","button_label":"Button label","button_link":"","button_style":"btn--primary","button_icon":"none","enable_preload_image":false}},"image_slide_8Vj63x":{"type":"image-slide","disabled":true,"settings":{"color_scheme":"scheme-1","desktop_content_position":"top-left","desktop_content_alignment":"left","mobile_content_alignment":"left","subheading":"Add a tagline","heading":"Image slide","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"hd2","text":"<p>Tell your brand's story through images<\/p>","text_size":"text-base","button_label":"Button label","button_link":"","button_style":"btn--primary","button_icon":"none","enable_preload_image":false}},"image_slide_xaEPAr":{"type":"image-slide","disabled":true,"settings":{"color_scheme":"","desktop_content_position":"top-left","desktop_content_alignment":"left","mobile_content_alignment":"left","subheading":"Add a tagline","heading":"Image slide","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"hd2","text":"<p>Tell your brand's story through images<\/p>","text_size":"text-base","button_label":"Button label","button_link":"","button_style":"btn--primary","button_icon":"none","enable_preload_image":false}},"image_slide_WAAUPw":{"type":"image-slide","disabled":true,"settings":{"color_scheme":"","desktop_content_position":"top-left","desktop_content_alignment":"left","mobile_content_alignment":"left","subheading":"Add a tagline","heading":"Image slide","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"hd2","text":"<p>Tell your brand's story through images<\/p>","text_size":"text-base","button_label":"Button label","button_link":"","button_style":"btn--primary","button_icon":"none","enable_preload_image":false}}},"block_order":["image_slide_Gjjhyt","image_slide_JtmiXF","image_slide_8Vj63x","image_slide_xaEPAr","image_slide_WAAUPw"],"name":"t:sections.image-with-text-slider.presets.name","settings":{"container":"fixed","color_scheme":"","image_height":"medium","image_width":70,"image_position":"right","show_controls":true,"autoplay":false,"autoplay_delay":3,"desktop_controls_position":"start","mobile_controls_position":"inherit","padding_top":80,"padding_bottom":80}},"collapsible_tabs_e4t7bJ":{"type":"collapsible-tabs","blocks":{"image_card_K3izeK":{"type":"image_card","settings":{"color_scheme":"scheme-1","desktop_image_position":"left","image_width":30,"alignment":"center","image":"shopify:\/\/shop_images\/gwin_single_zone_bundle.png","image_ratio":"adapt","image_overlay_opacity":0,"content_position":"top-center","content_alignment":"center","content_spacing":"medium","content_gap":"fitted","card_link":"","subheading":"","subheading_style":"","heading":"","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h1","heading_size_mobile":"inherit","heading_size_custom":18,"description":"","button_label":"","button_style":"btn--primary","button_icon":"none","order_first":false}},"collapsible_item_x7JARp":{"type":"collapsible_item","settings":{"icon":"none","heading":"Features","content":"<ul><li>Self Cleaning- Eliminates bacteria, viruses, dust mites, microorganisms, and dust particles. Advanced sterilization system (134°F high temperature) removes viruses, bacteria, dust, pollen to deliver clean air. <\/li><li>Micro-Vent Soft Airflow- Thousands of precision micro vents designed to produce gentle draft free breeze for optimum comfort. (Excluding 36,000K BTU)<\/li><li>Outdoor unit operation- -22°F-125°F<\/li><li>Wide Voltage Fluctuation- System can tolerate 165-265V fluctuation in unstable environment <\/li><li>Wifi-Control- Built in wifi module <\/li><li>Fast heating & cooling technology- Thanks to our Inverter compressor, your desired room temperature can be quickly obtained. <\/li><li>Offline Voice control- Same room voice command abilities. (Excluding 36,000K BTU)<\/li><li>Eco-Energy Saving Mode- Designed to help save power and energy <\/li><li>Easy Installation- Comes with: installation guide, installation plate, and built in level<\/li><li>Gold Fin- In both the outdoor and indoor unit to reduce corrosion and oxidation over blue finned models. <\/li><li>Vertical placement PCB- Prevents depositioning and deformation to deduce damage rates. UV adhesive cover to help reduce corrosion to lower failure rates and lower maintenance needs. <\/li><li>Base pan heating- Automatically turning on in low temperatures in the base of the outdoor unit to improve efficiency and reduce freezing.<\/li><\/ul>","custom_liquid":"","page":"","open":false,"use_subtext_color":false}},"collapsible_item_7w7rpp":{"type":"collapsible_item","settings":{"icon":"none","heading":"Air Handler Options","content":"<p>9,000 BTU 115V & 230V <\/p><p>12,000 BTU 115V & 230V <\/p><p>18,000 BTU 230V <\/p><p>24,000 BTU 230V <\/p><p>36,000 BTU 230V <\/p>","custom_liquid":"","page":"","open":false,"use_subtext_color":false}},"collapsible_item_zLbCAW":{"type":"collapsible_item","settings":{"icon":"none","heading":"GWIN Warranty","content":"<p>GWIN comes with 12 year parts and 12 year compressor warranties free, no matter who installed it. There's no tiered installer program like other manufacturers. Everyone gets the best warranty we have, for free.  <\/p><p>GWIN also comes with a free 7 year warranty on labor and refrigerant. There's no need to buy a warranty for the labor yourself. If you install a GWIN and there's a problem within the warranty period, we'll pay the labor costs to fix it (limitations apply). <\/p>","custom_liquid":"","page":"","open":false,"use_subtext_color":false}}},"block_order":["image_card_K3izeK","collapsible_item_x7JARp","collapsible_item_7w7rpp","collapsible_item_zLbCAW"],"name":"t:sections.collapsible-tabs.name","settings":{"container":"fixed","color_scheme":"scheme-cc9da964-50f9-4f46-bebb-f2e158bae3af","header_layout":"vertical","section_header_alignment":"center","section_header_alignment_mobile":"inherit","subheading":"","heading":"About GWIN Single Zone Ductless Mini Split Systems","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h1","description":"","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--primary","button_icon":"none","column_gap":"large","row_gap":"inherit","item_style":"standard","item_color_scheme":"","item_heading_font":"heading","item_heading_size":"h4","item_icon_size":"extra-large","padding_top":50,"padding_bottom":50,"show_section_divider":false,"divider_width":"fixed"}},"featured_collection_RWUfH9":{"type":"featured-collection","blocks":{"collection_tqdqYc":{"type":"collection","name":"Complete Single Zone Ductless Mini-Split Systems","settings":{"collection":"complete-single-zone-systems","title":"Complete Ductless Mini-Split Systems","show_banner":false,"color_scheme":"scheme-1","card_link":"","image_overlay_opacity":0,"content_position":"top-left","content_alignment":"left","subheading":"","subheading_style":"","heading":"Collections","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h2","heading_size_mobile":"inherit","heading_size_custom":18,"description":"","text_size":"text-base","button_label":"","button_style":"btn--primary","button_icon":"none"}}},"block_order":["collection_tqdqYc"],"name":"Complete GWIN Ductless Single Zone Systems","settings":{"container":"fixed","color_scheme":"scheme-1","section_header_alignment":"left","section_header_alignment_mobile":"inherit","subheading":"","heading":"GWIN Single Zone Ductless Mini Split Complete Systems","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h2","description":"","text_size":"text-base","button_label":"Collection","button_link":"shopify:\/\/collections\/complete-single-zone-systems","button_style":"btn--plain","button_icon":"caret-right","limit":8,"columns":5,"column_gap":"medium","row_gap":"inherit","enable_slider":true,"content_overflow":true,"navigation_position":"bottom","pcard_image_ratio":"","columns_mobile":"1","swipe_on_mobile":true,"show_progress_bar":true,"padding_top":60,"padding_bottom":20,"show_section_divider":false,"divider_width":"fixed"}},"1759959561167b3255":{"type":"apps","blocks":{"ck_google_reviews_google_reviews_beEKKi":{"type":"shopify:\/\/apps\/ck-google-reviews\/blocks\/google_reviews\/65a77010-5e58-49de-928f-6b86aa6ecffe","settings":{}}},"block_order":["ck_google_reviews_google_reviews_beEKKi"],"settings":{"include_margins":true,"padding_top":0,"padding_bottom":0}},"collapsible_tabs_wwKUNa":{"type":"collapsible-tabs","blocks":{"image_card_LwnpYe":{"type":"image_card","settings":{"color_scheme":"scheme-1","desktop_image_position":"left","image_width":30,"alignment":"center","image":"shopify:\/\/shop_images\/gwin_multi_zone_bundle_369be8a3-c1d4-4389-8926-d7796f29d633.png","image_ratio":"adapt","image_overlay_opacity":0,"content_position":"top-center","content_alignment":"center","content_spacing":"medium","content_gap":"fitted","card_link":"","subheading":"","subheading_style":"","heading":"","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h1","heading_size_mobile":"inherit","heading_size_custom":18,"description":"","button_label":"","button_style":"btn--primary","button_icon":"none","order_first":false}},"collapsible_item_aEafAW":{"type":"collapsible_item","settings":{"icon":"none","heading":"Features","content":"<p>Create your own Multi-Zone Bundle! <\/p><ul><li>Self Cleaning- Eliminates bacteria, viruses, dust mites, microorganisms, and dust particles. Advanced sterilization system (134°F high temperature) removes viruses, bacteria, dust, pollen to deliver clean air. <\/li><li>Micro-Vent Soft Airflow- Thousands of precision micro vents designed to produce gentle draft free breeze for optimum comfort. (Excluding 36,000K BTU)<\/li><li>Outdoor unit operation- -22°F-125°F<\/li><li>Wide Voltage Fluctuation- System can tolerate 165-265V fluctuation in unstable environment <\/li><li>Wifi-Control- Built in wifi module <\/li><li>Fast heating & cooling technology- Thanks to our Inverter compressor, your desired room temperature can be quickly obtained. <\/li><li>Offline Voice control- Same room voice command abilities. (Excluding 36,000K BTU)<\/li><li>Eco-Energy Saving Mode- Designed to help save power and energy <\/li><li>Easy Installation- Comes with: installation guide, installation plate, and built in level<\/li><li>Gold Fin- In both the outdoor and indoor unit to reduce corrosion and oxidation over blue finned models. <\/li><li>Vertical placement PCB- Prevents depositioning and deformation to deduce damage rates. UV adhesive cover to help reduce corrosion to lower failure rates and lower maintenance needs. <\/li><li>Base pan heating- Automatically turning on in low temperatures in the base of the outdoor unit to improve efficiency and reduce freezing.<\/li><\/ul><p>***Some features maybe available on the Wall Mount Air Handlers Only***<\/p>","custom_liquid":"","page":"","open":false,"use_subtext_color":false}},"collapsible_item_tigpcR":{"type":"collapsible_item","settings":{"icon":"none","heading":"Condenser & Air Handler Options","content":"<p><strong>Condenser<\/strong><\/p><p>18,000K BTU 2 Zone<\/p><p>24,000K BTU 3 Zone<\/p><p>36,000K BTU 4 Zone<\/p><p>42,000K BTU 5 Zone<\/p><p><strong>High Wall Mount Air Handler <\/strong><\/p><p>7,000K BTU 230V<\/p><p>9,000K BTU 230V<\/p><p>12,000K BTU 230V<\/p><p>18,000K BTU 230V<\/p><p>24,000K BTU 230V<\/p><p><strong>Cassette<\/strong> <\/p><p>9,000K BTU 230V<\/p><p>12,000K BTU 230V<\/p><p>18,000K BTU 230V<\/p><p>24,000K BTU 230V<\/p><p><strong>Floor\/Ceiling Console <\/strong><\/p><p>9,000K BTU 230V<\/p><p>12,000K BTU 230V<\/p><p>18,000K BTU 230V<\/p><p>24,000K BTU 230V<\/p><p><strong>Slim Ducted <\/strong><\/p><p>9,000K BTU 230V<\/p><p>12,000K BTU 230V<\/p><p>18,000K BTU 230V<\/p><p>24,000K BTU 230V<\/p>","custom_liquid":"","page":"","open":false,"use_subtext_color":false}},"collapsible_item_yRKLMY":{"type":"collapsible_item","settings":{"icon":"none","heading":"GWIN Warranty","content":"<p>GWIN comes with 12 year parts and 12 year compressor warranties free, no matter who installed it. There's no tiered installer program like other manufacturers. Everyone gets the best warranty we have, for free.  <\/p><p>GWIN also comes with a free 7 year warranty on labor and refrigerant. There's no need to buy a warranty for the labor yourself. If you install a GWIN and there's a problem within the warranty period, we'll pay the labor costs to fix it (limitations apply). <\/p>","custom_liquid":"","page":"","open":false,"use_subtext_color":false}}},"block_order":["image_card_LwnpYe","collapsible_item_aEafAW","collapsible_item_tigpcR","collapsible_item_yRKLMY"],"name":"t:sections.collapsible-tabs.name","settings":{"container":"fixed","color_scheme":"scheme-cc9da964-50f9-4f46-bebb-f2e158bae3af","header_layout":"vertical","section_header_alignment":"center","section_header_alignment_mobile":"inherit","subheading":"","heading":"About GWIN Multi Zone Mini Splits","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h1","description":"","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--primary","button_icon":"none","column_gap":"large","row_gap":"inherit","item_style":"standard","item_color_scheme":"","item_heading_font":"heading","item_heading_size":"h4","item_icon_size":"extra-large","padding_top":50,"padding_bottom":50,"show_section_divider":false,"divider_width":"fixed"}},"featured_collection_izN64c":{"type":"featured-collection","blocks":{"collection_zaCRHq":{"type":"collection","name":"1 Zone","settings":{"collection":"complete-single-zone-systems","title":"1 Zone","show_banner":false,"color_scheme":"scheme-1","card_link":"","banner_image":"shopify:\/\/shop_images\/single_zone_bundle.png","image_overlay_opacity":0,"content_position":"top-left","content_alignment":"left","subheading":"","subheading_style":"","heading":"Collections","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h2","heading_size_mobile":"inherit","heading_size_custom":18,"description":"","text_size":"text-base","button_label":"Button label","button_style":"btn--primary","button_icon":"none"}},"collection_ChFcdd":{"type":"collection","name":"2 Zone","settings":{"collection":"2-zone","title":"2 Zone","show_banner":false,"color_scheme":"","card_link":"shopify:\/\/collections\/2-zone","image_overlay_opacity":0,"content_position":"top-left","content_alignment":"left","subheading":"","subheading_style":"","heading":"2 Zone","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h2","heading_size_mobile":"inherit","heading_size_custom":18,"description":"<p>2 Zone<\/p>","text_size":"text-base","button_label":"","button_style":"btn--primary","button_icon":"none"}},"collection_bhCAUG":{"type":"collection","name":"3 Zone","settings":{"collection":"3-zone","title":"3 Zone","show_banner":false,"color_scheme":"","card_link":"shopify:\/\/collections\/3-zone","image_overlay_opacity":0,"content_position":"top-left","content_alignment":"left","subheading":"","subheading_style":"","heading":"3 Zone","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h2","heading_size_mobile":"inherit","heading_size_custom":18,"description":"<p>3 Zone<\/p>","text_size":"text-base","button_label":"","button_style":"btn--primary","button_icon":"none"}},"collection_3AbNcj":{"type":"collection","name":"4 Zone","disabled":true,"settings":{"collection":"4-zone","title":"4 Zone","show_banner":false,"color_scheme":"scheme-1","card_link":"","image_overlay_opacity":0,"content_position":"top-left","content_alignment":"left","subheading":"","subheading_style":"","heading":"Collections","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h2","heading_size_mobile":"inherit","heading_size_custom":18,"description":"","text_size":"text-base","button_label":"Button label","button_style":"btn--primary","button_icon":"none"}},"collection_gVEtMm":{"type":"collection","name":"5 Zone","disabled":true,"settings":{"collection":"5-zone","title":"5 Zone","show_banner":false,"color_scheme":"scheme-1","card_link":"","image_overlay_opacity":0,"content_position":"top-left","content_alignment":"left","subheading":"","subheading_style":"","heading":"Collections","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h2","heading_size_mobile":"inherit","heading_size_custom":18,"description":"","text_size":"text-base","button_label":"Button label","button_style":"btn--primary","button_icon":"none"}}},"block_order":["collection_zaCRHq","collection_ChFcdd","collection_bhCAUG","collection_3AbNcj","collection_gVEtMm"],"name":"GWIN Multi-Zone Bundles","settings":{"container":"fixed","color_scheme":"","section_header_alignment":"center","section_header_alignment_mobile":"inherit","subheading":"","heading":"GWIN Multi-Zone Bundles","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h1","description":"<p>Don't see your bundle or want different unit types? Give us a call for a customized bundle! Up to 5 zone configurations. <\/p><p>Unit types: <\/p><ul><li>Recessed Ducted <\/li><li>Cassette <\/li><li>Floor\/Ceiling Console<\/li><li>Wall Mount Air Handler <\/li><\/ul>","text_size":"text-base","button_label":"Give us a call!","button_link":"tel: 615-538-7979","button_style":"btn--primary","button_icon":"none","limit":8,"columns":4,"column_gap":"medium","row_gap":"inherit","enable_slider":true,"content_overflow":true,"navigation_position":"bottom","pcard_image_ratio":"","columns_mobile":"1","swipe_on_mobile":true,"show_progress_bar":true,"padding_top":50,"padding_bottom":50,"show_section_divider":false,"divider_width":"fixed"}},"buttons_with_icon_7zH9F3":{"type":"buttons-with-icon","blocks":{"button_item_VQE7f9":{"type":"button_item","settings":{"button_label":"Living Room","button_link":"","icon":"check"}},"button_item_A8ctbq":{"type":"button_item","settings":{"button_label":"Planters","button_link":"","icon":"check"}},"button_item_gp6wzj":{"type":"button_item","settings":{"button_label":"Gravel Rug","button_link":"","icon":"check"}},"button_item_KjqtJi":{"type":"button_item","settings":{"button_label":"Table Mirror","button_link":"","icon":"check"}},"button_item_Q3cegW":{"type":"button_item","settings":{"button_label":"Table Wears","button_link":"","icon":"check"}},"button_item_pqRX7H":{"type":"button_item","settings":{"button_label":"Dining Decor","button_link":"","icon":"check"}},"button_item_en8WtA":{"type":"button_item","settings":{"button_label":"Ray Table Lamp","button_link":"","icon":"check"}},"button_item_JnFWN8":{"type":"button_item","settings":{"button_label":"Chairs","button_link":"","icon":"check"}},"button_item_FrFqff":{"type":"button_item","settings":{"button_label":"Living Room","button_link":"","icon":"check"}},"button_item_mKVJW4":{"type":"button_item","settings":{"button_label":"Planters","button_link":"","icon":"check"}}},"block_order":["button_item_VQE7f9","button_item_A8ctbq","button_item_gp6wzj","button_item_KjqtJi","button_item_Q3cegW","button_item_pqRX7H","button_item_en8WtA","button_item_JnFWN8","button_item_FrFqff","button_item_mKVJW4"],"disabled":true,"settings":{"container":"fixed","color_scheme":"","section_header_alignment":"left","section_header_alignment_mobile":"inherit","subheading":"","heading":"","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h2","item_alignment":"left","item_button_style":"btn--icon","item_button_font":"button","enable_slider":true,"swipe_on_mobile":true,"show_section_divider":false,"divider_width":"fixed","padding_top":60,"padding_bottom":0}},"collection_list_yHY4CD":{"type":"collection-list","blocks":{"featured_collection_wFWGUC":{"type":"featured_collection","name":"1 Zone Bundles","settings":{"collection":"complete-single-zone-systems","image":"shopify:\/\/shop_images\/single_zone_bundle.png","title":"1 Zone Bundles"}},"featured_collection_kQYCki":{"type":"featured_collection","name":"2 Zone Bundles","settings":{"collection":"2-zone","title":"2 Zone Bundles"}},"featured_collection_tnYHKN":{"type":"featured_collection","name":"3 Zone Bundles","settings":{"collection":"3-zone","title":"3 Zone Bundles"}},"featured_collection_mxmThP":{"type":"featured_collection","name":"4 Zone Bundles","settings":{"collection":"4-zone","title":"4 Zone Bundles"}},"featured_collection_97Gacx":{"type":"featured_collection","name":"5 Zone Bundles","disabled":true,"settings":{"collection":"5-zone","title":"5 Zone Bundles"}}},"block_order":["featured_collection_wFWGUC","featured_collection_kQYCki","featured_collection_tnYHKN","featured_collection_mxmThP","featured_collection_97Gacx"],"disabled":true,"name":"t:sections.collection-list.name","settings":{"container":"fixed","color_scheme":"","section_header_alignment":"center","section_header_alignment_mobile":"inherit","subheading":"","heading":"Collections","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h1","description":"<p>Don't see your bundle or want different unit types? Give us a call for a customized bundle! Up to 5 zone configurations. <\/p><p>Unit types: <\/p><ul><li>Recessed Ducted <\/li><li>Cassette <\/li><li>Floor\/Ceiling Console<\/li><li>Wall Mount Air Handler <\/li><\/ul>","text_size":"text-base","button_label":"Give us a call","button_link":"tel: 615-538-7979","button_style":"btn--primary","button_icon":"none","card_color_scheme":"","card_style":"standard","card_heading_size":"text-base","card_text_line_limit":"none","card_image_ratio":"1\/1","card_image_width":"large","card_image_padding":"none","rounded_card_image":true,"card_show_border":false,"mobile_layout":"vertical","columns_desktop":6,"column_gap":"medium","row_gap":"inherit","grid_bordered":false,"columns_mobile":"3","swipe_on_mobile":true,"padding_top":50,"padding_bottom":50,"show_section_divider":false,"divider_width":"fixed"}},"lookbook_banner_WnbgRh":{"type":"lookbook-banner","name":"t:sections.banner-with-hotspots.name","settings":{"container":"fixed","color_scheme":"scheme-12","section_header_alignment":"center","section_header_alignment_mobile":"inherit","subheading":"","heading":"Meet GWIN!","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h2","description":"","description_size":"text-base","button_label":"Contact Us","button_link":"shopify:\/\/pages\/contact","button_style":"btn--underline","button_icon":"none","image":"shopify:\/\/shop_images\/GWIN-Associates-_1920-x-900_px.jpg","icon_style":"plus","icon_color":"dark","card_color_scheme":"scheme-12","show_section_divider":false,"divider_width":"full","padding_top":18,"padding_bottom":30}},"featured_collection_78c8zh":{"type":"featured-collection","blocks":{"collection_ia4nfm":{"type":"collection","name":"Ductless  GWIN Multi-Zone","settings":{"collection":"gwin","title":"Ductless  GWIN Multi-Zone","show_banner":false,"color_scheme":"","card_link":"","image_overlay_opacity":0,"content_position":"top-left","content_alignment":"left","subheading":"","subheading_style":"","heading":"Collections","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h2","heading_size_mobile":"inherit","heading_size_custom":18,"description":"","text_size":"text-base","button_label":"","button_style":"btn--primary","button_icon":"none"}}},"block_order":["collection_ia4nfm"],"disabled":true,"name":"Ductless  GWIN Multi-Zone","settings":{"container":"fixed","color_scheme":"","section_header_alignment":"left","section_header_alignment_mobile":"inherit","subheading":"","heading":"GWIN Ductless Multi-Zone","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h2","description":"","text_size":"text-base","button_label":"Collection","button_link":"shopify:\/\/collections\/gwin","button_style":"btn--plain","button_icon":"caret-right","limit":8,"columns":5,"column_gap":"medium","row_gap":"inherit","enable_slider":true,"content_overflow":true,"navigation_position":"bottom","pcard_image_ratio":"","columns_mobile":"1","swipe_on_mobile":true,"show_progress_bar":true,"padding_top":60,"padding_bottom":0,"show_section_divider":false,"divider_width":"fixed"}},"collapsible_tabs_kDk74y":{"type":"collapsible-tabs","blocks":{"image_card_gXhtnC":{"type":"image_card","settings":{"color_scheme":"scheme-1","desktop_image_position":"left","image_width":30,"alignment":"center","image":"shopify:\/\/shop_images\/gwin_ducted_bundle.png","image_ratio":"adapt","image_overlay_opacity":0,"content_position":"top-center","content_alignment":"center","content_spacing":"medium","content_gap":"fitted","card_link":"","subheading":"","subheading_style":"","heading":"","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h1","heading_size_mobile":"inherit","heading_size_custom":18,"description":"","button_label":"","button_style":"btn--primary","button_icon":"none","order_first":false}},"collapsible_item_dfpLze":{"type":"collapsible_item","settings":{"icon":"none","heading":"Features","content":"<p>Notable Features Include: <\/p><ul><li>High Performance: Consistent indoor comfort, even during extreme outdoor temperatures.<\/li><li>Wide Voltage Range: Operates from 170V–253V to handle power fluctuations and protect the PCB. <\/li><li>Long Piping Design: Install up to 98 ft horizontally and 49 ft vertically for layout flexibility.<\/li><li>Auto-Restart: System automatically resumes previous settings after a power outage.<\/li><li>Refrigerant Cooling Technology: Prevents PCB overheating for longer system life.<\/li><li>Dual Communication: Compatible with 24V and 485 control systems, easily integrates with most setups.<\/li><li>Flexible Mounting Options: Vertical, horizontal, or inverted installation for any space type.<\/li><li>ESP Range: Rated at 0.5 in.W.C, with a max of 1.0 in.W.C for optimal air pressure control.<\/li><\/ul>","custom_liquid":"","page":"","open":false,"use_subtext_color":false}},"collapsible_item_Kz93pA":{"type":"collapsible_item","settings":{"icon":"none","heading":"Air Handler Options","content":"<p>Currently we have the following options: <\/p><p>18,000 BTU 230V <\/p><p>24,000 BTU 230V <\/p><p>36,000 BTU 230V <\/p><p>48,000 BTU 230V <\/p><p>60,000 BTU 230V <\/p>","custom_liquid":"","page":"","open":false,"use_subtext_color":false}},"collapsible_item_mJbCGr":{"type":"collapsible_item","settings":{"icon":"none","heading":"GWIN Warranty","content":"<p>GWIN comes with 12 year parts and 12 year compressor warranties free, no matter who installed it. There's no tiered installer program like other manufacturers. Everyone gets the best warranty we have, for free.  <\/p><p>GWIN also comes with a free 7 year warranty on labor and refrigerant. There's no need to buy a warranty for the labor yourself. If you install a GWIN and there's a problem within the warranty period, we'll pay the labor costs to fix it (limitations apply). <\/p>","custom_liquid":"","page":"","open":false,"use_subtext_color":false}}},"block_order":["image_card_gXhtnC","collapsible_item_dfpLze","collapsible_item_Kz93pA","collapsible_item_mJbCGr"],"name":"t:sections.collapsible-tabs.name","settings":{"container":"fixed","color_scheme":"scheme-cc9da964-50f9-4f46-bebb-f2e158bae3af","header_layout":"vertical","section_header_alignment":"center","section_header_alignment_mobile":"inherit","subheading":"","heading":"About GWIN Ducted Systems","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h1","description":"","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--primary","button_icon":"none","column_gap":"large","row_gap":"inherit","item_style":"standard","item_color_scheme":"","item_heading_font":"heading","item_heading_size":"h4","item_icon_size":"extra-large","padding_top":50,"padding_bottom":50,"show_section_divider":false,"divider_width":"fixed"}},"featured_collection_WW3LEe":{"type":"featured-collection","blocks":{"collection_WMH3iB":{"type":"collection","name":"Complete GWIN Ducted Systems","settings":{"collection":"complete-ducted-systems","title":"Complete GWIN Ducted Systems","show_banner":false,"color_scheme":"","card_link":"","image_overlay_opacity":0,"content_position":"top-left","content_alignment":"left","subheading":"","subheading_style":"","heading":"Collections","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h2","heading_size_mobile":"inherit","heading_size_custom":18,"description":"","text_size":"text-base","button_label":"","button_style":"btn--primary","button_icon":"none"}}},"block_order":["collection_WMH3iB"],"name":"Complete GWIN Ducted Systems","settings":{"container":"fixed","color_scheme":"scheme-1","section_header_alignment":"left","section_header_alignment_mobile":"inherit","subheading":"","heading":"Complete GWIN Ducted Systems","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h2","description":"","text_size":"text-base","button_label":"Collection","button_link":"shopify:\/\/collections\/complete-single-zone-systems","button_style":"btn--plain","button_icon":"caret-right","limit":8,"columns":5,"column_gap":"medium","row_gap":"inherit","enable_slider":true,"content_overflow":true,"navigation_position":"bottom","pcard_image_ratio":"","columns_mobile":"1","swipe_on_mobile":true,"show_progress_bar":true,"padding_top":60,"padding_bottom":0,"show_section_divider":false,"divider_width":"fixed"}},"collection_list_slider_6qbNfj":{"type":"collection-list-slider","blocks":{"featured_collection_L9N3Tg":{"type":"featured_collection","name":"Complete Ductless GWIN Single Zone Systems","settings":{"collection":"complete-single-zone-systems","title":"Complete Ductless GWIN Single Zone Systems"}},"featured_collection_gxdACj":{"type":"featured_collection","name":"Complete Ducted Systems","settings":{"collection":"complete-ducted-systems","title":"Complete Ducted Systems"}}},"block_order":["featured_collection_L9N3Tg","featured_collection_gxdACj"],"custom_css":[],"name":"Complete Systems","settings":{"container":"fixed","color_scheme":"scheme-cc9da964-50f9-4f46-bebb-f2e158bae3af","section_header_alignment":"center","section_header_alignment_mobile":"inherit","subheading":"","heading":"Complete Systems","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h1","description":"<p>Find complete systems here that come bundles with the air handler & condenser. <\/p>","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--underline","button_icon":"none","card_color_scheme":"scheme-12","card_style":"standard","card_heading_size":"text-base","card_image_ratio":"adapt","card_image_width":"full","card_image_padding":"none","rounded_card_image":false,"mobile_layout":"vertical","carousel_item_size":"fixed","columns_desktop":2,"carousel_control_color_scheme":"scheme-1","padding_top":20,"padding_bottom":20,"show_section_divider":false,"divider_width":"fixed"}},"scrolling_promotion_9Hng8m":{"type":"scrolling-promotion","blocks":{"text_m9JnRY":{"type":"text","settings":{"text_link":"","text":"12 Year Parts & Compressor Warranty","text_size":"h2","text_opacity":100,"use_custom_color":true,"custom_color":"#000000"}},"image_pmGhNr":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Untitled_design.jpg","image_height":72,"image_rounded":false,"image_link":"","image_height_mobile":60}},"text_gENJV7":{"type":"text","settings":{"text_link":"","text":"7 Year Refrigerant & Labor Warranty","text_size":"h2","text_opacity":100,"use_custom_color":true,"custom_color":"#000000"}},"image_pQdfHa":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Untitled_design.jpg","image_height":72,"image_rounded":false,"image_link":"","image_height_mobile":60}}},"block_order":["text_m9JnRY","image_pmGhNr","text_gENJV7","image_pQdfHa"],"settings":{"color_scheme":"scheme-12","direction":"left","pause_on_hover":true,"speed":0.3,"h_spacing":16,"show_section_divider":false,"padding_top":20,"padding_bottom":20}},"buttons_with_icon_c8CzHV":{"type":"buttons-with-icon","blocks":{"button_item_TXLwjF":{"type":"button_item","settings":{"button_label":"R-32 Refrigerant","button_link":"","icon":"check"}},"button_item_tpCdia":{"type":"button_item","settings":{"button_label":"Fast Cooling & Heating","button_link":"","icon":"check"}},"button_item_wKgxpM":{"type":"button_item","settings":{"button_label":"Quite & Comfortable","button_link":"","icon":"check"}},"button_item_Ngk44m":{"type":"button_item","settings":{"button_label":"Easy Installation","button_link":"","icon":"check"}}},"block_order":["button_item_TXLwjF","button_item_tpCdia","button_item_wKgxpM","button_item_Ngk44m"],"custom_css":[".section__header {--header-padding-bottom: 2.4rem;}",".section__heading {max-width: 45rem;}"],"settings":{"container":"fixed","color_scheme":"scheme-cc9da964-50f9-4f46-bebb-f2e158bae3af","section_header_alignment":"center","section_header_alignment_mobile":"inherit","subheading":"","heading":"WIN With GWIN","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h2","item_alignment":"center","item_button_style":"btn--primary","item_button_font":"button","enable_slider":true,"swipe_on_mobile":true,"show_section_divider":true,"divider_width":"full","padding_top":22,"padding_bottom":22}},"image_with_text_slider_mfNEBe":{"type":"image-with-text-slider","blocks":{"image_slide_7Yecdj":{"type":"image-slide","name":"Hassle-Free Installation","settings":{"color_scheme":"","image":"shopify:\/\/shop_images\/Hassle-Free_Installation.jpg","desktop_content_position":"top-left","desktop_content_alignment":"left","mobile_content_alignment":"left","subheading":"GWIN High Wall Mount Air Handlers","heading":"Hassle-Free Installation","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"hd2","text":"<p>GWIN systems are designed for easy installation, often requiring minimal modifications to your home. <\/p>","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--primary","button_icon":"none","enable_preload_image":false}},"image_slide_gfhk7z":{"type":"image-slide","name":"Ease-of-Access","settings":{"color_scheme":"","image":"shopify:\/\/shop_images\/ease-of-access.jpg","desktop_content_position":"top-left","desktop_content_alignment":"left","mobile_content_alignment":"left","subheading":"GWIN High Wall Mount Air Handlers","heading":"Ease-of-Access","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"hd2","text":"<p>Vertical PCB Boards can be directly extracted, prevent deposition or deformation, and reduce damage rates to give you peace of mind.<\/p>","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--primary","button_icon":"none","enable_preload_image":false}},"image_slide_Gf3XDe":{"type":"image-slide","name":"Refrigerant Cooling Technology","settings":{"color_scheme":"","image":"shopify:\/\/shop_images\/Refrigerant_Cooling_Technology.jpg","desktop_content_position":"top-left","desktop_content_alignment":"left","mobile_content_alignment":"left","subheading":"GWIN Condensers","heading":"Refrigerant Cooling Technology","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"hd2","text":"<p>Efficient thermal operation prevents GWIN units from overheating, allowing for more consistent operation and reducing maintenance requirements by 50%.<\/p>","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--primary","button_icon":"none","enable_preload_image":false}},"image_slide_xWEeBQ":{"type":"image-slide","name":"Energy-Saving Efficiency","settings":{"color_scheme":"","image":"shopify:\/\/shop_images\/Energy_Saving_Efficiency.jpg","desktop_content_position":"top-left","desktop_content_alignment":"left","mobile_content_alignment":"left","subheading":"GWIN High Wall Mount Air Handlers","heading":"Energy-Saving Efficiency","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"hd2","text":"<p>GWIN units range from SEER20 to SEER25, providing better efficiency and comfort. <\/p>","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--primary","button_icon":"none","enable_preload_image":false}},"image_slide_rhpdXE":{"type":"image-slide","name":"Auto-Restart Function","settings":{"color_scheme":"","image":"shopify:\/\/shop_images\/Auto-Restart_Function.png","desktop_content_position":"top-left","desktop_content_alignment":"left","mobile_content_alignment":"left","subheading":"GWIN Condensers & Air Handlers","heading":"Auto-Restart Function","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"hd2","text":"<p>In cases of power loss, due to unreliable and unpredictable power grid issues, GWIN systems pick up the settings where it lost power. No manual restart necessary! <\/p>","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--primary","button_icon":"none","enable_preload_image":false}},"image_slide_TEw4Rn":{"type":"image-slide","name":"Automatic Self-Cleaning","settings":{"color_scheme":"","image":"shopify:\/\/shop_images\/Automatic_Self-Cleaning.jpg","desktop_content_position":"top-left","desktop_content_alignment":"left","mobile_content_alignment":"left","subheading":"GWIN High Wall Mount Air Handler","heading":"Automatic Self-Cleaning","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"hd2","text":"<p>GWIN indoor units wash particulates from their coils - providing fresh, clean, and healthy air. <\/p>","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--primary","button_icon":"none","enable_preload_image":false}},"image_slide_kez9dE":{"type":"image-slide","name":"Base Pan Heating","settings":{"color_scheme":"","image":"shopify:\/\/shop_images\/Base_Pan_heating.jpg","desktop_content_position":"top-left","desktop_content_alignment":"left","mobile_content_alignment":"left","subheading":"GWIN Condensers","heading":"Base Pan Heating","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"hd2","text":"<p>A heater in the base pan automatically turns on in low temperatures to reduce freezing & improve efficiency.<\/p>","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--primary","button_icon":"none","enable_preload_image":false}},"image_slide_CqifTC":{"type":"image-slide","name":"Golden Fin Technology","settings":{"color_scheme":"","image":"shopify:\/\/shop_images\/Gold_Fin_Technology.png","desktop_content_position":"top-left","desktop_content_alignment":"left","mobile_content_alignment":"left","subheading":"High Wall Mount Air Handlers","heading":"Golden Fin Technology","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"hd2","text":"<p>Gold-finned indoor and outdoor units helps to reduce corrosion and oxidation over conventional, blue-finned models.<\/p>","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--primary","button_icon":"none","enable_preload_image":false}},"image_slide_T8TPqC":{"type":"image-slide","name":"Flexible Power","settings":{"color_scheme":"","image":"shopify:\/\/shop_images\/Flexible_Power.jpg","desktop_content_position":"top-left","desktop_content_alignment":"left","mobile_content_alignment":"left","subheading":"GWIN Condensers","heading":"Flexible Power","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"hd2","text":"<p>Designed to operate normally under voltage fluctuations between 165V and 265V. <\/p>","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--primary","button_icon":"none","enable_preload_image":false}},"image_slide_46k4Np":{"type":"image-slide","name":"Fast Cooling","settings":{"color_scheme":"","image":"shopify:\/\/shop_images\/Fast_Cooling.jpg","desktop_content_position":"top-left","desktop_content_alignment":"left","mobile_content_alignment":"left","subheading":"GWIN High Wall Mount Air Handlers","heading":"Fast Cooling","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"hd2","text":"<p>Enjoy comfort right away, provided by high-frequency start-up and strong cooling capacity. <\/p>","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--primary","button_icon":"none","enable_preload_image":false}}},"block_order":["image_slide_7Yecdj","image_slide_gfhk7z","image_slide_Gf3XDe","image_slide_xWEeBQ","image_slide_rhpdXE","image_slide_TEw4Rn","image_slide_kez9dE","image_slide_CqifTC","image_slide_T8TPqC","image_slide_46k4Np"],"name":"GWIN With GWIN","settings":{"container":"fixed","color_scheme":"scheme-12","image_height":"medium","image_width":70,"image_position":"right","show_controls":true,"autoplay":false,"autoplay_delay":3,"desktop_controls_position":"start","mobile_controls_position":"inherit","padding_top":80,"padding_bottom":80}},"slideshow_q3U4Jn":{"type":"slideshow","blocks":{"slide_JhU8hg":{"type":"slide","name":"Hassle-Free Installation","settings":{"color_scheme":"scheme-inverse","background":"shopify:\/\/shop_images\/Hassle-Free_Installation.jpg","image_overlay_opacity":30,"content_position":"middle-center","text_alignment":"center","subheading":"GWIN systems are designed for easy installation, often requiring minimal modifications to your home","title":"Hassle-Free Installation","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"hd1","description":"","description_size":"text-base","button_label":"Shop collection","button_link":"","button_style":"btn--primary","button_icon":"none","enable_preload_image":true}},"slide_9J93gk":{"type":"slide","settings":{"color_scheme":"scheme-1","image_overlay_opacity":0,"content_position":"middle-center","text_alignment":"center","subheading":"","title":"Image slide","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"hd1","description":"<p>Tell your brand's story through images<\/p>","description_size":"text-base","button_label":"Button label","button_link":"","button_style":"btn--primary","button_icon":"none","enable_preload_image":false}},"slide_gMdrjB":{"type":"slide","settings":{"color_scheme":"scheme-1","image_overlay_opacity":0,"content_position":"middle-center","text_alignment":"center","subheading":"","title":"Image slide","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"hd1","description":"<p>Tell your brand's story through images<\/p>","description_size":"text-base","button_label":"Button label","button_link":"","button_style":"btn--primary","button_icon":"none","enable_preload_image":false}},"slide_U9bPyj":{"type":"slide","settings":{"color_scheme":"scheme-inverse","image_overlay_opacity":30,"content_position":"middle-center","text_alignment":"center","subheading":"Modern Elegance","title":"Spoke Sofa","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"hd1","description":"","description_size":"text-base","button_label":"Shop collection","button_link":"","button_style":"btn--primary","button_icon":"none","enable_preload_image":false}},"slide_cQ6eF8":{"type":"slide","settings":{"color_scheme":"scheme-inverse","image_overlay_opacity":30,"content_position":"middle-center","text_alignment":"center","subheading":"Contemporary Grace","title":"Dining & Kitchen","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"hd1","description":"","description_size":"text-base","button_label":"Shop collection","button_link":"","button_style":"btn--primary","button_icon":"none","enable_preload_image":false}},"slide_UwBML9":{"type":"slide","settings":{"color_scheme":"scheme-1","image_overlay_opacity":0,"content_position":"middle-center","text_alignment":"center","subheading":"","title":"Image slide","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"hd1","description":"<p>Tell your brand's story through images<\/p>","description_size":"text-base","button_label":"Button label","button_link":"","button_style":"btn--primary","button_icon":"none","enable_preload_image":false}}},"block_order":["slide_JhU8hg","slide_9J93gk","slide_gMdrjB","slide_U9bPyj","slide_cQ6eF8","slide_UwBML9"],"disabled":true,"name":"WIN With GWIN","settings":{"container":"fixed","slide_height":"adapt","show_controls":true,"autoplay":true,"autoplay_delay":6,"show_text_below":false,"text_alignment_mobile":"center","accessibility_info":"Slideshow about our brand"}},"lookbook_slider_9zCdQJ":{"type":"lookbook-slider","blocks":{"lookbook_card_8cicAx":{"type":"lookbook_card","settings":{"product_list":[],"width":59,"width_mobile":90,"image":"shopify:\/\/shop_images\/Hassle-Free_Installation.jpg","heading":"Hassle-Free Installation","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h6"}},"lookbook_card_eUB7yN":{"type":"lookbook_card","settings":{"product_list":[],"width":29,"width_mobile":65,"heading":"Shop this look","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h6"}},"lookbook_card_tHgUQt":{"type":"lookbook_card","settings":{"product_list":[],"width":59,"width_mobile":90,"heading":"Shop this look","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h6"}},"lookbook_card_8BaXc6":{"type":"lookbook_card","settings":{"product_list":[],"width":29,"width_mobile":65,"heading":"Shop this look","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h6"}},"lookbook_card_DtRhzC":{"type":"lookbook_card","settings":{"product_list":[],"width":59,"width_mobile":90,"heading":"Shop this look","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h6"}}},"block_order":["lookbook_card_8cicAx","lookbook_card_eUB7yN","lookbook_card_tHgUQt","lookbook_card_8BaXc6","lookbook_card_DtRhzC"],"disabled":true,"name":"WIN With GWIN","settings":{"container":"fixed","color_scheme":"","section_header_alignment":"left","section_header_alignment_mobile":"inherit","subheading":"","heading":"WIN With GWIN","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h2","description":"","description_size":"text-base","button_label":"","button_link":"","button_style":"btn--primary","button_icon":"none","column_gap":"2xs","enable_slider":true,"slide_height":"medium","enable_swiper_mobile":true,"show_progress_bar":true,"show_section_divider":false,"divider_width":"fixed","padding_top":60,"padding_bottom":0}},"custom_content_JxRy7x":{"type":"custom-content","blocks":{"image_card_mL7WWJ":{"type":"image_card","settings":{"color_scheme":"scheme-1","image":"shopify:\/\/shop_images\/Hassle-Free_Installation.jpg","image_ratio":"adapt","image_overlay_opacity":0,"content_position":"split-bottom-button","content_alignment":"left","content_spacing":"small","content_gap":"fitted","card_link":"","subheading":"","subheading_style":"","heading":"Turn Chairs","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"#c4301c","highlight_text_color":"#ff0101","heading_size":"h2","heading_size_mobile":"inherit","heading_size_custom":18,"description":"<p>Elevate your space with 40% off<br\/>our timeless designs!<\/p>","button_label":"Shop Now","button_style":"btn--primary","button_icon":"none","show_badge":false,"badge_color_scheme":"scheme-8","badge_shape":"circle","badge_position":"top-right","badge_subtext":"Save","badge_text":"40%","color_scheme_mobile":"scheme-1","show_text_below":false,"content_alignment_mobile":"left","width":"50%","alignment":"center","block_custom_class":"","enable_preload_image":false}},"image_card_Vj69GM":{"type":"image_card","settings":{"color_scheme":"scheme-1","image_ratio":"adapt","image_overlay_opacity":0,"content_position":"split-bottom-button","content_alignment":"left","content_spacing":"small","content_gap":"fitted","card_link":"","subheading":"","subheading_style":"","heading":"Cross Chairs","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h2","heading_size_mobile":"inherit","heading_size_custom":18,"description":"<p>Get 30% off elegant, timeless <br\/>seating—don’t miss out!<\/p>","button_label":"Shop Now","button_style":"btn--primary","button_icon":"none","show_badge":true,"badge_color_scheme":"scheme-8","badge_shape":"circle","badge_position":"top-right","badge_subtext":"Save","badge_text":"30%","color_scheme_mobile":"scheme-1","show_text_below":false,"content_alignment_mobile":"left","width":"50%","alignment":"center","block_custom_class":"","enable_preload_image":false}}},"block_order":["image_card_mL7WWJ","image_card_Vj69GM"],"disabled":true,"name":"WIN with GWIN","settings":{"container":"fixed","color_scheme":"","enable_sticky_column":false,"section_header_alignment":"left","section_header_alignment_mobile":"inherit","subheading":"","heading":"WIN with GWIN","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h1","description":"","text_size":"text-base","column_gap":"2xs","row_gap":"inherit","swipe_on_mobile":false,"columns_mobile":"1","padding_top":40,"padding_bottom":0,"show_section_divider":false,"divider_width":"fixed"}},"image_with_text_aXhRxw":{"type":"image-with-text","blocks":{"badge_fQjMHW":{"type":"badge","settings":{"color_scheme":"scheme-3","text":"garace - where design meet function -","position_mobile":"right"}},"subheading_8kBXjM":{"type":"subheading","settings":{"subheading":"Meet Our Team"}},"heading_jnb9cP":{"type":"heading","settings":{"heading":"The creative minds behind our studio","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h1"}},"text_4pYVYF":{"type":"text","settings":{"text":"<p>As designers we are constantly thinking about how people live and what problems we could solve for them. <\/p>","subtext_color":true}},"icon_with_text_8qCJiV":{"type":"icon_with_text","settings":{"icon":"map-pin","icon_width":24,"color":"#000000","heading":"Product locally in New York","heading_size":"h5","text":"","vertical_alignment":"start"}},"icon_with_text_w4D3R6":{"type":"icon_with_text","settings":{"icon":"smiley","icon_width":24,"color":"#000000","heading":"4,8 Review Score","heading_size":"h5","text":"","vertical_alignment":"start"}},"icon_with_text_pcaqTj":{"type":"icon_with_text","settings":{"icon":"stool","icon_width":24,"color":"#000000","heading":"Over 50 Products","heading_size":"h5","text":"","vertical_alignment":"start"}},"button_aegkDr":{"type":"button","settings":{"button_label":"Contact Us","button_link":"","button_style":"btn--primary","button_icon":"none"}}},"block_order":["badge_fQjMHW","subheading_8kBXjM","heading_jnb9cP","text_4pYVYF","icon_with_text_8qCJiV","icon_with_text_w4D3R6","icon_with_text_pcaqTj","button_aegkDr"],"disabled":true,"custom_css":[".image-with-text__content {max-width: 45rem; --text-margin-top: 2rem;}","@media (min-width: 1280px) {.image-with-text__media {padding-inline-start: 5rem; }}"],"settings":{"container":"fixed","color_scheme":"","image_position":"left","image_width":50,"desktop_content_position":"center","desktop_content_alignment":"left","mobile_content_alignment":"inherit","show_section_divider":false,"divider_width":"fixed","padding_top":60,"padding_bottom":60}},"featured_blog_xHkn7F":{"type":"featured-blog","name":"t:sections.featured-blog.name","settings":{"container":"fixed","color_scheme":"","section_header_alignment":"center","section_header_alignment_mobile":"inherit","subheading":"","heading":"Featured Blogs","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h2","description":"","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--underline","button_icon":"none","blog":"news","post_limit":3,"columns_desktop":3,"column_gap":"medium","row_gap":"large","columns_mobile":"1","swipe_on_mobile":true,"card_title_size":"h4","show_tags":true,"show_excerpt":true,"show_date":true,"show_author":true,"show_button":false,"padding_top":50,"padding_bottom":50,"show_section_divider":false,"divider_width":"fixed"}},"testimonials_mLThk7":{"type":"testimonials","blocks":{"testimonial_EtxFFg":{"type":"testimonial","settings":{"icon":"none","heading":"Testimonials","text":"<p>\"GWIN is great for areas that have fluctuating power surges. It can withstand voltages between 165V and 265V saving me thousands when power surges occur!\" <\/p>","author":"Jenny W.","bio":"New Mexico","product":""}},"testimonial_QPUyLy":{"type":"testimonial","settings":{"icon":"none","heading":"Testimonials","text":"<p>“UNTOUCHABLE and UNBEATABLE warranties! Customer Support is really helpful with all the parts ON HAND needed for GWIN.”<\/p>","author":"Samantha T.","bio":"Portland, Oregon","product":""}},"testimonial_pY94Uy":{"type":"testimonial","settings":{"icon":"none","heading":"Testimonials","text":"<p>“OMG, my system speaks to me and I can give it commands. So cool!”<\/p>","author":"Luis G.","bio":"Chattanooga, Tennnessee","product":""}},"testimonial_iTzQDb":{"type":"testimonial","settings":{"icon":"none","heading":"Testimonials","text":"<p>“The auto cleaning feature is ridiculously cool. Now I only deep clean every 6 months! I love breathing in fresh air every day without the constantly weekly hassle of cleaning my system.”<\/p>","author":"David Martinez","bio":"Austin, Texas","product":""}}},"block_order":["testimonial_EtxFFg","testimonial_QPUyLy","testimonial_pY94Uy","testimonial_iTzQDb"],"custom_css":[".testimonial__inner {max-width: 64rem; margin-left: auto; margin-right: auto;}"],"settings":{"container":"full","color_scheme":"scheme-12","section_header_alignment":"center","section_header_alignment_mobile":"inherit","subheading":"","heading":"What Clients Talk About Us","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h6","description":"","text_size":"text-base","layout":"focused","card_color_scheme":"scheme-cc9da964-50f9-4f46-bebb-f2e158bae3af","card_content_color_scheme":"","card_image_ratio":"adapt","card_heading_size":"h4","card_text_size":"h2","author_info_layout":"vertical","card_trigger_behavior":"click","show_image":false,"show_author_image":false,"columns_desktop":2,"column_gap":"medium","row_gap":"medium","enable_slider":true,"columns_mobile":"1","swipe_on_mobile":false,"show_progress_bar":true,"padding_top":60,"padding_bottom":60,"show_section_divider":false,"divider_width":"fixed"}},"multicolumn_Ff4Wbj":{"type":"multicolumn","blocks":{"column_AwmLJY":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/Automatic_Self-Cleaning.jpg","title":"Advanced Technology","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h4","text":"<p>Self Cleaning <\/p><p>Micro Vents <\/p><p>Voltage fluctuation <\/p><p>Offline Voice Control <\/p><p>Base Pan Heating<\/p><p>Much more! <\/p>","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--underline","button_icon":"none"}},"column_MikwAx":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/customer-support-staff-ready-for-work.jpg","title":"Customer Support","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h4","text":"<p>Committed to excellent customer service to improve customer experience. Reliable in the rare instances you need a replacement part or assistance with your system.  <\/p>","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--underline","button_icon":"none"}},"column_j3Pdbn":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/Untitled_design.jpg","title":"GWIN SHIELD Warranty","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h4","text":"<p>12 Year Parts & Compressor Warranty <\/p><p>7 Year Refrigerant & Labor Warranty <\/p>","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--underline","button_icon":"none"}},"column_YWTLnF":{"type":"column","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Hassle-Free_Installation.jpg","title":"DIY","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h4","text":"<p>DIY Program that enables you to install your system and we will find someone to charge your line set!<\/p><p>*Electrical should be installed by a licensed electrician. Line set should be charged by a licensed hvac technician or EPA license technician. <\/p>","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--underline","button_icon":"none"}}},"block_order":["column_AwmLJY","column_MikwAx","column_j3Pdbn","column_YWTLnF"],"settings":{"container":"fixed","color_scheme":"scheme-12","section_header_alignment":"left","section_header_alignment_mobile":"inherit","subheading":"","heading":"","highlight_style":"none","highlight_font_style":"italic","highlight_style_color":"","highlight_text_color":"","heading_size":"h1","description":"","text_size":"text-base","button_label":"","button_link":"","button_style":"btn--underline","button_icon":"none","content_alignment":"left","show_col_count":false,"show_image":true,"columns_desktop":3,"column_gap":"medium","row_gap":"inherit","columns_mobile":"2","swipe_on_mobile":true,"show_section_divider":false,"divider_width":"fixed","padding_top":40,"padding_bottom":60}}},"order":["promotion_banner_VCkmzP","image_with_text_slider_9GkxWB","collapsible_tabs_e4t7bJ","featured_collection_RWUfH9","1759959561167b3255","collapsible_tabs_wwKUNa","featured_collection_izN64c","buttons_with_icon_7zH9F3","collection_list_yHY4CD","lookbook_banner_WnbgRh","featured_collection_78c8zh","collapsible_tabs_kDk74y","featured_collection_WW3LEe","collection_list_slider_6qbNfj","scrolling_promotion_9Hng8m","buttons_with_icon_c8CzHV","image_with_text_slider_mfNEBe","slideshow_q3U4Jn","lookbook_slider_9zCdQJ","custom_content_JxRy7x","image_with_text_aXhRxw","featured_blog_xHkn7F","testimonials_mLThk7","multicolumn_Ff4Wbj"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "promotion_banner_VCkmzP": {
+      "type": "promotion-banner",
+      "blocks": {
+        "subheading_xKzbww": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Flash Sale now on!",
+            "subheading_icon": "none"
+          }
+        },
+        "timer_6FyFrY": {
+          "type": "timer",
+          "settings": {
+            "type": "evergreen",
+            "number_size": "h1",
+            "duration": "every_month",
+            "time": "2025/06/28 03:45 PM"
+          }
+        },
+        "text_QWap4d": {
+          "type": "text",
+          "settings": {
+            "text": "<p>All orders revive a 3% discount! </p>",
+            "text_color": "base-text"
+          }
+        },
+        "code_FWe4HN": {
+          "type": "code",
+          "disabled": true,
+          "settings": {
+            "discount_code": "FLASH30",
+            "button_label": "Use Code: FLASH30",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_xKzbww",
+        "timer_6FyFrY",
+        "text_QWap4d",
+        "code_FWe4HN"
+      ],
+      "disabled": true,
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-cc9da964-50f9-4f46-bebb-f2e158bae3af",
+        "layout": "horizontal",
+        "content_alignment": "center",
+        "content_alignment_mobile": "center",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_slider_9GkxWB": {
+      "type": "image-with-text-slider",
+      "blocks": {
+        "image_slide_Gjjhyt": {
+          "type": "image-slide",
+          "settings": {
+            "color_scheme": "scheme-cc9da964-50f9-4f46-bebb-f2e158bae3af",
+            "image": "shopify://shop_images/GWINSingleZoneBundle.png",
+            "desktop_content_position": "top-left",
+            "desktop_content_alignment": "left",
+            "mobile_content_alignment": "left",
+            "subheading": "",
+            "heading": "GWIN HVAC",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1",
+            "text": "<p>The Best HVAC System You Can Buy.</p><p>Learn more →</p>",
+            "text_size": "text-inherit",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": false
+          }
+        },
+        "image_slide_JtmiXF": {
+          "type": "image-slide",
+          "disabled": true,
+          "settings": {
+            "color_scheme": "scheme-1",
+            "desktop_content_position": "top-left",
+            "desktop_content_alignment": "left",
+            "mobile_content_alignment": "left",
+            "subheading": "Add a tagline",
+            "heading": "Image slide",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2",
+            "text": "<p>Tell your brand's story through images</p>",
+            "text_size": "text-base",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": false
+          }
+        },
+        "image_slide_8Vj63x": {
+          "type": "image-slide",
+          "disabled": true,
+          "settings": {
+            "color_scheme": "scheme-1",
+            "desktop_content_position": "top-left",
+            "desktop_content_alignment": "left",
+            "mobile_content_alignment": "left",
+            "subheading": "Add a tagline",
+            "heading": "Image slide",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2",
+            "text": "<p>Tell your brand's story through images</p>",
+            "text_size": "text-base",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": false
+          }
+        },
+        "image_slide_xaEPAr": {
+          "type": "image-slide",
+          "disabled": true,
+          "settings": {
+            "color_scheme": "",
+            "desktop_content_position": "top-left",
+            "desktop_content_alignment": "left",
+            "mobile_content_alignment": "left",
+            "subheading": "Add a tagline",
+            "heading": "Image slide",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2",
+            "text": "<p>Tell your brand's story through images</p>",
+            "text_size": "text-base",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": false
+          }
+        },
+        "image_slide_WAAUPw": {
+          "type": "image-slide",
+          "disabled": true,
+          "settings": {
+            "color_scheme": "",
+            "desktop_content_position": "top-left",
+            "desktop_content_alignment": "left",
+            "mobile_content_alignment": "left",
+            "subheading": "Add a tagline",
+            "heading": "Image slide",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2",
+            "text": "<p>Tell your brand's story through images</p>",
+            "text_size": "text-base",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": false
+          }
+        }
+      },
+      "block_order": [
+        "image_slide_Gjjhyt",
+        "image_slide_JtmiXF",
+        "image_slide_8Vj63x",
+        "image_slide_xaEPAr",
+        "image_slide_WAAUPw"
+      ],
+      "name": "t:sections.image-with-text-slider.presets.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "image_height": "medium",
+        "image_width": 70,
+        "image_position": "right",
+        "show_controls": true,
+        "autoplay": false,
+        "autoplay_delay": 3,
+        "desktop_controls_position": "start",
+        "mobile_controls_position": "inherit",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "collapsible_tabs_e4t7bJ": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "image_card_K3izeK": {
+          "type": "image_card",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "desktop_image_position": "left",
+            "image_width": 30,
+            "alignment": "center",
+            "image": "shopify://shop_images/gwin_single_zone_bundle.png",
+            "image_ratio": "adapt",
+            "image_overlay_opacity": 0,
+            "content_position": "top-center",
+            "content_alignment": "center",
+            "content_spacing": "medium",
+            "content_gap": "fitted",
+            "card_link": "",
+            "subheading": "",
+            "subheading_style": "",
+            "heading": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "description": "",
+            "button_label": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "order_first": false
+          }
+        },
+        "collapsible_item_x7JARp": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Features",
+            "content": "<ul><li>Self Cleaning- Eliminates bacteria, viruses, dust mites, microorganisms, and dust particles. Advanced sterilization system (134°F high temperature) removes viruses, bacteria, dust, pollen to deliver clean air. </li><li>Micro-Vent Soft Airflow- Thousands of precision micro vents designed to produce gentle draft free breeze for optimum comfort. (Excluding 36,000K BTU)</li><li>Outdoor unit operation- -22°F-125°F</li><li>Wide Voltage Fluctuation- System can tolerate 165-265V fluctuation in unstable environment </li><li>Wifi-Control- Built in wifi module </li><li>Fast heating & cooling technology- Thanks to our Inverter compressor, your desired room temperature can be quickly obtained. </li><li>Offline Voice control- Same room voice command abilities. (Excluding 36,000K BTU)</li><li>Eco-Energy Saving Mode- Designed to help save power and energy </li><li>Easy Installation- Comes with: installation guide, installation plate, and built in level</li><li>Gold Fin- In both the outdoor and indoor unit to reduce corrosion and oxidation over blue finned models. </li><li>Vertical placement PCB- Prevents depositioning and deformation to deduce damage rates. UV adhesive cover to help reduce corrosion to lower failure rates and lower maintenance needs. </li><li>Base pan heating- Automatically turning on in low temperatures in the base of the outdoor unit to improve efficiency and reduce freezing.</li></ul>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_7w7rpp": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Air Handler Options",
+            "content": "<p>9,000 BTU 115V & 230V </p><p>12,000 BTU 115V & 230V </p><p>18,000 BTU 230V </p><p>24,000 BTU 230V </p><p>36,000 BTU 230V </p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_zLbCAW": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "GWIN Warranty",
+            "content": "<p>GWIN comes with 12 year parts and 12 year compressor warranties free, no matter who installed it. There's no tiered installer program like other manufacturers. Everyone gets the best warranty we have, for free.  </p><p>GWIN also comes with a free 7 year warranty on labor and refrigerant. There's no need to buy a warranty for the labor yourself. If you install a GWIN and there's a problem within the warranty period, we'll pay the labor costs to fix it (limitations apply). </p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        }
+      },
+      "block_order": [
+        "image_card_K3izeK",
+        "collapsible_item_x7JARp",
+        "collapsible_item_7w7rpp",
+        "collapsible_item_zLbCAW"
+      ],
+      "name": "t:sections.collapsible-tabs.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-cc9da964-50f9-4f46-bebb-f2e158bae3af",
+        "header_layout": "vertical",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "About GWIN Single Zone Ductless Mini Split Systems",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--primary",
+        "button_icon": "none",
+        "column_gap": "large",
+        "row_gap": "inherit",
+        "item_style": "standard",
+        "item_color_scheme": "",
+        "item_heading_font": "heading",
+        "item_heading_size": "h4",
+        "item_icon_size": "extra-large",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "featured_collection_RWUfH9": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_tqdqYc": {
+          "type": "collection",
+          "name": "Complete Single Zone Ductless Mini-Split Systems",
+          "settings": {
+            "collection": "complete-single-zone-systems",
+            "title": "Complete Ductless Mini-Split Systems",
+            "show_banner": false,
+            "color_scheme": "scheme-1",
+            "card_link": "",
+            "image_overlay_opacity": 0,
+            "content_position": "top-left",
+            "content_alignment": "left",
+            "subheading": "",
+            "subheading_style": "",
+            "heading": "Collections",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "description": "",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "collection_tqdqYc"
+      ],
+      "name": "Complete GWIN Ductless Single Zone Systems",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "GWIN Single Zone Ductless Mini Split Complete Systems",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "Collection",
+        "button_link": "shopify://collections/complete-single-zone-systems",
+        "button_style": "btn--plain",
+        "button_icon": "caret-right",
+        "limit": 8,
+        "columns": 5,
+        "column_gap": "medium",
+        "row_gap": "inherit",
+        "enable_slider": true,
+        "content_overflow": true,
+        "navigation_position": "bottom",
+        "pcard_image_ratio": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "show_progress_bar": true,
+        "padding_top": 60,
+        "padding_bottom": 20,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "1759959561167b3255": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "collapsible_tabs_wwKUNa": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "image_card_LwnpYe": {
+          "type": "image_card",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "desktop_image_position": "left",
+            "image_width": 30,
+            "alignment": "center",
+            "image": "shopify://shop_images/gwin_multi_zone_bundle_369be8a3-c1d4-4389-8926-d7796f29d633.png",
+            "image_ratio": "adapt",
+            "image_overlay_opacity": 0,
+            "content_position": "top-center",
+            "content_alignment": "center",
+            "content_spacing": "medium",
+            "content_gap": "fitted",
+            "card_link": "",
+            "subheading": "",
+            "subheading_style": "",
+            "heading": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "description": "",
+            "button_label": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "order_first": false
+          }
+        },
+        "collapsible_item_aEafAW": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Features",
+            "content": "<p>Create your own Multi-Zone Bundle! </p><ul><li>Self Cleaning- Eliminates bacteria, viruses, dust mites, microorganisms, and dust particles. Advanced sterilization system (134°F high temperature) removes viruses, bacteria, dust, pollen to deliver clean air. </li><li>Micro-Vent Soft Airflow- Thousands of precision micro vents designed to produce gentle draft free breeze for optimum comfort. (Excluding 36,000K BTU)</li><li>Outdoor unit operation- -22°F-125°F</li><li>Wide Voltage Fluctuation- System can tolerate 165-265V fluctuation in unstable environment </li><li>Wifi-Control- Built in wifi module </li><li>Fast heating & cooling technology- Thanks to our Inverter compressor, your desired room temperature can be quickly obtained. </li><li>Offline Voice control- Same room voice command abilities. (Excluding 36,000K BTU)</li><li>Eco-Energy Saving Mode- Designed to help save power and energy </li><li>Easy Installation- Comes with: installation guide, installation plate, and built in level</li><li>Gold Fin- In both the outdoor and indoor unit to reduce corrosion and oxidation over blue finned models. </li><li>Vertical placement PCB- Prevents depositioning and deformation to deduce damage rates. UV adhesive cover to help reduce corrosion to lower failure rates and lower maintenance needs. </li><li>Base pan heating- Automatically turning on in low temperatures in the base of the outdoor unit to improve efficiency and reduce freezing.</li></ul><p>***Some features maybe available on the Wall Mount Air Handlers Only***</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_tigpcR": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Condenser & Air Handler Options",
+            "content": "<p><strong>Condenser</strong></p><p>18,000K BTU 2 Zone</p><p>24,000K BTU 3 Zone</p><p>36,000K BTU 4 Zone</p><p>42,000K BTU 5 Zone</p><p><strong>High Wall Mount Air Handler </strong></p><p>7,000K BTU 230V</p><p>9,000K BTU 230V</p><p>12,000K BTU 230V</p><p>18,000K BTU 230V</p><p>24,000K BTU 230V</p><p><strong>Cassette</strong> </p><p>9,000K BTU 230V</p><p>12,000K BTU 230V</p><p>18,000K BTU 230V</p><p>24,000K BTU 230V</p><p><strong>Floor/Ceiling Console </strong></p><p>9,000K BTU 230V</p><p>12,000K BTU 230V</p><p>18,000K BTU 230V</p><p>24,000K BTU 230V</p><p><strong>Slim Ducted </strong></p><p>9,000K BTU 230V</p><p>12,000K BTU 230V</p><p>18,000K BTU 230V</p><p>24,000K BTU 230V</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_yRKLMY": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "GWIN Warranty",
+            "content": "<p>GWIN comes with 12 year parts and 12 year compressor warranties free, no matter who installed it. There's no tiered installer program like other manufacturers. Everyone gets the best warranty we have, for free.  </p><p>GWIN also comes with a free 7 year warranty on labor and refrigerant. There's no need to buy a warranty for the labor yourself. If you install a GWIN and there's a problem within the warranty period, we'll pay the labor costs to fix it (limitations apply). </p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        }
+      },
+      "block_order": [
+        "image_card_LwnpYe",
+        "collapsible_item_aEafAW",
+        "collapsible_item_tigpcR",
+        "collapsible_item_yRKLMY"
+      ],
+      "name": "t:sections.collapsible-tabs.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-cc9da964-50f9-4f46-bebb-f2e158bae3af",
+        "header_layout": "vertical",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "About GWIN Multi Zone Mini Splits",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--primary",
+        "button_icon": "none",
+        "column_gap": "large",
+        "row_gap": "inherit",
+        "item_style": "standard",
+        "item_color_scheme": "",
+        "item_heading_font": "heading",
+        "item_heading_size": "h4",
+        "item_icon_size": "extra-large",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "featured_collection_izN64c": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_zaCRHq": {
+          "type": "collection",
+          "name": "1 Zone",
+          "settings": {
+            "collection": "complete-single-zone-systems",
+            "title": "1 Zone",
+            "show_banner": false,
+            "color_scheme": "scheme-1",
+            "card_link": "",
+            "banner_image": "shopify://shop_images/single_zone_bundle.png",
+            "image_overlay_opacity": 0,
+            "content_position": "top-left",
+            "content_alignment": "left",
+            "subheading": "",
+            "subheading_style": "",
+            "heading": "Collections",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "description": "",
+            "text_size": "text-base",
+            "button_label": "Button label",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        },
+        "collection_ChFcdd": {
+          "type": "collection",
+          "name": "2 Zone",
+          "settings": {
+            "collection": "2-zone",
+            "title": "2 Zone",
+            "show_banner": false,
+            "color_scheme": "",
+            "card_link": "shopify://collections/2-zone",
+            "image_overlay_opacity": 0,
+            "content_position": "top-left",
+            "content_alignment": "left",
+            "subheading": "",
+            "subheading_style": "",
+            "heading": "2 Zone",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "description": "<p>2 Zone</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        },
+        "collection_bhCAUG": {
+          "type": "collection",
+          "name": "3 Zone",
+          "settings": {
+            "collection": "3-zone",
+            "title": "3 Zone",
+            "show_banner": false,
+            "color_scheme": "",
+            "card_link": "shopify://collections/3-zone",
+            "image_overlay_opacity": 0,
+            "content_position": "top-left",
+            "content_alignment": "left",
+            "subheading": "",
+            "subheading_style": "",
+            "heading": "3 Zone",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "description": "<p>3 Zone</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        },
+        "collection_3AbNcj": {
+          "type": "collection",
+          "name": "4 Zone",
+          "disabled": true,
+          "settings": {
+            "collection": "4-zone",
+            "title": "4 Zone",
+            "show_banner": false,
+            "color_scheme": "scheme-1",
+            "card_link": "",
+            "image_overlay_opacity": 0,
+            "content_position": "top-left",
+            "content_alignment": "left",
+            "subheading": "",
+            "subheading_style": "",
+            "heading": "Collections",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "description": "",
+            "text_size": "text-base",
+            "button_label": "Button label",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        },
+        "collection_gVEtMm": {
+          "type": "collection",
+          "name": "5 Zone",
+          "disabled": true,
+          "settings": {
+            "collection": "5-zone",
+            "title": "5 Zone",
+            "show_banner": false,
+            "color_scheme": "scheme-1",
+            "card_link": "",
+            "image_overlay_opacity": 0,
+            "content_position": "top-left",
+            "content_alignment": "left",
+            "subheading": "",
+            "subheading_style": "",
+            "heading": "Collections",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "description": "",
+            "text_size": "text-base",
+            "button_label": "Button label",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "collection_zaCRHq",
+        "collection_ChFcdd",
+        "collection_bhCAUG",
+        "collection_3AbNcj",
+        "collection_gVEtMm"
+      ],
+      "name": "GWIN Multi-Zone Bundles",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "GWIN Multi-Zone Bundles",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "<p>Don't see your bundle or want different unit types? Give us a call for a customized bundle! Up to 5 zone configurations. </p><p>Unit types: </p><ul><li>Recessed Ducted </li><li>Cassette </li><li>Floor/Ceiling Console</li><li>Wall Mount Air Handler </li></ul>",
+        "text_size": "text-base",
+        "button_label": "Give us a call!",
+        "button_link": "tel: 615-538-7979",
+        "button_style": "btn--primary",
+        "button_icon": "none",
+        "limit": 8,
+        "columns": 4,
+        "column_gap": "medium",
+        "row_gap": "inherit",
+        "enable_slider": true,
+        "content_overflow": true,
+        "navigation_position": "bottom",
+        "pcard_image_ratio": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "show_progress_bar": true,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "buttons_with_icon_7zH9F3": {
+      "type": "buttons-with-icon",
+      "blocks": {
+        "button_item_VQE7f9": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Living Room",
+            "button_link": "",
+            "icon": "check"
+          }
+        },
+        "button_item_A8ctbq": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Planters",
+            "button_link": "",
+            "icon": "check"
+          }
+        },
+        "button_item_gp6wzj": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Gravel Rug",
+            "button_link": "",
+            "icon": "check"
+          }
+        },
+        "button_item_KjqtJi": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Table Mirror",
+            "button_link": "",
+            "icon": "check"
+          }
+        },
+        "button_item_Q3cegW": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Table Wears",
+            "button_link": "",
+            "icon": "check"
+          }
+        },
+        "button_item_pqRX7H": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Dining Decor",
+            "button_link": "",
+            "icon": "check"
+          }
+        },
+        "button_item_en8WtA": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Ray Table Lamp",
+            "button_link": "",
+            "icon": "check"
+          }
+        },
+        "button_item_JnFWN8": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Chairs",
+            "button_link": "",
+            "icon": "check"
+          }
+        },
+        "button_item_FrFqff": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Living Room",
+            "button_link": "",
+            "icon": "check"
+          }
+        },
+        "button_item_mKVJW4": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Planters",
+            "button_link": "",
+            "icon": "check"
+          }
+        }
+      },
+      "block_order": [
+        "button_item_VQE7f9",
+        "button_item_A8ctbq",
+        "button_item_gp6wzj",
+        "button_item_KjqtJi",
+        "button_item_Q3cegW",
+        "button_item_pqRX7H",
+        "button_item_en8WtA",
+        "button_item_JnFWN8",
+        "button_item_FrFqff",
+        "button_item_mKVJW4"
+      ],
+      "disabled": true,
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "item_alignment": "left",
+        "item_button_style": "btn--icon",
+        "item_button_font": "button",
+        "enable_slider": true,
+        "swipe_on_mobile": true,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "collection_list_yHY4CD": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_wFWGUC": {
+          "type": "featured_collection",
+          "name": "1 Zone Bundles",
+          "settings": {
+            "collection": "complete-single-zone-systems",
+            "image": "shopify://shop_images/single_zone_bundle.png",
+            "title": "1 Zone Bundles"
+          }
+        },
+        "featured_collection_kQYCki": {
+          "type": "featured_collection",
+          "name": "2 Zone Bundles",
+          "settings": {
+            "collection": "2-zone",
+            "title": "2 Zone Bundles"
+          }
+        },
+        "featured_collection_tnYHKN": {
+          "type": "featured_collection",
+          "name": "3 Zone Bundles",
+          "settings": {
+            "collection": "3-zone",
+            "title": "3 Zone Bundles"
+          }
+        },
+        "featured_collection_mxmThP": {
+          "type": "featured_collection",
+          "name": "4 Zone Bundles",
+          "settings": {
+            "collection": "4-zone",
+            "title": "4 Zone Bundles"
+          }
+        },
+        "featured_collection_97Gacx": {
+          "type": "featured_collection",
+          "name": "5 Zone Bundles",
+          "disabled": true,
+          "settings": {
+            "collection": "5-zone",
+            "title": "5 Zone Bundles"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_wFWGUC",
+        "featured_collection_kQYCki",
+        "featured_collection_tnYHKN",
+        "featured_collection_mxmThP",
+        "featured_collection_97Gacx"
+      ],
+      "disabled": true,
+      "name": "t:sections.collection-list.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Collections",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "<p>Don't see your bundle or want different unit types? Give us a call for a customized bundle! Up to 5 zone configurations. </p><p>Unit types: </p><ul><li>Recessed Ducted </li><li>Cassette </li><li>Floor/Ceiling Console</li><li>Wall Mount Air Handler </li></ul>",
+        "text_size": "text-base",
+        "button_label": "Give us a call",
+        "button_link": "tel: 615-538-7979",
+        "button_style": "btn--primary",
+        "button_icon": "none",
+        "card_color_scheme": "",
+        "card_style": "standard",
+        "card_heading_size": "text-base",
+        "card_text_line_limit": "none",
+        "card_image_ratio": "1/1",
+        "card_image_width": "large",
+        "card_image_padding": "none",
+        "rounded_card_image": true,
+        "card_show_border": false,
+        "mobile_layout": "vertical",
+        "columns_desktop": 6,
+        "column_gap": "medium",
+        "row_gap": "inherit",
+        "grid_bordered": false,
+        "columns_mobile": "3",
+        "swipe_on_mobile": true,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "lookbook_banner_WnbgRh": {
+      "type": "lookbook-banner",
+      "name": "t:sections.banner-with-hotspots.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-12",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Meet GWIN!",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "description": "",
+        "description_size": "text-base",
+        "button_label": "Contact Us",
+        "button_link": "shopify://pages/contact",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "image": "shopify://shop_images/GWIN-Associates-_1920-x-900_px.jpg",
+        "icon_style": "plus",
+        "icon_color": "dark",
+        "card_color_scheme": "scheme-12",
+        "show_section_divider": false,
+        "divider_width": "full",
+        "padding_top": 18,
+        "padding_bottom": 30
+      }
+    },
+    "featured_collection_78c8zh": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_ia4nfm": {
+          "type": "collection",
+          "name": "Ductless  GWIN Multi-Zone",
+          "settings": {
+            "collection": "gwin",
+            "title": "Ductless  GWIN Multi-Zone",
+            "show_banner": false,
+            "color_scheme": "",
+            "card_link": "",
+            "image_overlay_opacity": 0,
+            "content_position": "top-left",
+            "content_alignment": "left",
+            "subheading": "",
+            "subheading_style": "",
+            "heading": "Collections",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "description": "",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "collection_ia4nfm"
+      ],
+      "disabled": true,
+      "name": "Ductless  GWIN Multi-Zone",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "GWIN Ductless Multi-Zone",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "Collection",
+        "button_link": "shopify://collections/gwin",
+        "button_style": "btn--plain",
+        "button_icon": "caret-right",
+        "limit": 8,
+        "columns": 5,
+        "column_gap": "medium",
+        "row_gap": "inherit",
+        "enable_slider": true,
+        "content_overflow": true,
+        "navigation_position": "bottom",
+        "pcard_image_ratio": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "show_progress_bar": true,
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "collapsible_tabs_kDk74y": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "image_card_gXhtnC": {
+          "type": "image_card",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "desktop_image_position": "left",
+            "image_width": 30,
+            "alignment": "center",
+            "image": "shopify://shop_images/gwin_ducted_bundle.png",
+            "image_ratio": "adapt",
+            "image_overlay_opacity": 0,
+            "content_position": "top-center",
+            "content_alignment": "center",
+            "content_spacing": "medium",
+            "content_gap": "fitted",
+            "card_link": "",
+            "subheading": "",
+            "subheading_style": "",
+            "heading": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "description": "",
+            "button_label": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "order_first": false
+          }
+        },
+        "collapsible_item_dfpLze": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Features",
+            "content": "<p>Notable Features Include: </p><ul><li>High Performance: Consistent indoor comfort, even during extreme outdoor temperatures.</li><li>Wide Voltage Range: Operates from 170V–253V to handle power fluctuations and protect the PCB. </li><li>Long Piping Design: Install up to 98 ft horizontally and 49 ft vertically for layout flexibility.</li><li>Auto-Restart: System automatically resumes previous settings after a power outage.</li><li>Refrigerant Cooling Technology: Prevents PCB overheating for longer system life.</li><li>Dual Communication: Compatible with 24V and 485 control systems, easily integrates with most setups.</li><li>Flexible Mounting Options: Vertical, horizontal, or inverted installation for any space type.</li><li>ESP Range: Rated at 0.5 in.W.C, with a max of 1.0 in.W.C for optimal air pressure control.</li></ul>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_Kz93pA": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Air Handler Options",
+            "content": "<p>Currently we have the following options: </p><p>18,000 BTU 230V </p><p>24,000 BTU 230V </p><p>36,000 BTU 230V </p><p>48,000 BTU 230V </p><p>60,000 BTU 230V </p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_mJbCGr": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "GWIN Warranty",
+            "content": "<p>GWIN comes with 12 year parts and 12 year compressor warranties free, no matter who installed it. There's no tiered installer program like other manufacturers. Everyone gets the best warranty we have, for free.  </p><p>GWIN also comes with a free 7 year warranty on labor and refrigerant. There's no need to buy a warranty for the labor yourself. If you install a GWIN and there's a problem within the warranty period, we'll pay the labor costs to fix it (limitations apply). </p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        }
+      },
+      "block_order": [
+        "image_card_gXhtnC",
+        "collapsible_item_dfpLze",
+        "collapsible_item_Kz93pA",
+        "collapsible_item_mJbCGr"
+      ],
+      "name": "t:sections.collapsible-tabs.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-cc9da964-50f9-4f46-bebb-f2e158bae3af",
+        "header_layout": "vertical",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "About GWIN Ducted Systems",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--primary",
+        "button_icon": "none",
+        "column_gap": "large",
+        "row_gap": "inherit",
+        "item_style": "standard",
+        "item_color_scheme": "",
+        "item_heading_font": "heading",
+        "item_heading_size": "h4",
+        "item_icon_size": "extra-large",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "featured_collection_WW3LEe": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_WMH3iB": {
+          "type": "collection",
+          "name": "Complete GWIN Ducted Systems",
+          "settings": {
+            "collection": "complete-ducted-systems",
+            "title": "Complete GWIN Ducted Systems",
+            "show_banner": false,
+            "color_scheme": "",
+            "card_link": "",
+            "image_overlay_opacity": 0,
+            "content_position": "top-left",
+            "content_alignment": "left",
+            "subheading": "",
+            "subheading_style": "",
+            "heading": "Collections",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "description": "",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "collection_WMH3iB"
+      ],
+      "name": "Complete GWIN Ducted Systems",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Complete GWIN Ducted Systems",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "Collection",
+        "button_link": "shopify://collections/complete-single-zone-systems",
+        "button_style": "btn--plain",
+        "button_icon": "caret-right",
+        "limit": 8,
+        "columns": 5,
+        "column_gap": "medium",
+        "row_gap": "inherit",
+        "enable_slider": true,
+        "content_overflow": true,
+        "navigation_position": "bottom",
+        "pcard_image_ratio": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "show_progress_bar": true,
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "collection_list_slider_6qbNfj": {
+      "type": "collection-list-slider",
+      "blocks": {
+        "featured_collection_L9N3Tg": {
+          "type": "featured_collection",
+          "name": "Complete Ductless GWIN Single Zone Systems",
+          "settings": {
+            "collection": "complete-single-zone-systems",
+            "title": "Complete Ductless GWIN Single Zone Systems"
+          }
+        },
+        "featured_collection_gxdACj": {
+          "type": "featured_collection",
+          "name": "Complete Ducted Systems",
+          "settings": {
+            "collection": "complete-ducted-systems",
+            "title": "Complete Ducted Systems"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_L9N3Tg",
+        "featured_collection_gxdACj"
+      ],
+      "custom_css": [],
+      "name": "Complete Systems",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-cc9da964-50f9-4f46-bebb-f2e158bae3af",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Complete Systems",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "<p>Find complete systems here that come bundles with the air handler & condenser. </p>",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "card_color_scheme": "scheme-12",
+        "card_style": "standard",
+        "card_heading_size": "text-base",
+        "card_image_ratio": "adapt",
+        "card_image_width": "full",
+        "card_image_padding": "none",
+        "rounded_card_image": false,
+        "mobile_layout": "vertical",
+        "carousel_item_size": "fixed",
+        "columns_desktop": 2,
+        "carousel_control_color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "scrolling_promotion_9Hng8m": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "text_m9JnRY": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "12 Year Parts & Compressor Warranty",
+            "text_size": "h2",
+            "text_opacity": 100,
+            "use_custom_color": true,
+            "custom_color": "#000000"
+          }
+        },
+        "image_pmGhNr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design.jpg",
+            "image_height": 72,
+            "image_rounded": false,
+            "image_link": "",
+            "image_height_mobile": 60
+          }
+        },
+        "text_gENJV7": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "7 Year Refrigerant & Labor Warranty",
+            "text_size": "h2",
+            "text_opacity": 100,
+            "use_custom_color": true,
+            "custom_color": "#000000"
+          }
+        },
+        "image_pQdfHa": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design.jpg",
+            "image_height": 72,
+            "image_rounded": false,
+            "image_link": "",
+            "image_height_mobile": 60
+          }
+        }
+      },
+      "block_order": [
+        "text_m9JnRY",
+        "image_pmGhNr",
+        "text_gENJV7",
+        "image_pQdfHa"
+      ],
+      "settings": {
+        "color_scheme": "scheme-12",
+        "direction": "left",
+        "pause_on_hover": true,
+        "speed": 0.3,
+        "h_spacing": 16,
+        "show_section_divider": false,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "buttons_with_icon_c8CzHV": {
+      "type": "buttons-with-icon",
+      "blocks": {
+        "button_item_TXLwjF": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "R-32 Refrigerant",
+            "button_link": "",
+            "icon": "check"
+          }
+        },
+        "button_item_tpCdia": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Fast Cooling & Heating",
+            "button_link": "",
+            "icon": "check"
+          }
+        },
+        "button_item_wKgxpM": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Quite & Comfortable",
+            "button_link": "",
+            "icon": "check"
+          }
+        },
+        "button_item_Ngk44m": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Easy Installation",
+            "button_link": "",
+            "icon": "check"
+          }
+        }
+      },
+      "block_order": [
+        "button_item_TXLwjF",
+        "button_item_tpCdia",
+        "button_item_wKgxpM",
+        "button_item_Ngk44m"
+      ],
+      "custom_css": [
+        ".section__header {--header-padding-bottom: 2.4rem;}",
+        ".section__heading {max-width: 45rem;}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-cc9da964-50f9-4f46-bebb-f2e158bae3af",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "WIN With GWIN",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "item_alignment": "center",
+        "item_button_style": "btn--primary",
+        "item_button_font": "button",
+        "enable_slider": true,
+        "swipe_on_mobile": true,
+        "show_section_divider": true,
+        "divider_width": "full",
+        "padding_top": 22,
+        "padding_bottom": 22
+      }
+    },
+    "image_with_text_slider_mfNEBe": {
+      "type": "image-with-text-slider",
+      "blocks": {
+        "image_slide_7Yecdj": {
+          "type": "image-slide",
+          "name": "Hassle-Free Installation",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/Hassle-Free_Installation.jpg",
+            "desktop_content_position": "top-left",
+            "desktop_content_alignment": "left",
+            "mobile_content_alignment": "left",
+            "subheading": "GWIN High Wall Mount Air Handlers",
+            "heading": "Hassle-Free Installation",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2",
+            "text": "<p>GWIN systems are designed for easy installation, often requiring minimal modifications to your home. </p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": false
+          }
+        },
+        "image_slide_gfhk7z": {
+          "type": "image-slide",
+          "name": "Ease-of-Access",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/ease-of-access.jpg",
+            "desktop_content_position": "top-left",
+            "desktop_content_alignment": "left",
+            "mobile_content_alignment": "left",
+            "subheading": "GWIN High Wall Mount Air Handlers",
+            "heading": "Ease-of-Access",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2",
+            "text": "<p>Vertical PCB Boards can be directly extracted, prevent deposition or deformation, and reduce damage rates to give you peace of mind.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": false
+          }
+        },
+        "image_slide_Gf3XDe": {
+          "type": "image-slide",
+          "name": "Refrigerant Cooling Technology",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/Refrigerant_Cooling_Technology.jpg",
+            "desktop_content_position": "top-left",
+            "desktop_content_alignment": "left",
+            "mobile_content_alignment": "left",
+            "subheading": "GWIN Condensers",
+            "heading": "Refrigerant Cooling Technology",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2",
+            "text": "<p>Efficient thermal operation prevents GWIN units from overheating, allowing for more consistent operation and reducing maintenance requirements by 50%.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": false
+          }
+        },
+        "image_slide_xWEeBQ": {
+          "type": "image-slide",
+          "name": "Energy-Saving Efficiency",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/Energy_Saving_Efficiency.jpg",
+            "desktop_content_position": "top-left",
+            "desktop_content_alignment": "left",
+            "mobile_content_alignment": "left",
+            "subheading": "GWIN High Wall Mount Air Handlers",
+            "heading": "Energy-Saving Efficiency",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2",
+            "text": "<p>GWIN units range from SEER20 to SEER25, providing better efficiency and comfort. </p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": false
+          }
+        },
+        "image_slide_rhpdXE": {
+          "type": "image-slide",
+          "name": "Auto-Restart Function",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/Auto-Restart_Function.png",
+            "desktop_content_position": "top-left",
+            "desktop_content_alignment": "left",
+            "mobile_content_alignment": "left",
+            "subheading": "GWIN Condensers & Air Handlers",
+            "heading": "Auto-Restart Function",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2",
+            "text": "<p>In cases of power loss, due to unreliable and unpredictable power grid issues, GWIN systems pick up the settings where it lost power. No manual restart necessary! </p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": false
+          }
+        },
+        "image_slide_TEw4Rn": {
+          "type": "image-slide",
+          "name": "Automatic Self-Cleaning",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/Automatic_Self-Cleaning.jpg",
+            "desktop_content_position": "top-left",
+            "desktop_content_alignment": "left",
+            "mobile_content_alignment": "left",
+            "subheading": "GWIN High Wall Mount Air Handler",
+            "heading": "Automatic Self-Cleaning",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2",
+            "text": "<p>GWIN indoor units wash particulates from their coils - providing fresh, clean, and healthy air. </p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": false
+          }
+        },
+        "image_slide_kez9dE": {
+          "type": "image-slide",
+          "name": "Base Pan Heating",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/Base_Pan_heating.jpg",
+            "desktop_content_position": "top-left",
+            "desktop_content_alignment": "left",
+            "mobile_content_alignment": "left",
+            "subheading": "GWIN Condensers",
+            "heading": "Base Pan Heating",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2",
+            "text": "<p>A heater in the base pan automatically turns on in low temperatures to reduce freezing & improve efficiency.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": false
+          }
+        },
+        "image_slide_CqifTC": {
+          "type": "image-slide",
+          "name": "Golden Fin Technology",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/Gold_Fin_Technology.png",
+            "desktop_content_position": "top-left",
+            "desktop_content_alignment": "left",
+            "mobile_content_alignment": "left",
+            "subheading": "High Wall Mount Air Handlers",
+            "heading": "Golden Fin Technology",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2",
+            "text": "<p>Gold-finned indoor and outdoor units helps to reduce corrosion and oxidation over conventional, blue-finned models.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": false
+          }
+        },
+        "image_slide_T8TPqC": {
+          "type": "image-slide",
+          "name": "Flexible Power",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/Flexible_Power.jpg",
+            "desktop_content_position": "top-left",
+            "desktop_content_alignment": "left",
+            "mobile_content_alignment": "left",
+            "subheading": "GWIN Condensers",
+            "heading": "Flexible Power",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2",
+            "text": "<p>Designed to operate normally under voltage fluctuations between 165V and 265V. </p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": false
+          }
+        },
+        "image_slide_46k4Np": {
+          "type": "image-slide",
+          "name": "Fast Cooling",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/Fast_Cooling.jpg",
+            "desktop_content_position": "top-left",
+            "desktop_content_alignment": "left",
+            "mobile_content_alignment": "left",
+            "subheading": "GWIN High Wall Mount Air Handlers",
+            "heading": "Fast Cooling",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2",
+            "text": "<p>Enjoy comfort right away, provided by high-frequency start-up and strong cooling capacity. </p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": false
+          }
+        }
+      },
+      "block_order": [
+        "image_slide_7Yecdj",
+        "image_slide_gfhk7z",
+        "image_slide_Gf3XDe",
+        "image_slide_xWEeBQ",
+        "image_slide_rhpdXE",
+        "image_slide_TEw4Rn",
+        "image_slide_kez9dE",
+        "image_slide_CqifTC",
+        "image_slide_T8TPqC",
+        "image_slide_46k4Np"
+      ],
+      "name": "GWIN With GWIN",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-12",
+        "image_height": "medium",
+        "image_width": 70,
+        "image_position": "right",
+        "show_controls": true,
+        "autoplay": false,
+        "autoplay_delay": 3,
+        "desktop_controls_position": "start",
+        "mobile_controls_position": "inherit",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "slideshow_q3U4Jn": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_JhU8hg": {
+          "type": "slide",
+          "name": "Hassle-Free Installation",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "background": "shopify://shop_images/Hassle-Free_Installation.jpg",
+            "image_overlay_opacity": 30,
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "subheading": "GWIN systems are designed for easy installation, often requiring minimal modifications to your home",
+            "title": "Hassle-Free Installation",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd1",
+            "description": "",
+            "description_size": "text-base",
+            "button_label": "Shop collection",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": true
+          }
+        },
+        "slide_9J93gk": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "image_overlay_opacity": 0,
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "subheading": "",
+            "title": "Image slide",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd1",
+            "description": "<p>Tell your brand's story through images</p>",
+            "description_size": "text-base",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": false
+          }
+        },
+        "slide_gMdrjB": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "image_overlay_opacity": 0,
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "subheading": "",
+            "title": "Image slide",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd1",
+            "description": "<p>Tell your brand's story through images</p>",
+            "description_size": "text-base",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": false
+          }
+        },
+        "slide_U9bPyj": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "image_overlay_opacity": 30,
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "subheading": "Modern Elegance",
+            "title": "Spoke Sofa",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd1",
+            "description": "",
+            "description_size": "text-base",
+            "button_label": "Shop collection",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": false
+          }
+        },
+        "slide_cQ6eF8": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "image_overlay_opacity": 30,
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "subheading": "Contemporary Grace",
+            "title": "Dining & Kitchen",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd1",
+            "description": "",
+            "description_size": "text-base",
+            "button_label": "Shop collection",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": false
+          }
+        },
+        "slide_UwBML9": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "image_overlay_opacity": 0,
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "subheading": "",
+            "title": "Image slide",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd1",
+            "description": "<p>Tell your brand's story through images</p>",
+            "description_size": "text-base",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": false
+          }
+        }
+      },
+      "block_order": [
+        "slide_JhU8hg",
+        "slide_9J93gk",
+        "slide_gMdrjB",
+        "slide_U9bPyj",
+        "slide_cQ6eF8",
+        "slide_UwBML9"
+      ],
+      "disabled": true,
+      "name": "WIN With GWIN",
+      "settings": {
+        "container": "fixed",
+        "slide_height": "adapt",
+        "show_controls": true,
+        "autoplay": true,
+        "autoplay_delay": 6,
+        "show_text_below": false,
+        "text_alignment_mobile": "center",
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "lookbook_slider_9zCdQJ": {
+      "type": "lookbook-slider",
+      "blocks": {
+        "lookbook_card_8cicAx": {
+          "type": "lookbook_card",
+          "settings": {
+            "product_list": [],
+            "width": 59,
+            "width_mobile": 90,
+            "image": "shopify://shop_images/Hassle-Free_Installation.jpg",
+            "heading": "Hassle-Free Installation",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h6"
+          }
+        },
+        "lookbook_card_eUB7yN": {
+          "type": "lookbook_card",
+          "settings": {
+            "product_list": [],
+            "width": 29,
+            "width_mobile": 65,
+            "heading": "Shop this look",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h6"
+          }
+        },
+        "lookbook_card_tHgUQt": {
+          "type": "lookbook_card",
+          "settings": {
+            "product_list": [],
+            "width": 59,
+            "width_mobile": 90,
+            "heading": "Shop this look",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h6"
+          }
+        },
+        "lookbook_card_8BaXc6": {
+          "type": "lookbook_card",
+          "settings": {
+            "product_list": [],
+            "width": 29,
+            "width_mobile": 65,
+            "heading": "Shop this look",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h6"
+          }
+        },
+        "lookbook_card_DtRhzC": {
+          "type": "lookbook_card",
+          "settings": {
+            "product_list": [],
+            "width": 59,
+            "width_mobile": 90,
+            "heading": "Shop this look",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h6"
+          }
+        }
+      },
+      "block_order": [
+        "lookbook_card_8cicAx",
+        "lookbook_card_eUB7yN",
+        "lookbook_card_tHgUQt",
+        "lookbook_card_8BaXc6",
+        "lookbook_card_DtRhzC"
+      ],
+      "disabled": true,
+      "name": "WIN With GWIN",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "WIN With GWIN",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "description": "",
+        "description_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--primary",
+        "button_icon": "none",
+        "column_gap": "2xs",
+        "enable_slider": true,
+        "slide_height": "medium",
+        "enable_swiper_mobile": true,
+        "show_progress_bar": true,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "custom_content_JxRy7x": {
+      "type": "custom-content",
+      "blocks": {
+        "image_card_mL7WWJ": {
+          "type": "image_card",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "image": "shopify://shop_images/Hassle-Free_Installation.jpg",
+            "image_ratio": "adapt",
+            "image_overlay_opacity": 0,
+            "content_position": "split-bottom-button",
+            "content_alignment": "left",
+            "content_spacing": "small",
+            "content_gap": "fitted",
+            "card_link": "",
+            "subheading": "",
+            "subheading_style": "",
+            "heading": "Turn Chairs",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "#c4301c",
+            "highlight_text_color": "#ff0101",
+            "heading_size": "h2",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "description": "<p>Elevate your space with 40% off<br/>our timeless designs!</p>",
+            "button_label": "Shop Now",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "show_badge": false,
+            "badge_color_scheme": "scheme-8",
+            "badge_shape": "circle",
+            "badge_position": "top-right",
+            "badge_subtext": "Save",
+            "badge_text": "40%",
+            "color_scheme_mobile": "scheme-1",
+            "show_text_below": false,
+            "content_alignment_mobile": "left",
+            "width": "50%",
+            "alignment": "center",
+            "block_custom_class": "",
+            "enable_preload_image": false
+          }
+        },
+        "image_card_Vj69GM": {
+          "type": "image_card",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "image_ratio": "adapt",
+            "image_overlay_opacity": 0,
+            "content_position": "split-bottom-button",
+            "content_alignment": "left",
+            "content_spacing": "small",
+            "content_gap": "fitted",
+            "card_link": "",
+            "subheading": "",
+            "subheading_style": "",
+            "heading": "Cross Chairs",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "description": "<p>Get 30% off elegant, timeless <br/>seating—don’t miss out!</p>",
+            "button_label": "Shop Now",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "show_badge": true,
+            "badge_color_scheme": "scheme-8",
+            "badge_shape": "circle",
+            "badge_position": "top-right",
+            "badge_subtext": "Save",
+            "badge_text": "30%",
+            "color_scheme_mobile": "scheme-1",
+            "show_text_below": false,
+            "content_alignment_mobile": "left",
+            "width": "50%",
+            "alignment": "center",
+            "block_custom_class": "",
+            "enable_preload_image": false
+          }
+        }
+      },
+      "block_order": [
+        "image_card_mL7WWJ",
+        "image_card_Vj69GM"
+      ],
+      "disabled": true,
+      "name": "WIN with GWIN",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "enable_sticky_column": false,
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "WIN with GWIN",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "column_gap": "2xs",
+        "row_gap": "inherit",
+        "swipe_on_mobile": false,
+        "columns_mobile": "1",
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "image_with_text_aXhRxw": {
+      "type": "image-with-text",
+      "blocks": {
+        "badge_fQjMHW": {
+          "type": "badge",
+          "settings": {
+            "color_scheme": "scheme-3",
+            "text": "garace - where design meet function -",
+            "position_mobile": "right"
+          }
+        },
+        "subheading_8kBXjM": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Meet Our Team"
+          }
+        },
+        "heading_jnb9cP": {
+          "type": "heading",
+          "settings": {
+            "heading": "The creative minds behind our studio",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_4pYVYF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As designers we are constantly thinking about how people live and what problems we could solve for them. </p>",
+            "subtext_color": true
+          }
+        },
+        "icon_with_text_8qCJiV": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "map-pin",
+            "icon_width": 24,
+            "color": "#000000",
+            "heading": "Product locally in New York",
+            "heading_size": "h5",
+            "text": "",
+            "vertical_alignment": "start"
+          }
+        },
+        "icon_with_text_w4D3R6": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "smiley",
+            "icon_width": 24,
+            "color": "#000000",
+            "heading": "4,8 Review Score",
+            "heading_size": "h5",
+            "text": "",
+            "vertical_alignment": "start"
+          }
+        },
+        "icon_with_text_pcaqTj": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "stool",
+            "icon_width": 24,
+            "color": "#000000",
+            "heading": "Over 50 Products",
+            "heading_size": "h5",
+            "text": "",
+            "vertical_alignment": "start"
+          }
+        },
+        "button_aegkDr": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact Us",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "badge_fQjMHW",
+        "subheading_8kBXjM",
+        "heading_jnb9cP",
+        "text_4pYVYF",
+        "icon_with_text_8qCJiV",
+        "icon_with_text_w4D3R6",
+        "icon_with_text_pcaqTj",
+        "button_aegkDr"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".image-with-text__content {max-width: 45rem; --text-margin-top: 2rem;}",
+        "@media (min-width: 1280px) {.image-with-text__media {padding-inline-start: 5rem; }}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "image_position": "left",
+        "image_width": 50,
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "inherit",
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "featured_blog_xHkn7F": {
+      "type": "featured-blog",
+      "name": "t:sections.featured-blog.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Featured Blogs",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "blog": "news",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "column_gap": "medium",
+        "row_gap": "large",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "card_title_size": "h4",
+        "show_tags": true,
+        "show_excerpt": true,
+        "show_date": true,
+        "show_author": true,
+        "show_button": false,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "testimonials_mLThk7": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_EtxFFg": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "none",
+            "heading": "Testimonials",
+            "text": "<p>\"GWIN is great for areas that have fluctuating power surges. It can withstand voltages between 165V and 265V saving me thousands when power surges occur!\" </p>",
+            "author": "Jenny W.",
+            "bio": "New Mexico",
+            "product": ""
+          }
+        },
+        "testimonial_QPUyLy": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "none",
+            "heading": "Testimonials",
+            "text": "<p>“UNTOUCHABLE and UNBEATABLE warranties! Customer Support is really helpful with all the parts ON HAND needed for GWIN.”</p>",
+            "author": "Samantha T.",
+            "bio": "Portland, Oregon",
+            "product": ""
+          }
+        },
+        "testimonial_pY94Uy": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "none",
+            "heading": "Testimonials",
+            "text": "<p>“OMG, my system speaks to me and I can give it commands. So cool!”</p>",
+            "author": "Luis G.",
+            "bio": "Chattanooga, Tennnessee",
+            "product": ""
+          }
+        },
+        "testimonial_iTzQDb": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "none",
+            "heading": "Testimonials",
+            "text": "<p>“The auto cleaning feature is ridiculously cool. Now I only deep clean every 6 months! I love breathing in fresh air every day without the constantly weekly hassle of cleaning my system.”</p>",
+            "author": "David Martinez",
+            "bio": "Austin, Texas",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_EtxFFg",
+        "testimonial_QPUyLy",
+        "testimonial_pY94Uy",
+        "testimonial_iTzQDb"
+      ],
+      "custom_css": [
+        ".testimonial__inner {max-width: 64rem; margin-left: auto; margin-right: auto;}"
+      ],
+      "settings": {
+        "container": "full",
+        "color_scheme": "scheme-12",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "What Clients Talk About Us",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h6",
+        "description": "",
+        "text_size": "text-base",
+        "layout": "focused",
+        "card_color_scheme": "scheme-cc9da964-50f9-4f46-bebb-f2e158bae3af",
+        "card_content_color_scheme": "",
+        "card_image_ratio": "adapt",
+        "card_heading_size": "h4",
+        "card_text_size": "h2",
+        "author_info_layout": "vertical",
+        "card_trigger_behavior": "click",
+        "show_image": false,
+        "show_author_image": false,
+        "columns_desktop": 2,
+        "column_gap": "medium",
+        "row_gap": "medium",
+        "enable_slider": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "show_progress_bar": true,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "multicolumn_Ff4Wbj": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_AwmLJY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Automatic_Self-Cleaning.jpg",
+            "title": "Advanced Technology",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p>Self Cleaning </p><p>Micro Vents </p><p>Voltage fluctuation </p><p>Offline Voice Control </p><p>Base Pan Heating</p><p>Much more! </p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_MikwAx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/customer-support-staff-ready-for-work.jpg",
+            "title": "Customer Support",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p>Committed to excellent customer service to improve customer experience. Reliable in the rare instances you need a replacement part or assistance with your system.  </p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_j3Pdbn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design.jpg",
+            "title": "GWIN SHIELD Warranty",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p>12 Year Parts & Compressor Warranty </p><p>7 Year Refrigerant & Labor Warranty </p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_YWTLnF": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Hassle-Free_Installation.jpg",
+            "title": "DIY",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p>DIY Program that enables you to install your system and we will find someone to charge your line set!</p><p>*Electrical should be installed by a licensed electrician. Line set should be charged by a licensed hvac technician or EPA license technician. </p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "column_AwmLJY",
+        "column_MikwAx",
+        "column_j3Pdbn",
+        "column_YWTLnF"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-12",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "content_alignment": "left",
+        "show_col_count": false,
+        "show_image": true,
+        "columns_desktop": 3,
+        "column_gap": "medium",
+        "row_gap": "inherit",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 40,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "promotion_banner_VCkmzP",
+    "image_with_text_slider_9GkxWB",
+    "collapsible_tabs_e4t7bJ",
+    "featured_collection_RWUfH9",
+    "1759959561167b3255",
+    "collapsible_tabs_wwKUNa",
+    "featured_collection_izN64c",
+    "buttons_with_icon_7zH9F3",
+    "collection_list_yHY4CD",
+    "lookbook_banner_WnbgRh",
+    "featured_collection_78c8zh",
+    "collapsible_tabs_kDk74y",
+    "featured_collection_WW3LEe",
+    "collection_list_slider_6qbNfj",
+    "scrolling_promotion_9Hng8m",
+    "buttons_with_icon_c8CzHV",
+    "image_with_text_slider_mfNEBe",
+    "slideshow_q3U4Jn",
+    "lookbook_slider_9zCdQJ",
+    "custom_content_JxRy7x",
+    "image_with_text_aXhRxw",
+    "featured_blog_xHkn7F",
+    "testimonials_mLThk7",
+    "multicolumn_Ff4Wbj"
+  ]
+}
