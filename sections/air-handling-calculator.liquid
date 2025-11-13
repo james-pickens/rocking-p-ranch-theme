@@ -13,7 +13,8 @@
 Safest: load CSS/JS from assets so Shopify adds CSP nonce.
 Upload the two files below to /assets first:
   - air-calculator.css
-  - air-calculator.vanilla.js
+  - air-calculator.js (production obfuscated version)
+Source code: gwin-calculator-nov13.js (do not upload to Shopify)
 {%- endcomment -%}
 
 {{ 'air-calculator.css' | asset_url | stylesheet_tag }}
@@ -49,4 +50,4 @@ Upload the two files below to /assets first:
   window.HVAC_CONFIG_URL = {{ 'hvac-calculator-config-gwin.json' | asset_url | json }};
 </script>
 
-<script src="{{ 'gwin-calculator-nov13.js' | asset_url }}" defer></script>
+<script src="{{ 'air-calculator.js' | asset_url }}" defer></script>
