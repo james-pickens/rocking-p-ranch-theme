@@ -45,5 +45,8 @@ Upload the two files below to /assets first:
   </div>
 </div>
 
+<script>
+  window.HVAC_CONFIG_URL = {{ 'hvac-calculator-config-gwin.json' | asset_url | json }};
+</script>
 
-{{ 'air-calculator.vanilla.js' | asset_url | script_tag }}
+<script src="{{ 'gwin-calculator-nov13.js' | asset_url }}" defer></script>

@@ -1,0 +1,210 @@
+{
+  "productCatalog": {
+    "singleZone": {
+      "airHandlers": [
+        {
+          "name": "GWIN 9k BTU Single Zone System SEER25",
+          "sku": "GAMAR09HP230V1EH",
+          "btu": 9000,
+          "seer": 25
+        },
+        {
+          "name": "GWIN 12k BTU Single Zone System SEER25",
+          "sku": "GAMAR12HP230V1EH",
+          "btu": 12000,
+          "seer": 25
+        },
+        {
+          "name": "GWIN 18k BTU Single Zone System SEER25",
+          "sku": "GAMAR18HP230V1EH",
+          "btu": 18000,
+          "seer": 25
+        },
+        {
+          "name": "GWIN 24k BTU Single Zone System SEER25",
+          "sku": "GAMAR24HP230V1EH",
+          "btu": 24000,
+          "seer": 25
+        },
+        {
+          "name": "GWIN 36k BTU Single Zone System SEER25",
+          "sku": "GAFEB36HP230V1CH",
+          "btu": 36000,
+          "seer": 25
+        }
+      ],
+      "outdoorUnits": [
+        {
+          "name": "GWIN 9k BTU Single Zone Condenser SEER25",
+          "sku": "GAMAR09HP230V1EO",
+          "btu": 9000,
+          "seer": 25
+        },
+        {
+          "name": "GWIN 12k BTU Single Zone Condenser SEER25",
+          "sku": "GAMAR12HP230V1EO",
+          "btu": 12000,
+          "seer": 25
+        },
+        {
+          "name": "GWIN 18k BTU Single Zone Condenser SEER25",
+          "sku": "GAMAR18HP230V1EO",
+          "btu": 18000,
+          "seer": 25
+        },
+        {
+          "name": "GWIN 24k BTU Single Zone Condenser SEER25",
+          "sku": "GAMAR24HP230V1EO",
+          "btu": 24000,
+          "seer": 25
+        }
+      ]
+    },
+    "multiZone": {
+      "outdoorUnits": [
+        {
+          "name": "GWIN 18k BTU 2-Zone Multi-Zone System",
+          "sku": "GASUM18HPMULO",
+          "btu": 18000,
+          "zones": 2
+        },
+        {
+          "name": "GWIN 24k BTU 3-Zone Multi-Zone System",
+          "sku": "GASUM24HPMULO",
+          "btu": 24000,
+          "zones": 3
+        },
+        {
+          "name": "GWIN 36k BTU 4-Zone Multi-Zone System",
+          "sku": "GASUM36HPMULO",
+          "btu": 36000,
+          "zones": 4
+        },
+        {
+          "name": "GWIN 42k BTU 5-Zone Multi-Zone System",
+          "sku": "GASUM42HPMULO",
+          "btu": 42000,
+          "zones": 5
+        }
+      ],
+      "indoorUnits": {
+        "7000": [
+          {
+            "type": "High Wall",
+            "sku": "GAFEB07HP230V1EH",
+            "name": "GWIN 7k BTU Multi-Zone Wall Mount"
+          }
+        ],
+        "9000": [
+          {
+            "type": "High Wall",
+            "sku": "GAFEB09HP230V1EH",
+            "name": "GWIN 9k BTU Multi-Zone Wall Mount"
+          },
+          {
+            "type": "4-Way Ceiling Cassette",
+            "sku": "GAFEB09HP230V1CC",
+            "name": "GWIN 9k BTU Multi-Zone Cassette"
+          },
+          {
+            "type": "Slim Duct",
+            "sku": "GAFEB09HP230V1SD",
+            "name": "GWIN 9k BTU Multi-Zone Slim Duct"
+          },
+          {
+            "type": "Floor/Ceiling",
+            "sku": "GAFEB09HP230V1FL",
+            "name": "GWIN 9k BTU Multi-Zone Floor/Ceiling"
+          }
+        ],
+        "12000": [
+          {
+            "type": "High Wall",
+            "sku": "GAFEB12HP230V1EH",
+            "name": "GWIN 12k BTU Multi-Zone Wall Mount"
+          },
+          {
+            "type": "4-Way Ceiling Cassette",
+            "sku": "GAFEB12HP230V1CC",
+            "name": "GWIN 12k BTU Multi-Zone Cassette"
+          },
+          {
+            "type": "Slim Duct",
+            "sku": "GAFEB12HP230V1SD",
+            "name": "GWIN 12k BTU Multi-Zone Slim Duct"
+          },
+          {
+            "type": "Floor/Ceiling",
+            "sku": "GAFEB12HP230V1FL",
+            "name": "GWIN 12k BTU Multi-Zone Floor/Ceiling"
+          }
+        ],
+        "18000": [
+          {
+            "type": "High Wall",
+            "sku": "GAFEB18HP230V2EH",
+            "name": "GWIN 18k BTU Multi-Zone Wall Mount"
+          },
+          {
+            "type": "4-Way Ceiling Cassette",
+            "sku": "GAFEB18HP230V1CC",
+            "name": "GWIN 18k BTU Multi-Zone Cassette"
+          },
+          {
+            "type": "Slim Duct",
+            "sku": "GAFEB18HP230V1SD",
+            "name": "GWIN 18k BTU Multi-Zone Slim Duct"
+          },
+          {
+            "type": "Floor/Ceiling",
+            "sku": "GAFEB18HP230V1FL",
+            "name": "GWIN 18k BTU Multi-Zone Floor/Ceiling"
+          }
+        ],
+        "24000": [
+          {
+            "type": "High Wall",
+            "sku": "GAFEB24HP230V1EH",
+            "name": "GWIN 24k BTU Multi-Zone Wall Mount"
+          },
+          {
+            "type": "4-Way Ceiling Cassette",
+            "sku": "GAFEB24HP230V1CC",
+            "name": "GWIN 24k BTU Multi-Zone Cassette"
+          },
+          {
+            "type": "Slim Duct",
+            "sku": "GAFEB24HP230V1SD",
+            "name": "GWIN 24k BTU Multi-Zone Slim Duct"
+          },
+          {
+            "type": "Floor/Ceiling",
+            "sku": "GAFEB24HP230V1FL",
+            "name": "GWIN 24k BTU Multi-Zone Floor/Ceiling"
+          }
+        ],
+        "36000": [
+          {
+            "type": "High Wall",
+            "sku": "GAFEB36HP230V1CH",
+            "name": "GWIN 36k BTU Multi-Zone Wall Mount"
+          }
+        ]
+      }
+    }
+  },
+  "outdoorCombinations": {
+    "South": [
+      { "sku": "GASUM18HPMULO", "capacity": 18000, "maxRatio": 1.33, "ports": 2 },
+      { "sku": "GASUM24HPMULO", "capacity": 24000, "maxRatio": 1.5, "ports": 3 },
+      { "sku": "GASUM36HPMULO", "capacity": 36000, "maxRatio": 1.5, "ports": 4 },
+      { "sku": "GASUM42HPMULO", "capacity": 42000, "maxRatio": 1.42, "ports": 5 }
+    ],
+    "North": [
+      { "sku": "GASUM18HPMULO", "capacity": 18000, "maxRatio": 1.33, "ports": 2 },
+      { "sku": "GASUM24HPMULO", "capacity": 24000, "maxRatio": 1.5, "ports": 3 },
+      { "sku": "GASUM36HPMULO", "capacity": 36000, "maxRatio": 1.5, "ports": 4 },
+      { "sku": "GASUM42HPMULO", "capacity": 42000, "maxRatio": 1.42, "ports": 5 }
+    ]
+  }
+}

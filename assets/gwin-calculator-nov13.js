@@ -11,41 +11,86 @@
     return n;
   }
 
-  // ---------- Data (Phase 1 hard-coded) ----------
-  var indoorUnitModels = {
-    36000: { "High Wall": "AFEB36HP230V1CH" },
-    7000:  { "High Wall": "AFEB07HP230V1CH" },
-    9000:  { "High Wall": "AFEB09HP230V1CH", "4-Way Ceiling Cassette":"AFEB09HP230V1CC", "Slim Duct":"AFEB09HP230V1SD", "Floor/Ceiling":"AFEB09HP230V1FL" },
-    12000: { "High Wall": "AFEB12HP230V1CH", "4-Way Ceiling Cassette":"AFEB12HP230V1CC", "Slim Duct":"AFEB12HP230V1SD", "Floor/Ceiling":"AFEB12HP230V1FL" },
-    18000: { "High Wall": "AFEB18HP230V1CH", "4-Way Ceiling Cassette":"AFEB18HP230V1CC", "Slim Duct":"AFEB18HP230V1SD", "Floor/Ceiling":"AFEB18HP230V1FL" },
-    24000: { "High Wall": "AFEB24HP230V1CH", "4-Way Ceiling Cassette":"AFEB24HP230V1CC", "Slim Duct":"AFEB24HP230V1SD", "Floor/Ceiling":"AFEB24HP230V1FL" }
-  };
 
-  var outdoorCombinations = {
-    South: [
-      { model:"ASPR18HPMULO", capacity:18000, maxRatio:1.33, ports:2 },
-      { model:"ASPR24HPMULO", capacity:24000, maxRatio:1.5,  ports:3 },
-      { model:"ASPR36HPMULO", capacity:36000, maxRatio:1.5,  ports:4 },
-      { model:"ASPR42HPMULO", capacity:42000, maxRatio:1.42, ports:5 }
-    ],
-    North: [
-      { model:"ASUM18HPMULO", capacity:18000, maxRatio:1.33, ports:2 },
-      { model:"ASUM24HPMULO", capacity:24000, maxRatio:1.5,  ports:3 },
-      { model:"ASUM36HPMULO", capacity:36000, maxRatio:1.5,  ports:4 },
-      { model:"ASUM42HPMULO", capacity:42000, maxRatio:1.42, ports:5 }
-    ]
-  };
+  // ========== CONFIGURATION SYSTEM ==========
+  var hvacConfig = null;
+  var configReady = false;
+  
+  function loadHvacConfig(callback) {
+    if (configReady) { callback(); return; }
+    
+    fetch(window.HVAC_CONFIG_URL || '/assets/hvac-calculator-config.json')
+      .then(function(response) {
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        return response.json();
+      })
+      .then(function(configData) {
+        hvacConfig = configData;
+        configReady = true;
+        console.log('HVAC config loaded successfully');
+        callback();
+      })
+      .catch(function(error) {
+        console.error('Failed to load HVAC config:', error);
+        alert('Calculator configuration failed to load. Please refresh the page.');
+        configReady = true; // Prevent infinite retry
+        callback(); // Continue anyway with fallback
+      });
+  }
+  
+  // Helper to find single zone air handler by BTU and SEER from config
+  function getSingleZoneModel(btu, seer) {
+    if (!hvacConfig || !hvacConfig.productCatalog || !hvacConfig.productCatalog.singleZone) {
+      return "N/A";
+    }
+    
+    var handlers = hvacConfig.productCatalog.singleZone.airHandlers || [];
+    var match = null;
+    
+    for (var i = 0; i < handlers.length; i++) {
+      if (handlers[i].btu === btu && handlers[i].seer === seer) {
+        match = handlers[i];
+        break;
+      }
+    }
+    
+    if (match) {
+      return match.sku || match.name || "N/A";
+    }
+    
+    return "N/A";
+  }
+  // ========== END CONFIGURATION SYSTEM ==========
 
-  // ---------- Core calc helpers ----------
-  function getClosestBTU(value) {
-    var options = Object.keys(indoorUnitModels).map(function (k) { return Number(k); });
+  // Helper to find closest BTU size from config
+  function getClosestBTU(value, mode) {
+    var options = [];
+    
+    if (hvacConfig && hvacConfig.productCatalog) {
+      if (mode === 'Single' && hvacConfig.productCatalog.singleZone && hvacConfig.productCatalog.singleZone.airHandlers) {
+        // Get BTU options from single zone air handlers
+        options = hvacConfig.productCatalog.singleZone.airHandlers.map(function(h) { return h.btu; });
+      } else if (hvacConfig.productCatalog.multiZone && hvacConfig.productCatalog.multiZone.indoorUnits) {
+        // Get BTU options from multi zone indoor units
+        options = Object.keys(hvacConfig.productCatalog.multiZone.indoorUnits).map(Number);
+      }
+    }
+    
+    // Fallback if no config data
+    if (options.length === 0) {
+      options = [7000, 9000, 12000, 18000, 24000, 36000];
+    }
+    
     return options.reduce(function (prev, curr) {
       return Math.abs(curr - value) < Math.abs(prev - value) ? curr : prev;
     });
   }
 
+
   function getAllValidOutdoorOptions(zone, totalBTU, roomCount) {
-    var combos = outdoorCombinations[zone] || [];
+    if (!hvacConfig || !hvacConfig.outdoorCombinations) return [];
+    
+    var combos = hvacConfig.outdoorCombinations[zone] || [];
     return combos
       .filter(function (c) { return roomCount <= c.ports && totalBTU <= c.capacity * c.maxRatio; })
       .map(function (c) {
@@ -53,7 +98,7 @@
         var color = "green";
         if (loadPercent > 1.1 && loadPercent <= 1.2) color = "yellow";
         else if (loadPercent > 1.2) color = "orange";
-        return { model: c.model, capacity: c.capacity, ports: c.ports, loadPercent: loadPercent, color: color };
+        return { sku: c.sku, capacity: c.capacity, ports: c.ports, loadPercent: loadPercent, color: color };
       })
       .sort(function (a, b) { return Math.abs(1 - a.loadPercent) - Math.abs(1 - b.loadPercent); });
   }
@@ -300,33 +345,62 @@
         var windows = num(form.windows);
         var doors   = num(form.doors);
 
-        var insulationFactor = 1.0;
-        if (form.insulation === "Fair") insulationFactor = 1.1;
-        else if (form.insulation === "Poor") insulationFactor = 1.2;
-
-        var roomLoad   = area * height * 5;
-        var windowLoad = windows * 100;
-        var doorLoad   = doors * 50;
-        var totalLoad  = Math.round((roomLoad + windowLoad + doorLoad) * insulationFactor);
+        // CORRECTED FORMULA per GWIN HVAC specifications
+        // Base: 25 BTU/sqft + 1.6 BTU per foot over 8ft ceiling + insulation adjustment
+        var btuPerSqFt = 25; // Base BTU per square foot
+        
+        // Height adjustment: Only for ceilings OVER 8 feet
+        if (height > 8) {
+          btuPerSqFt += (height - 8) * 1.6;
+        }
+        
+        // Insulation adjustment (per square foot, NOT multiplier)
+        if (form.insulation === "Fair") btuPerSqFt += 3;
+        else if (form.insulation === "Poor") btuPerSqFt += 7;
+        // Good = +0 (no adjustment)
+        
+        // Calculate total load
+        var areaLoad   = area * btuPerSqFt;
+        var windowLoad = windows * 1500;  // 1500 BTU per window (not 100!)
+        var doorLoad   = doors * 300;      // 300 BTU per door (not 50!)
+        var totalLoad  = Math.round(areaLoad + windowLoad + doorLoad);
         if (!isFinite(totalLoad)) totalLoad = 0;
         total += totalLoad;
 
         if (state.mode === "Single") {
-          var closestBTU = getClosestBTU(totalLoad);
-          var model20 = "N/A", model22 = "N/A", model25 = "N/A";
-          if (closestBTU === 9000)  { model20 = "AJAN09HP115V1C / AJAN09HP230V1C"; model22 = "AFEB09HP115V1C / AFEB09HP230V1C"; model25 = "AMAR09HP115V1C / AMAR09HP230V1C"; }
-          else if (closestBTU === 12000) { model20 = "AJAN12HP115V1C / AJAN12HP230V1C"; model22 = "AFEB12HP115V1C / AFEB12HP230V1C"; model25 = "AMAR12HP115V1C / AMAR12HP230V1C"; }
-          else if (closestBTU === 18000) { model20 = "AJAN18HP230V1C"; model22 = "AFEB18HP230V2C"; model25 = "AMAR18HP230V1C"; }
-          else if (closestBTU === 24000) { model20 = "AJAN24HP230V1C"; model22 = "AFEB24HP230V1C"; model25 = "AMAR24HP230V1C"; }
-          else if (closestBTU === 36000) { model20 = "AJAN36HP230V1C"; model22 = "N/A"; model25 = "N/A"; }
+          var closestBTU = getClosestBTU(totalLoad, 'Single');
+          
+          // GWIN only sells SEER 25 - look up from config
+          var model = getSingleZoneModel(closestBTU, 25);
+          
           if (totalLoad > closestBTU * 1.1) {
-            var warn = "⚠️ No suitable outdoor unit found. Recommend multiple AUX systems.";
-            model20 = warn; model22 = warn; model25 = warn;
+            model = "⚠️ Load exceeds capacity. Recommend multiple systems or contact professional.";
           }
-          return { btu: totalLoad, roomName: form.roomName, model20: model20, model22: model22, model25: model25 };
+          
+          if (model === "N/A") {
+            model = "Model not available for this capacity";
+          }
+          
+          return { btu: totalLoad, roomName: form.roomName, model: model };
         } else {
-          var closest = getClosestBTU(totalLoad);
-          var model = (indoorUnitModels[closest] && indoorUnitModels[closest][form.unitType]) || "Model not available";
+          // Multi-zone: look up indoor unit from config
+          var closest = getClosestBTU(totalLoad, 'Multi');
+          var model = "Model not available";
+          
+          if (hvacConfig && hvacConfig.productCatalog && hvacConfig.productCatalog.multiZone) {
+            var indoorUnits = hvacConfig.productCatalog.multiZone.indoorUnits;
+            var unitsForBTU = indoorUnits[String(closest)];
+            
+            if (unitsForBTU) {
+              for (var i = 0; i < unitsForBTU.length; i++) {
+                if (unitsForBTU[i].type === form.unitType) {
+                  model = unitsForBTU[i].sku;
+                  break;
+                }
+              }
+            }
+          }
+          
           return { btu: totalLoad, roomName: form.roomName, model: model };
         }
       });
@@ -337,14 +411,7 @@
           '<div class="result-item '+ (i < results.length - 1 ? 'result-item-bordered' : '') +'">',
             '<span class="result-name">'+ (r.roomName || ('Room ' + (i+1))) +':</span> ',
             '<span class="result-btu">'+ r.btu +' BTU</span>',
-            (state.mode === 'Single'
-              ? '<div class="model-info">'
-                  + '<p class="model-line"><strong>SEER 20:</strong> '+ r.model20 +'</p>'
-                  + '<p class="model-line"><strong>SEER 22:</strong> '+ r.model22 +'</p>'
-                  + '<p class="model-line"><strong>SEER 25:</strong> '+ r.model25 +'</p>'
-                + '</div>'
-              : '<div class="model-info"><strong>Model:</strong> '+ r.model +'</div>'
-            ),
+            '<div class="model-info"><strong>Recommended System:</strong> '+ r.model +'</div>',
           '</div>'
         );
       });
@@ -360,14 +427,14 @@
                            : opt.color === 'orange' ? 'outdoor-card-orange' : '';
             html.push(
               '<div class="outdoor-card '+ colorClass +'">',
-                '<div class="outdoor-model">'+ opt.model +'</div>',
+                '<div class="outdoor-model">'+ opt.sku +'</div>',
                 '<div class="outdoor-specs">'+ opt.capacity +' BTU Capacity | '+ opt.ports +' Port'+ (opt.ports>1?'s':'') +'</div>',
                 '<div class="outdoor-load">System Load: '+ (opt.loadPercent*100).toFixed(1) +'%</div>',
               '</div>'
             );
           });
         } else {
-          html.push('<div class="error-card">⚠️ No suitable outdoor unit found. Recommend multiple AUX systems or contact a professional for a custom solution.</div>');
+          html.push('<div class="error-card">⚠️ No suitable outdoor unit found. Recommend multiple GWIN systems or contact a professional for a custom solution.</div>');
         }
       }
 
@@ -444,8 +511,16 @@
 
   // DOM ready
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function(){ initAll(); });
-  } else { initAll(); }
+    document.addEventListener('DOMContentLoaded', function(){
+    loadHvacConfig(function() {
+      initAll();
+    });
+  });
+  } else { 
+    loadHvacConfig(function() {
+      initAll();
+    });
+  }
 
   // Theme editor lifecycle
   document.addEventListener('shopify:section:load', function (e) { initAll(e.target); });

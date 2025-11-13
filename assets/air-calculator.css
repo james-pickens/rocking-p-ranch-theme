@@ -6,9 +6,9 @@
 
 /* Optional CSS variables for easy future tweaks */
 :root {
-  --ahc-purple: #6D28D9;
-  --ahc-purple-hover: #5B21B6;
-  --ahc-purple-deep: #4C1D95;
+  --ahc-purple: #9B3AA0;
+  --ahc-purple-hover: #7E2D87;
+  --ahc-purple-deep: #6B2475;
   --ahc-lavender-50: #F5F3FF;
   --ahc-lavender-100: #EDE9FE;
   --ahc-lavender-200: #E9D5FF;
@@ -265,10 +265,10 @@
   appearance: none !important;
 
   /* our colors */
-  background-color: #6D28D9 !important;
-  background: #6D28D9 !important; /* Add both background and background-color */
+  background-color: #9B3AA0 !important;
+  background: #9B3AA0 !important; /* Add both background and background-color */
   color: #ffffff !important;
-  border: 1px solid #6D28D9 !important;
+  border: 1px solid #9B3AA0 !important;
   border-radius: 8px !important;
 }
 
@@ -277,9 +277,9 @@
 .air-calculator-wrapper .ahc-shell .ahc-launch:hover,
 .calculator-container .calculate-button:hover,
 .disclaimer-box .disclaimer-button:hover {
-  background-color: #5B21B6 !important;
-  background: #5B21B6 !important;
-  border-color: #5B21B6 !important;
+  background-color: #7E2D87 !important;
+  background: #7E2D87 !important;
+  border-color: #7E2D87 !important;
   color: #ffffff !important;
 }
 /* ===== NUCLEAR OPTION - Override Shopify theme buttons ===== */
@@ -297,10 +297,10 @@ button.ahc-launch,
 .disclaimer-button.disclaimer-button,
 .ahc-launch.ahc-launch {
   background-image: none !important;
-  background: #6D28D9 !important;
-  background-color: #6D28D9 !important;
+  background: #9B3AA0 !important;
+  background-color: #9B3AA0 !important;
   color: #ffffff !important;
-  border: 1px solid #6D28D9 !important;
+  border: 1px solid #9B3AA0 !important;
   border-radius: 8px !important;
   box-shadow: none !important;
   text-shadow: none !important;
@@ -316,8 +316,8 @@ body .ahc-modal .disclaimer-button:hover,
 button.calculate-button:hover,
 button.disclaimer-button:hover,
 button.ahc-launch:hover {
-  background: #5B21B6 !important;
-  background-color: #5B21B6 !important;
-  border-color: #5B21B6 !important;
+  background: #7E2D87 !important;
+  background-color: #7E2D87 !important;
+  border-color: #7E2D87 !important;
   color: #ffffff !important;
 }
