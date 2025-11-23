@@ -321,3 +321,337 @@ button.ahc-launch:hover {
   border-color: #7E2D87 !important;
   color: #ffffff !important;
 }
+/* ============================================================
+   GWIN HVAC Calculator - Enhanced Product Integration Styles
+   Add these styles to your existing air-calculator.css
+   ============================================================ */
+
+/* Product Details Container */
+.product-details-container {
+  margin-top: 15px;
+}
+
+.product-loading {
+  color: #6b7280;
+  font-style: italic;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-error {
+  color: #dc2626;
+  padding: 10px;
+  background: #fee2e2;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* Product Card */
+.product-card {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Image */
+.product-image-container {
+  flex-shrink: 0;
+}
+
+.product-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+@media (max-width: 560px) {
+  .product-image {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Product Info */
+.product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.product-title {
+  margin: 0;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #374151;
+  line-height: 1.3;
+}
+
+.product-variant {
+  margin: 0;
+  font-size: 0.9em;
+  color: #6b7280;
+}
+
+/* Product Pricing */
+.product-pricing {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+.product-price {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: var(--ahc-purple, #9B3AA0);
+}
+
+.product-price-compare {
+  font-size: 1.1em;
+  color: #9ca3af;
+  text-decoration: line-through;
+}
+
+.product-price-sale {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #dc2626;
+}
+
+/* Stock Status */
+.out-of-stock {
+  color: #dc2626;
+  font-weight: 600;
+  font-size: 0.95em;
+  margin: 5px 0;
+}
+
+.low-stock {
+  color: #f59e0b;
+  font-weight: 600;
+  font-size: 0.95em;
+  margin: 5px 0;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+  background: var(--ahc-purple, #9B3AA0) !important;
+  background-color: var(--ahc-purple, #9B3AA0) !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 2px 4px rgba(155, 58, 160, 0.2);
+  margin-top: 5px;
+}
+
+.add-to-cart-btn:hover {
+  background: var(--ahc-purple-hover, #7E2D87) !important;
+  background-color: var(--ahc-purple-hover, #7E2D87) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(155, 58, 160, 0.3);
+}
+
+.add-to-cart-btn:active {
+  transform: translateY(0);
+}
+
+.add-to-cart-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* View Product Link */
+.view-product-link {
+  display: inline-block;
+  color: var(--ahc-purple, #9B3AA0);
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  margin-top: 5px;
+}
+
+.view-product-link:hover {
+  color: var(--ahc-purple-hover, #7E2D87);
+  text-decoration: underline;
+}
+
+.view-product-link::after {
+  content: " →";
+}
+
+/* Success Toast Notification */
+.cart-success-toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #10b981;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-weight: 600;
+  z-index: 10000;
+  transform: translateX(400px);
+  transition: transform 0.3s ease;
+}
+
+.cart-success-toast.show {
+  transform: translateX(0);
+}
+
+@media (max-width: 560px) {
+  .cart-success-toast {
+    right: 10px;
+    left: 10px;
+    text-align: center;
+  }
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 560px) {
+  .product-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .product-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .product-info {
+    width: 100%;
+    align-items: center;
+  }
+  
+  .product-pricing {
+    justify-content: center;
+  }
+  
+  .add-to-cart-btn {
+    width: 100%;
+  }
+}
+
+/* Loading Spinner for Product Fetching */
+.product-loading::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #9B3AA0;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Product Badge (Optional - for sale/new labels) */
+.product-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 0.75em;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.product-badge-sale {
+  background: #dc2626;
+  color: white;
+}
+
+.product-badge-new {
+  background: #10b981;
+  color: white;
+}
+
+/* Enhanced Result Items with Product Cards */
+.result-item {
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+}
+
+.result-item:not(:last-child) {
+  border-bottom: 2px solid var(--ahc-lavender-100, #EDE9FE);
+}
+
+/* Outdoor Unit Product Cards */
+.outdoor-card .product-details-container {
+  margin-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 15px;
+}
+
+/* Animation for Product Card Appearance */
+.product-card {
+  animation: fadeInUp 0.4s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Nuclear Option: Override ALL theme button styles */
+body .add-to-cart-btn,
+button.add-to-cart-btn,
+.add-to-cart-btn.add-to-cart-btn {
+  background-image: none !important;
+  background: #9B3AA0 !important;
+  background-color: #9B3AA0 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 6px !important;
+  box-shadow: 0 2px 4px rgba(155, 58, 160, 0.2) !important;
+  text-shadow: none !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+body .add-to-cart-btn:hover,
+button.add-to-cart-btn:hover,
+.add-to-cart-btn.add-to-cart-btn:hover {
+  background: #7E2D87 !important;
+  background-color: #7E2D87 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 8px rgba(155, 58, 160, 0.3) !important;
+}
