@@ -201,7 +201,7 @@ function populateLineSetDropdowns(mode, roomsHost) {
   
   selects.forEach(function(select) {
     var currentValue = select.value;
-    select.innerHTML = '<option value="">-- Select Length --</option>';
+    select.innerHTML = '';
     
     if (mode === 'Single') {
       // Single-zone: use SINGLE_ZONE_LINE_SETS
@@ -213,8 +213,11 @@ function populateLineSetDropdowns(mode, roomsHost) {
         select.appendChild(opt);
       });
       
+      // Default to 15 if no current value or invalid value
       if (currentValue && SINGLE_ZONE_LINE_SETS[currentValue]) {
         select.value = currentValue;
+      } else {
+        select.value = '15';
       }
     } else {
       // Multi-zone: Just show lengths with prices - NO BTU calculation
@@ -226,8 +229,11 @@ function populateLineSetDropdowns(mode, roomsHost) {
         select.appendChild(opt);
       });
       
+      // Default to 15 if no current value or invalid value
       if (currentValue && MULTI_ZONE_LINE_SETS[currentValue]) {
         select.value = currentValue;
+      } else {
+        select.value = '15';
       }
     }
   });
@@ -242,7 +248,8 @@ function populateLineSetDropdowns(mode, roomsHost) {
     
     if (currentMode === 'Multi') {
       btnAddRoom.style.display = '';
-      var rooms = document.querySelectorAll('[data-room-index]');
+      // Only count room-card elements, not delete buttons
+      var rooms = document.querySelectorAll('.room-card[data-room-index]');
       btnAddRoom.disabled = rooms.length >= 5;
       
       if (rooms.length >= 5) {
@@ -657,19 +664,55 @@ function populateLineSetDropdowns(mode, roomsHost) {
 
 
   function getAllValidOutdoorOptions(zone, totalBTU, roomCount) {
-    if (!hvacConfig || !hvacConfig.outdoorCombinations) return [];
+    // EXPLICIT OUTDOOR UNIT RULES (not relying on config)
+    // Each indoor unit requires 1 port
+    // BTU Rule: Each outdoor unit supports capacity + 6,000 BTU max
+    // Port Rule: Each outdoor unit has fixed number of ports
     
-    var combos = hvacConfig.outdoorCombinations[zone] || [];
-    return combos
-      .filter(function (c) { return roomCount <= c.ports && totalBTU <= c.capacity * c.maxRatio; })
-      .map(function (c) {
-        var loadPercent = totalBTU / c.capacity;
-        var color = "green";
-        if (loadPercent > 1.1 && loadPercent <= 1.2) color = "yellow";
-        else if (loadPercent > 1.2) color = "orange";
-        return { sku: c.sku, capacity: c.capacity, ports: c.ports, loadPercent: loadPercent, color: color };
-      })
-      .sort(function (a, b) { return Math.abs(1 - a.loadPercent) - Math.abs(1 - b.loadPercent); });
+    var outdoorUnits = [
+      { sku: "GASUM18HPMULO", capacity: 18000, maxBTU: 24000, ports: 2 },  // 18k + 6k = 24k max, 2 ports
+      { sku: "GASUM24HPMULO", capacity: 24000, maxBTU: 30000, ports: 3 },  // 24k + 6k = 30k max, 3 ports
+      { sku: "GASUM36HPMULO", capacity: 36000, maxBTU: 42000, ports: 4 },  // 36k + 6k = 42k max, 4 ports
+      { sku: "GASUM42HPMULO", capacity: 42000, maxBTU: 48000, ports: 5 }   // 42k + 6k = 48k max, 5 ports
+    ];
+    
+    // Find the FIRST (smallest) outdoor unit that satisfies BOTH rules:
+    // 1. Total indoor BTU <= unit's maxBTU
+    // 2. Number of indoor units (rooms) <= unit's ports
+    var selectedUnit = null;
+    
+    for (var i = 0; i < outdoorUnits.length; i++) {
+      var unit = outdoorUnits[i];
+      
+      // Check BOTH conditions
+      var btuOK = totalBTU <= unit.maxBTU;
+      var portsOK = roomCount <= unit.ports;
+      
+      if (btuOK && portsOK) {
+        selectedUnit = unit;
+        break; // Found the smallest suitable unit, stop looking
+      }
+    }
+    
+    // If no unit found, return empty array (will show error message)
+    if (!selectedUnit) {
+      return [];
+    }
+    
+    // Calculate load percentage for display
+    var loadPercent = totalBTU / selectedUnit.capacity;
+    var color = "green";
+    if (loadPercent > 1.0 && loadPercent <= 1.1) color = "yellow";
+    else if (loadPercent > 1.1) color = "orange";
+    
+    // Return only the ONE selected unit
+    return [{
+      sku: selectedUnit.sku,
+      capacity: selectedUnit.capacity,
+      ports: selectedUnit.ports,
+      loadPercent: loadPercent,
+      color: color
+    }];
   }
 
   // ---------- UI builders ----------
@@ -771,7 +814,6 @@ function populateLineSetDropdowns(mode, roomsHost) {
         '<div class="form-group" style="margin-top:8px;">',
           '<label class="ahc-mini-label">Line Set Length</label>',
           '<select class="ahc-mini-sel" data-input="lineSet">',
-            '<option value="">-- Select Length --</option>',
           '</select>',
         '</div>',
 
@@ -803,7 +845,8 @@ function populateLineSetDropdowns(mode, roomsHost) {
       windows: '0',
       doors: '1',
       insulation: 'Good',
-      unitType: 'High Wall'
+      unitType: 'High Wall',
+      lineSet: '15'
     };
   }
 
@@ -875,6 +918,7 @@ function populateLineSetDropdowns(mode, roomsHost) {
         var doorsEl = card.querySelector('[data-input="doors"]');
         var insulEl = card.querySelector('[data-input="insulation"]');
         var unitTypeEl = card.querySelector('[data-input="unitType"]');
+        var lineSetEl = card.querySelector('[data-input="lineSet"]');
 
         if (roomNameEl) roomNameEl.value = form.roomName || '';
         if (areaEl) areaEl.value = form.area || '';
@@ -883,6 +927,7 @@ function populateLineSetDropdowns(mode, roomsHost) {
         if (doorsEl) doorsEl.value = form.doors || '0';
         if (insulEl) insulEl.value = form.insulation || 'Good';
         if (unitTypeEl) unitTypeEl.value = form.unitType || 'High Wall';
+        if (lineSetEl) lineSetEl.value = form.lineSet || '15';
       });
     }
 
@@ -897,7 +942,7 @@ function populateLineSetDropdowns(mode, roomsHost) {
         form.doors = (card.querySelector('[data-input="doors"]') || {}).value || '0';
         form.insulation = (card.querySelector('[data-input="insulation"]') || {}).value || 'Good';
         form.unitType = (card.querySelector('[data-input="unitType"]') || {}).value || 'High Wall';
-        form.lineSet = (card.querySelector('[data-input="lineSet"]') || {}).value || '';
+        form.lineSet = (card.querySelector('[data-input="lineSet"]') || {}).value || '15';
       });
     }
 
@@ -1061,7 +1106,7 @@ function populateLineSetDropdowns(mode, roomsHost) {
         html.push('<div class="total-load-box"><strong>Total System Load:</strong> <span class="total-load-value">'+ total +' BTU</span></div>');
         var options = getAllValidOutdoorOptions(state.zone, total, state.roomCount);
         if (options.length) {
-          html.push('<h4 class="outdoor-title">Recommended Outdoor Units:</h4>');
+          html.push('<h4 class="outdoor-title">Recommended Outdoor Unit:</h4>');
           options.forEach(function (opt, optIndex) {
             var colorClass = opt.color === 'green' ? 'outdoor-card-green'
                            : opt.color === 'yellow' ? 'outdoor-card-yellow'
@@ -1076,7 +1121,7 @@ function populateLineSetDropdowns(mode, roomsHost) {
             );
           });
         } else {
-          html.push('<div class="error-card">⚠️ No suitable outdoor unit found. Recommend multiple GWIN systems or contact a professional for a custom solution.</div>');
+          html.push('<div class="error-card">⚠️ System requirements exceed limits. Maximum supported: 48,000 BTU total and 5 indoor units. Consider multiple GWIN systems or contact a professional for a custom solution.</div>');
         }
       }
       
@@ -1216,6 +1261,7 @@ function populateLineSetDropdowns(mode, roomsHost) {
     zoneSel.addEventListener('change', function () {
       state.zone = zoneSel.value;
       resultsBox.style.display = 'none';
+      resultsBox.innerHTML = '';
     });
 
     btnCalc.addEventListener('click', calculate);
@@ -1239,6 +1285,9 @@ function populateLineSetDropdowns(mode, roomsHost) {
         return;
       }
       
+      // IMPORTANT: Save current input values BEFORE deleting room
+      syncFromDOM();
+      
       // Remove room from state
       state.rooms.splice(roomIndex, 1);
       state.roomCount = state.rooms.length;
@@ -1252,6 +1301,31 @@ function populateLineSetDropdowns(mode, roomsHost) {
       updateAddRoomButton();
     });
 
+    // CLEAR RESULTS when any input changes (user must recalculate)
+    roomsBox.addEventListener('input', function(e) {
+      // Check if target is an input field we care about
+      var target = e.target;
+      if (target.matches('[data-input]')) {
+        // Only clear if results are currently showing
+        if (resultsBox.style.display !== 'none') {
+          resultsBox.style.display = 'none';
+          resultsBox.innerHTML = '';
+        }
+      }
+    });
+    
+    roomsBox.addEventListener('change', function(e) {
+      // Check if target is a select field we care about
+      var target = e.target;
+      if (target.matches('[data-input]')) {
+        // Only clear if results are currently showing
+        if (resultsBox.style.display !== 'none') {
+          resultsBox.style.display = 'none';
+          resultsBox.innerHTML = '';
+        }
+      }
+    });
+
     // ADD ROOM functionality
     var btnAddRoom = $$ (root, '[data-action="add-room"]');
 
@@ -1262,6 +1336,9 @@ function populateLineSetDropdowns(mode, roomsHost) {
           alert('Maximum 5 rooms allowed');
           return;
         }
+        
+        // IMPORTANT: Save current input values BEFORE adding new room
+        syncFromDOM();
         
         // Add new empty room
         state.rooms.push(createEmptyRoom());
