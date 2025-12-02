@@ -349,7 +349,8 @@ button.ahc-launch:hover {
 /* Product Card */
 .product-card {
   display: flex;
-  gap: 15px;
+  flex-direction: column;
+  gap: 10px;
   padding: 15px;
   background: #ffffff;
   border: 1px solid #e5e7eb;
@@ -362,17 +363,74 @@ button.ahc-launch:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Top row: Image + View Link (left) | Price (right) */
+.product-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+/* Left section: Image and View link side by side, vertically centered */
+.product-left-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
 /* Product Image */
 .product-image-container {
   flex-shrink: 0;
 }
 
 .product-image {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
   border-radius: 6px;
   border: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+/* Price section (right-aligned) */
+.product-price-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+  min-width: 100px;
+}
+
+.product-price {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: var(--ahc-purple, #9B3AA0);
+  text-align: right;
+  margin: 0;
+}
+
+/* Product Actions (view link) - now inline with image */
+.product-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+/* Bottom row: Title only */
+.product-bottom-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.product-title {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 700;
+  color: #374151;
+  line-height: 1.3;
+  text-align: left;
 }
 
 @media (max-width: 560px) {
@@ -380,22 +438,27 @@ button.ahc-launch:hover {
     width: 80px;
     height: 80px;
   }
+  
+  .product-left-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
-/* Product Info */
+/* Legacy classes for compatibility */
 .product-info {
   flex: 1;
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
 }
 
-.product-title {
-  margin: 0;
-  font-size: 1.1em;
-  font-weight: 700;
-  color: #374151;
-  line-height: 1.3;
+.product-price-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
 }
 
 .product-variant {
@@ -409,13 +472,7 @@ button.ahc-launch:hover {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 5px 0;
-}
-
-.product-price {
-  font-size: 1.4em;
-  font-weight: 700;
-  color: var(--ahc-purple, #9B3AA0);
+  margin: 0;
 }
 
 .product-price-compare {
@@ -488,10 +545,11 @@ button.ahc-launch:hover {
   display: inline-block;
   color: var(--ahc-purple, #9B3AA0);
   text-decoration: none;
-  font-size: 0.9em;
+  font-size: 0.85em;
   font-weight: 500;
   transition: color 0.2s ease;
-  margin-top: 5px;
+  margin-top: 4px;
+  text-align: right;
 }
 
 .view-product-link:hover {
@@ -534,24 +592,30 @@ button.ahc-launch:hover {
 /* Mobile Responsive Adjustments */
 @media (max-width: 560px) {
   .product-card {
+    padding: 12px;
+  }
+  
+  .product-top-row {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .product-price {
+    text-align: left;
+  }
+  
+  .product-bottom-row {
+    flex-direction: row;
+    justify-content: space-between;
   }
   
   .product-image-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    flex-shrink: 0;
   }
   
-  .product-info {
-    width: 100%;
-    align-items: center;
-  }
-  
-  .product-pricing {
-    justify-content: center;
+  .product-actions {
+    align-items: flex-end;
   }
   
   .add-to-cart-btn {
@@ -657,37 +721,116 @@ button.add-to-cart-btn:hover,
 }
 /* Add this CSS to your theme's calculator styles */
 
-/* Line Set Box - white background like product cards */
-.line-set-box {
+/* Line Set Card - styled like a product card */
+.line-set-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   margin-top: 12px;
-  padding: 12px 14px;
+  padding: 15px;
   background: #ffffff;
-  border-radius: 6px;
-  border: 1px solid var(--ahc-lavender-100);
-  border-left: 4px solid var(--ahc-purple);
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.line-set-top-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  align-items: flex-start;
 }
 
 .line-set-label {
+  font-weight: 700;
+  color: #374151;
+  font-size: 1em;
+}
+
+.line-set-price {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: var(--ahc-purple, #9B3AA0);
+  text-align: right;
+  min-width: 100px;
+}
+
+.line-set-bottom-row {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.line-set-description {
+  color: var(--ahc-purple);
+  font-weight: 600;
+  font-size: 0.95em;
+}
+
+/* Line Set Box - styled exactly like indoor-box and condenser-box */
+.line-set-box {
+  margin-top: 12px;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.line-set-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4px;
+}
+
+.line-set-label {
+  display: block;
   font-weight: 600;
   color: var(--ahc-text-deep);
+  margin-bottom: 4px;
 }
 
 .line-set-value {
   color: var(--ahc-purple);
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.05em;
 }
 
-/* Condenser Box - similar to line-set-box */
+/* Inner product card for Line Set - matches nested product cards */
+.line-set-product-card {
+  margin-top: 10px;
+  min-height: 50px;
+}
+
+.line-set-product-card .product-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.line-set-product-card .product-left-section {
+  flex: 1;
+  text-align: left;
+}
+
+.line-set-product-card .line-set-value {
+  color: var(--ahc-purple);
+  font-weight: 700;
+  font-size: 1.05em;
+}
+
+.line-set-price-row {
+  margin-top: 10px;
+  text-align: right;
+}
+
+/* Condenser Box - styled like product cards (no left bracket) */
 .condenser-box {
-  margin-top: 15px;
-  padding: 12px 14px;
-  background: var(--ahc-lavender-50);
-  border-radius: 6px;
-  border-left: 4px solid var(--ahc-purple-deep);
+  margin-top: 12px;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 .condenser-label {
@@ -703,13 +846,36 @@ button.add-to-cart-btn:hover,
   font-size: 1.05em;
 }
 
+/* Indoor Box - styled exactly like condenser-box */
+.indoor-box {
+  margin-top: 12px;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.indoor-label {
+  display: block;
+  font-weight: 600;
+  color: var(--ahc-text-deep);
+  margin-bottom: 4px;
+}
+
+.indoor-value {
+  color: var(--ahc-purple);
+  font-weight: 700;
+  font-size: 1.05em;
+}
+
 /* Order Summary - with purple theme lines */
 .order-summary {
   margin-top: 20px;
 }
 
 .order-summary .summary-title {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--ahc-text-deep);
   margin-bottom: 10px;
@@ -720,8 +886,8 @@ button.add-to-cart-btn:hover,
 .order-summary .summary-row {
   display: flex;
   justify-content: space-between;
-  padding: 8px 0;
-  font-size: 0.9rem;
+  padding: 10px 0;
+  font-size: 1.1rem;
   border-bottom: 1px solid var(--ahc-lavender-200);
 }
 
@@ -729,8 +895,8 @@ button.add-to-cart-btn:hover,
   border-bottom: none;
   border-top: 2px solid var(--ahc-purple);
   margin-top: 5px;
-  padding-top: 10px;
-  font-size: 0.95rem;
+  padding-top: 12px;
+  font-size: 1.25rem;
   font-weight: 700;
 }
 

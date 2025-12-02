@@ -320,6 +320,12 @@ function populateLineSetDropdowns(mode, roomsHost) {
     
     html.push('<div class="product-card">');
     
+    // Top row: Image + View link (left/center) | Price (right)
+    html.push('<div class="product-top-row">');
+    
+    // Left section: Image and View link
+    html.push('<div class="product-left-section">');
+    
     // Product image
     if (product.image && product.image.url) {
       html.push(
@@ -331,21 +337,7 @@ function populateLineSetDropdowns(mode, roomsHost) {
       );
     }
     
-    // Product info
-    html.push('<div class="product-info">');
-    html.push('<h4 class="product-title">' + product.title + '</h4>');
-    html.push('<p class="product-price">$' + product.price + '</p>');
-    
-    // Stock status (no button)
-    if (!product.availableForSale || !product.inStock) {
-      if (product.availableForSale && !product.inStock) {
-        html.push('<p class="low-stock">Low Stock - Contact Us</p>');
-      } else {
-        html.push('<p class="out-of-stock">Currently Unavailable</p>');
-      }
-    }
-    
-    // View details link with variant ID
+    // View details link with variant ID (next to image)
     if (product.productUrl) {
       var numericVariantId = product.variantId.split('/').pop();
       var variantUrl = product.productUrl + '?variant=' + numericVariantId;
@@ -354,12 +346,34 @@ function populateLineSetDropdowns(mode, roomsHost) {
         '<a href="' + variantUrl + '" ',
            'target="_blank" ',
            'class="view-product-link">',
-          'View Full Details ',
+          'View Full Details',
         '</a>'
       );
     }
     
-    html.push('</div>'); // Close product-info
+    html.push('</div>'); // Close product-left-section
+    
+    // Right section: Price
+    html.push('<div class="product-price-section">');
+    html.push('<p class="product-price">$' + product.price + '</p>');
+    
+    // Stock status
+    if (!product.availableForSale || !product.inStock) {
+      if (product.availableForSale && !product.inStock) {
+        html.push('<p class="low-stock">Low Stock - Contact Us</p>');
+      } else {
+        html.push('<p class="out-of-stock">Currently Unavailable</p>');
+      }
+    }
+    html.push('</div>'); // Close product-price-section
+    
+    html.push('</div>'); // Close product-top-row
+    
+    // Bottom row: Title (left-justified)
+    html.push('<div class="product-bottom-row">');
+    html.push('<h4 class="product-title">' + product.title + '</h4>');
+    html.push('</div>');
+    
     html.push('</div>'); // Close product-card
     
     container.innerHTML = html.join('');
@@ -1002,8 +1016,11 @@ function populateLineSetDropdowns(mode, roomsHost) {
           '<div class="result-item '+ (i < results.length - 1 ? 'result-item-bordered' : '') +'">',
             '<span class="result-name">'+ (r.roomName || ('Room ' + (i+1))) +':</span> ',
             '<span class="result-btu">'+ r.btu +' BTU</span>',
-            '<div class="model-info"><strong>Recommended System:</strong> '+ r.model +'</div>',
-            '<div id="product-details-'+ i +'" class="product-details-container"></div>'
+            '<div class="indoor-box">',
+              '<span class="indoor-label"><strong>Recommended System:</strong></span> ',
+              '<span class="indoor-value">'+ r.model +'</span>',
+              '<div id="product-details-'+ i +'" class="product-details-container"></div>',
+            '</div>'
         );
         
         // Add condenser display for single-zone mode (BEFORE line set)
@@ -1017,11 +1034,23 @@ function populateLineSetDropdowns(mode, roomsHost) {
           );
         }
         
-        // Line set box (after condenser)
+        // Line set box (styled exactly like indoor-box and condenser-box)
+        var lineSetDesc = r.lineSetDisplay.split(' - $')[0] || r.lineSetDisplay;
+        var lineSetPrice = r.lineSetPrice || 0;
+        
         html.push(
             '<div class="line-set-box">',
-              '<span class="line-set-label">Line Set:</span> ',
-              '<span class="line-set-value">'+ r.lineSetDisplay +'</span>',
+              '<span class="line-set-label"><strong>Line Set:</strong></span>',
+              '<div class="product-card line-set-product-card">',
+                '<div class="product-top-row">',
+                  '<div class="product-left-section">',
+                    '<span class="line-set-value">'+ lineSetDesc +'</span>',
+                  '</div>',
+                  '<div class="product-price-section">',
+                    '<p class="product-price">$'+ lineSetPrice.toFixed(2) +'</p>',
+                  '</div>',
+                '</div>',
+              '</div>',
             '</div>'
         );
         
