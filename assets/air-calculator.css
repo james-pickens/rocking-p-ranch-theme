@@ -146,18 +146,18 @@
 
 .ahc-hdr {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 14px 20px;
-  border-bottom: 1px solid var(--ahc-lavender-100);
-  background: var(--ahc-lavender-50);
+  padding: 16px 20px;
+  border-bottom: none;
+  background: var(--ahc-purple);
   border-top-left-radius: 12px; border-top-right-radius: 12px;
 }
-.ahc-title { margin: 0; font-size: 1rem; font-weight: 700; color: var(--ahc-text-deep); }
+.ahc-title { margin: 0; font-size: 1.5rem; font-weight: 700; color: #ffffff; }
 .ahc-x {
-  background: transparent; border: 0; color: var(--ahc-purple);
+  background: rgba(255,255,255,0.15); border: 0; color: #ffffff;
   font-size: 24px; line-height: 1; cursor: pointer; border-radius: 50%;
-  padding: 4px 8px; transition: background-color .15s ease, transform .1s ease;
+  padding: 4px 10px; transition: background-color .15s ease, transform .1s ease;
 }
-.ahc-x:hover { background: var(--ahc-lavender-100); transform: scale(1.1); }
+.ahc-x:hover { background: rgba(255,255,255,0.3); transform: scale(1.1); }
 .ahc-body { padding: 12px; }
 
 /* ---------------- Primary / Secondary buttons ---------------- */
@@ -654,4 +654,88 @@ button.add-to-cart-btn:hover,
   background-color: #7E2D87 !important;
   color: #ffffff !important;
   box-shadow: 0 4px 8px rgba(155, 58, 160, 0.3) !important;
+}
+/* Add this CSS to your theme's calculator styles */
+
+/* Line Set Box - white background like product cards */
+.line-set-box {
+  margin-top: 12px;
+  padding: 12px 14px;
+  background: #ffffff;
+  border-radius: 6px;
+  border: 1px solid var(--ahc-lavender-100);
+  border-left: 4px solid var(--ahc-purple);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.line-set-label {
+  font-weight: 600;
+  color: var(--ahc-text-deep);
+}
+
+.line-set-value {
+  color: var(--ahc-purple);
+  font-weight: 600;
+}
+
+/* Condenser Box - similar to line-set-box */
+.condenser-box {
+  margin-top: 15px;
+  padding: 12px 14px;
+  background: var(--ahc-lavender-50);
+  border-radius: 6px;
+  border-left: 4px solid var(--ahc-purple-deep);
+}
+
+.condenser-label {
+  display: block;
+  font-weight: 600;
+  color: var(--ahc-text-deep);
+  margin-bottom: 4px;
+}
+
+.condenser-value {
+  color: var(--ahc-purple);
+  font-weight: 700;
+  font-size: 1.05em;
+}
+
+/* Order Summary - with purple theme lines */
+.order-summary {
+  margin-top: 20px;
+}
+
+.order-summary .summary-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ahc-text-deep);
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--ahc-purple);
+}
+
+.order-summary .summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--ahc-lavender-200);
+}
+
+.order-summary .summary-row.summary-total {
+  border-bottom: none;
+  border-top: 2px solid var(--ahc-purple);
+  margin-top: 5px;
+  padding-top: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.order-summary .summary-note {
+  font-size: 12px;
+  color: #666;
+  margin-top: 8px;
 }

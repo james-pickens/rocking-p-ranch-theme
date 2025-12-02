@@ -38,6 +38,9 @@
   };
 
   var lineSetPricesLoaded = false;
+  
+  // Multi-zone line set products (populated from API)
+  var MULTI_ZONE_LINE_SET_PRODUCTS = null;
 
   // Fetch line set prices from product API (optional - graceful fallback to $0)
 function loadLineSetPrices(callback) {
@@ -61,35 +64,50 @@ function loadLineSetPrices(callback) {
       //   "multiZone": { "15": "15 feet - $135.00", "25": "25 feet - $155.00", ... }
       // }
       
-      if (data.singleZone) {
-        Object.keys(data.singleZone).forEach(function(key) {
-          if (SINGLE_ZONE_LINE_SETS[key] && data.singleZone[key]) {
-            // Update display with full variant title from Shopify
-            SINGLE_ZONE_LINE_SETS[key].display = data.singleZone[key];
-            
-            // Also parse price from title for calculations (optional)
-            var priceMatch = data.singleZone[key].match(/\$([0-9.]+)/);
-            if (priceMatch) {
-              SINGLE_ZONE_LINE_SETS[key].price = parseFloat(priceMatch[1]);
+      if (data.singleZone && data.singleZone.variants) {
+        // API returns variants array - extract value for each length
+        data.singleZone.variants.forEach(function(variant) {
+          // Extract length number from value (e.g., "15 feet (default) - $0.00" -> "15")
+          var lengthMatch = variant.value.match(/^(\d+)\s+feet/i);
+          if (lengthMatch) {
+            var key = lengthMatch[1];
+            if (SINGLE_ZONE_LINE_SETS[key]) {
+              SINGLE_ZONE_LINE_SETS[key].display = variant.value;
+              SINGLE_ZONE_LINE_SETS[key].variantId = variant.variantId;
+              
+              // Extract price - handle both "$103.50" and "103.50" formats
+              var priceMatch = variant.value.match(/\$?\s*([0-9]+\.?[0-9]*)\s*$/);
+              if (priceMatch) {
+                SINGLE_ZONE_LINE_SETS[key].price = parseFloat(priceMatch[1]);
+              }
             }
           }
         });
+        console.log('Single-zone line sets updated:', Object.keys(SINGLE_ZONE_LINE_SETS).map(function(k) { return SINGLE_ZONE_LINE_SETS[k].display; }));
       }
       
       if (data.multiZone) {
-        Object.keys(data.multiZone).forEach(function(key) {
-          if (MULTI_ZONE_LINE_SETS[key] && data.multiZone[key]) {
-            // Update display with full variant title from Shopify
-            MULTI_ZONE_LINE_SETS[key].display = data.multiZone[key];
-            
-            // Also parse price from title for calculations (optional)
-            var priceMatch = data.multiZone[key].match(/\$([0-9.]+)/);
-            if (priceMatch) {
-              MULTI_ZONE_LINE_SETS[key].price = parseFloat(priceMatch[1]);
+        // Handle new multi-zone structure with product-specific variants
+        if (data.multiZone.byBtuRange) {
+          MULTI_ZONE_LINE_SET_PRODUCTS = data.multiZone.byBtuRange;
+          console.log('Multi-zone line set products loaded from API');
+        } else {
+          // Fallback: simple pricing structure (old format)
+          Object.keys(data.multiZone).forEach(function(key) {
+            if (MULTI_ZONE_LINE_SETS[key] && data.multiZone[key]) {
+              // Update display with full variant title from Shopify
+              MULTI_ZONE_LINE_SETS[key].display = data.multiZone[key];
+              
+              // Also parse price from title for calculations - handle both "$103.50" and "103.50" formats
+              var priceMatch = data.multiZone[key].match(/\$?\s*([0-9]+\.?[0-9]*)\s*$/);
+              if (priceMatch) {
+                MULTI_ZONE_LINE_SETS[key].price = parseFloat(priceMatch[1]);
+              }
             }
-          }
-        });
+          });
+        }
       }
+
       
       lineSetPricesLoaded = true;
       console.log('Line Set prices loaded from API successfully');
@@ -99,6 +117,71 @@ function loadLineSetPrices(callback) {
       console.error('Failed to load Line Set prices from API:', error);
       console.warn('Using fallback display values - API endpoint not available yet');
       lineSetPricesLoaded = true;
+      if (callback) callback();
+    });
+}
+
+// Load Multi-Zone line sets from separate API
+function loadMultiZoneLineSets(callback) {
+  fetch('https://gwin-product-api.vercel.app/api/multi-zone-linesets')
+    .then(function(response) {
+      if (!response.ok) throw new Error('HTTP ' + response.status);
+      return response.json();
+    })
+    .then(function(data) {
+      if (data.success && data.multiZone) {
+        // Populate dropdown options from API
+        if (data.multiZone.dropdownOptions) {
+          data.multiZone.dropdownOptions.forEach(function(opt) {
+            var lengthMatch = opt.title.match(/^(\d+)/);
+            if (lengthMatch) {
+              var key = lengthMatch[1];
+              if (MULTI_ZONE_LINE_SETS[key]) {
+                MULTI_ZONE_LINE_SETS[key].display = opt.displayText;
+                MULTI_ZONE_LINE_SETS[key].price = parseFloat(opt.price);
+                MULTI_ZONE_LINE_SETS[key].variantId = opt.variantId;
+              }
+            }
+          });
+          console.log('Multi-zone line sets loaded:', Object.keys(MULTI_ZONE_LINE_SETS).map(function(k) { return MULTI_ZONE_LINE_SETS[k].display; }));
+        }
+        
+        // Also store products for BTU-based cart logic (used later when adding to cart)
+        if (data.multiZone.products) {
+          MULTI_ZONE_LINE_SET_PRODUCTS = {};
+          data.multiZone.products.forEach(function(product) {
+            var key;
+            if (product.btuRange.indexOf('7k') >= 0) key = '7k-12k';
+            else if (product.btuRange.indexOf('18k') >= 0) key = '18k';
+            else if (product.btuRange.indexOf('24k') >= 0) key = '24k-36k';
+            
+            if (key) {
+              var diameterMatch = product.productTitle.match(/(\d+\/\d+\s*x\s*\d+\/\d+)/);
+              var variants = {};
+              
+              product.variants.forEach(function(v) {
+                var len = v.title.match(/^(\d+)/);
+                if (len) {
+                  variants[len[1]] = {
+                    variantId: v.variantId,
+                    displayText: v.title + ' - $' + parseFloat(v.price).toFixed(2)
+                  };
+                }
+              });
+              
+              MULTI_ZONE_LINE_SET_PRODUCTS[key] = {
+                productId: product.productId,
+                diameter: diameterMatch ? diameterMatch[1] : '',
+                variants: variants
+              };
+            }
+          });
+        }
+      }
+      if (callback) callback();
+    })
+    .catch(function(error) {
+      console.error('Multi-zone line sets failed:', error);
       if (callback) callback();
     });
 }
@@ -113,27 +196,42 @@ function loadLineSetPrices(callback) {
     return lineSet ? lineSet.price : 0;
   }
 
-  function populateLineSetDropdowns(mode, roomsHost) {
-    var lineSets = getLineSetData(mode);
-    var selects = $$$ (roomsHost, '[data-input="lineSet"]');
+function populateLineSetDropdowns(mode, roomsHost) {
+  var selects = $$$ (roomsHost, '[data-input="lineSet"]');
+  
+  selects.forEach(function(select) {
+    var currentValue = select.value;
+    select.innerHTML = '<option value="">-- Select Length --</option>';
     
-    selects.forEach(function(select) {
-      var currentValue = select.value;
-      select.innerHTML = '<option value="">-- Select Length --</option>';
-      
-      Object.keys(lineSets).forEach(function(key) {
-        var lineSet = lineSets[key];
+    if (mode === 'Single') {
+      // Single-zone: use SINGLE_ZONE_LINE_SETS
+      Object.keys(SINGLE_ZONE_LINE_SETS).forEach(function(key) {
+        var lineSet = SINGLE_ZONE_LINE_SETS[key];
         var opt = document.createElement('option');
         opt.value = key;
         opt.textContent = lineSet.display;
         select.appendChild(opt);
       });
       
-      if (currentValue && lineSets[currentValue]) {
+      if (currentValue && SINGLE_ZONE_LINE_SETS[currentValue]) {
         select.value = currentValue;
       }
-    });
-  }
+    } else {
+      // Multi-zone: Just show lengths with prices - NO BTU calculation
+      Object.keys(MULTI_ZONE_LINE_SETS).forEach(function(key) {
+        var lineSet = MULTI_ZONE_LINE_SETS[key];
+        var opt = document.createElement('option');
+        opt.value = key;
+        opt.textContent = lineSet.display;
+        select.appendChild(opt);
+      });
+      
+      if (currentValue && MULTI_ZONE_LINE_SETS[currentValue]) {
+        select.value = currentValue;
+      }
+    }
+  });
+}
 
   function updateAddRoomButton() {
     var btnAddRoom = document.querySelector('[data-action="add-room"]');
@@ -211,7 +309,13 @@ function loadLineSetPrices(callback) {
       return;
     }
     
-    // Build HTML for product card
+    // Store product data on container for order summary
+    container.dataset.productPrice = product.price;
+    container.dataset.variantId = product.variantId;
+    container.dataset.productTitle = product.title;
+    container.dataset.available = (product.availableForSale && product.inStock) ? 'true' : 'false';
+    
+    // Build HTML for product card (NO Add to Cart button - that comes after Order Summary)
     var html = [];
     
     html.push('<div class="product-card">');
@@ -232,23 +336,17 @@ function loadLineSetPrices(callback) {
     html.push('<h4 class="product-title">' + product.title + '</h4>');
     html.push('<p class="product-price">$' + product.price + '</p>');
     
-    // Add to cart or out of stock
-    if (product.availableForSale && product.inStock) {
-      html.push(
-        '<button class="add-to-cart-btn" ',
-                'onclick="addToCartGlobal(\'' + product.variantId + '\')">',
-          'Add to Cart',
-        '</button>'
-      );
-    } else if (product.availableForSale && !product.inStock) {
-      html.push('<p class="low-stock">Low Stock - Contact Us</p>');
-    } else {
-      html.push('<p class="out-of-stock">Currently Unavailable</p>');
+    // Stock status (no button)
+    if (!product.availableForSale || !product.inStock) {
+      if (product.availableForSale && !product.inStock) {
+        html.push('<p class="low-stock">Low Stock - Contact Us</p>');
+      } else {
+        html.push('<p class="out-of-stock">Currently Unavailable</p>');
+      }
     }
     
-    // View details link with variant ID (FIX FOR CORRECT PRICING)
+    // View details link with variant ID
     if (product.productUrl) {
-      // Extract numeric variant ID from GID
       var numericVariantId = product.variantId.split('/').pop();
       var variantUrl = product.productUrl + '?variant=' + numericVariantId;
       
@@ -265,6 +363,146 @@ function loadLineSetPrices(callback) {
     html.push('</div>'); // Close product-card
     
     container.innerHTML = html.join('');
+    
+    // Update order summary after product loads
+    updateOrderSummary();
+  }
+  
+  // Update order summary when products load (module level function)
+  function updateOrderSummary() {
+    var summaryBox = document.getElementById('order-summary-box');
+    var indoorPriceEl = document.getElementById('summary-indoor-price');
+    var outdoorPriceEl = document.getElementById('summary-outdoor-price');
+    var totalPriceEl = document.getElementById('summary-total-price');
+    var addAllBtn = document.getElementById('add-all-to-cart-btn');
+    
+    if (!summaryBox) return;
+    
+    // Get indoor unit containers (product-details-*)
+    var indoorContainers = document.querySelectorAll('[id^="product-details-"][data-product-price]');
+    var indoorTotal = 0;
+    var allVariantIds = [];
+    var allAvailable = true;
+    
+    indoorContainers.forEach(function(container) {
+      var price = parseFloat(container.dataset.productPrice) || 0;
+      indoorTotal += price;
+      
+      if (container.dataset.variantId) {
+        allVariantIds.push(container.dataset.variantId);
+      }
+      
+      if (container.dataset.available !== 'true') {
+        allAvailable = false;
+      }
+    });
+    
+    // Get outdoor unit containers (condenser-details-* for single-zone, outdoor-product-details-* for multi-zone)
+    var outdoorContainers = document.querySelectorAll('[id^="condenser-details-"][data-product-price], [id^="outdoor-product-details-"][data-product-price]');
+    var outdoorTotal = 0;
+    
+    outdoorContainers.forEach(function(container) {
+      var price = parseFloat(container.dataset.productPrice) || 0;
+      outdoorTotal += price;
+      
+      if (container.dataset.variantId) {
+        allVariantIds.push(container.dataset.variantId);
+      }
+      
+      if (container.dataset.available !== 'true') {
+        allAvailable = false;
+      }
+    });
+    
+    var lineSetTotal = parseFloat(summaryBox.dataset.linesetTotal) || 0;
+    var grandTotal = indoorTotal + outdoorTotal + lineSetTotal;
+    
+    // Update display
+    if (indoorPriceEl) {
+      indoorPriceEl.textContent = '$' + indoorTotal.toFixed(2);
+    }
+    if (outdoorPriceEl) {
+      outdoorPriceEl.textContent = '$' + outdoorTotal.toFixed(2);
+    }
+    if (totalPriceEl) {
+      totalPriceEl.textContent = '$' + grandTotal.toFixed(2);
+    }
+    
+    // Update Add to Cart button
+    if (addAllBtn) {
+      if (allAvailable && allVariantIds.length > 0) {
+        addAllBtn.disabled = false;
+        addAllBtn.textContent = 'Add to Cart - $' + grandTotal.toFixed(2);
+        addAllBtn.onclick = function() {
+          addAllToCart(allVariantIds);
+        };
+      } else if (!allAvailable) {
+        addAllBtn.disabled = true;
+        addAllBtn.textContent = 'Some Items Unavailable';
+      } else {
+        addAllBtn.disabled = true;
+        addAllBtn.textContent = 'Add to Cart';
+      }
+    }
+  }
+  
+  // Add all items to cart
+  async function addAllToCart(variantIds) {
+    var btn = document.getElementById('add-all-to-cart-btn');
+    if (btn) {
+      btn.disabled = true;
+      btn.textContent = 'Adding to Cart...';
+    }
+    
+    try {
+      // Add each variant to cart
+      for (var i = 0; i < variantIds.length; i++) {
+        var numericId = variantIds[i].split('/').pop();
+        await fetch('/cart/add.js', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ items: [{ id: parseInt(numericId), quantity: 1 }] })
+        });
+      }
+      
+      // Show success
+      if (btn) {
+        btn.textContent = '✓ Added to Cart!';
+        btn.style.background = '#10b981';
+      }
+      
+      // Show toast notification
+      showCartToast('Items added to cart!');
+      
+      // Reset button after delay
+      setTimeout(function() {
+        updateOrderSummary();
+      }, 2000);
+      
+    } catch (error) {
+      console.error('Add to cart failed:', error);
+      if (btn) {
+        btn.disabled = false;
+        btn.textContent = 'Error - Try Again';
+        btn.style.background = '#dc2626';
+      }
+    }
+  }
+  
+  function showCartToast(message) {
+    var existing = document.querySelector('.cart-success-toast');
+    if (existing) existing.remove();
+    
+    var toast = document.createElement('div');
+    toast.className = 'cart-success-toast';
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    
+    setTimeout(function() { toast.classList.add('show'); }, 100);
+    setTimeout(function() {
+      toast.classList.remove('show');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 3000);
   }
   
   /**
@@ -359,6 +597,23 @@ function loadLineSetPrices(callback) {
     }
     
     return "N/A";
+  }
+  
+  // Get single zone outdoor unit (condenser) by BTU and SEER
+  function getSingleZoneOutdoorUnit(btu, seer) {
+    if (!hvacConfig || !hvacConfig.productCatalog || !hvacConfig.productCatalog.singleZone) {
+      return null;
+    }
+    
+    var outdoorUnits = hvacConfig.productCatalog.singleZone.outdoorUnits || [];
+    
+    for (var i = 0; i < outdoorUnits.length; i++) {
+      if (outdoorUnits[i].btu === btu && outdoorUnits[i].seer === seer) {
+        return outdoorUnits[i];
+      }
+    }
+    
+    return null;
   }
   // ========== END CONFIGURATION SYSTEM ==========
 
@@ -628,6 +883,7 @@ function loadLineSetPrices(callback) {
         form.doors = (card.querySelector('[data-input="doors"]') || {}).value || '0';
         form.insulation = (card.querySelector('[data-input="insulation"]') || {}).value || 'Good';
         form.unitType = (card.querySelector('[data-input="unitType"]') || {}).value || 'High Wall';
+        form.lineSet = (card.querySelector('[data-input="lineSet"]') || {}).value || '';
       });
     }
 
@@ -669,15 +925,36 @@ function loadLineSetPrices(callback) {
           // GWIN only sells SEER 25 - look up from config
           var model = getSingleZoneModel(closestBTU, 25);
           
+          // Get matching outdoor unit (condenser)
+          var outdoorUnit = getSingleZoneOutdoorUnit(closestBTU, 25);
+          var outdoorSku = outdoorUnit ? outdoorUnit.sku : null;
+          
           if (totalLoad > closestBTU * 1.1) {
             model = "⚠️ Load exceeds capacity. Recommend multiple systems or contact professional.";
+            outdoorSku = null;
           }
           
           if (model === "N/A") {
             model = "Model not available for this capacity";
           }
           
-          return { btu: totalLoad, roomName: form.roomName, model: model, sku: model };
+          // Get line set info
+          var lineSetKey = form.lineSet || '15';
+          var lineSetData = SINGLE_ZONE_LINE_SETS[lineSetKey] || {};
+          var lineSetDisplay = lineSetData.display || (lineSetKey + ' ft');
+          var lineSetPrice = lineSetData.price || 0;
+          
+          return { 
+            btu: totalLoad,
+            closestBTU: closestBTU,
+            roomName: form.roomName, 
+            model: model, 
+            sku: model,
+            outdoorSku: outdoorSku,
+            lineSetLength: lineSetKey,
+            lineSetDisplay: lineSetDisplay,
+            lineSetPrice: lineSetPrice
+          };
         } else {
           // Multi-zone: look up indoor unit from config
           var closest = getClosestBTU(totalLoad, 'Multi');
@@ -697,20 +974,58 @@ function loadLineSetPrices(callback) {
             }
           }
           
-          return { btu: totalLoad, roomName: form.roomName, model: model, sku: model };
+          // Get line set info
+          var lineSetKey = form.lineSet || '15';
+          var lineSetData = MULTI_ZONE_LINE_SETS[lineSetKey] || {};
+          var lineSetDisplay = lineSetData.display || (lineSetKey + ' ft');
+          var lineSetPrice = lineSetData.price || 0;
+          
+          return { 
+            btu: totalLoad, 
+            roomName: form.roomName, 
+            model: model, 
+            sku: model,
+            lineSetLength: lineSetKey,
+            lineSetDisplay: lineSetDisplay,
+            lineSetPrice: lineSetPrice
+          };
         }
       });
 
       var html = ['<h3 class="results-title">Results</h3>'];
+      var totalLineSetPrice = 0;
+      
       results.forEach(function (r, i) {
+        totalLineSetPrice += r.lineSetPrice || 0;
+        
         html.push(
           '<div class="result-item '+ (i < results.length - 1 ? 'result-item-bordered' : '') +'">',
             '<span class="result-name">'+ (r.roomName || ('Room ' + (i+1))) +':</span> ',
             '<span class="result-btu">'+ r.btu +' BTU</span>',
             '<div class="model-info"><strong>Recommended System:</strong> '+ r.model +'</div>',
-            '<div id="product-details-'+ i +'" class="product-details-container"></div>',
-          '</div>'
+            '<div id="product-details-'+ i +'" class="product-details-container"></div>'
         );
+        
+        // Add condenser display for single-zone mode (BEFORE line set)
+        if (state.mode === 'Single' && r.outdoorSku) {
+          html.push(
+            '<div class="condenser-box">',
+              '<span class="condenser-label"><strong>Recommended Condenser:</strong></span> ',
+              '<span class="condenser-value">'+ r.outdoorSku +'</span>',
+              '<div id="condenser-details-'+ i +'" class="product-details-container"></div>',
+            '</div>'
+          );
+        }
+        
+        // Line set box (after condenser)
+        html.push(
+            '<div class="line-set-box">',
+              '<span class="line-set-label">Line Set:</span> ',
+              '<span class="line-set-value">'+ r.lineSetDisplay +'</span>',
+            '</div>'
+        );
+        
+        html.push('</div>');
       });
 
       if (state.mode === 'Multi') {
@@ -718,7 +1033,7 @@ function loadLineSetPrices(callback) {
         var options = getAllValidOutdoorOptions(state.zone, total, state.roomCount);
         if (options.length) {
           html.push('<h4 class="outdoor-title">Recommended Outdoor Units:</h4>');
-          options.forEach(function (opt) {
+          options.forEach(function (opt, optIndex) {
             var colorClass = opt.color === 'green' ? 'outdoor-card-green'
                            : opt.color === 'yellow' ? 'outdoor-card-yellow'
                            : opt.color === 'orange' ? 'outdoor-card-orange' : '';
@@ -727,6 +1042,7 @@ function loadLineSetPrices(callback) {
                 '<div class="outdoor-model">'+ opt.sku +'</div>',
                 '<div class="outdoor-specs">'+ opt.capacity +' BTU Capacity | '+ opt.ports +' Port'+ (opt.ports>1?'s':'') +'</div>',
                 '<div class="outdoor-load">System Load: '+ (opt.loadPercent*100).toFixed(1) +'%</div>',
+                '<div id="outdoor-product-details-'+ optIndex +'" class="product-details-container" data-outdoor-sku="'+ opt.sku +'"></div>',
               '</div>'
             );
           });
@@ -734,6 +1050,57 @@ function loadLineSetPrices(callback) {
           html.push('<div class="error-card">⚠️ No suitable outdoor unit found. Recommend multiple GWIN systems or contact a professional for a custom solution.</div>');
         }
       }
+      
+      // Build Order Summary display info
+      var indoorSkuDisplay = '';
+      var outdoorSkuDisplay = '';
+      var lineSetDescription = '';
+      
+      if (state.mode === 'Single' && results.length > 0) {
+        if (results[0].sku) {
+          indoorSkuDisplay = ' (' + results[0].sku + ')';
+        }
+        if (results[0].outdoorSku) {
+          outdoorSkuDisplay = ' (' + results[0].outdoorSku + ')';
+        }
+        if (results[0].lineSetDisplay) {
+          // Strip the price from lineSetDisplay (format: "15 feet (default) - $0.00")
+          var lineSetName = results[0].lineSetDisplay.split(' - $')[0] || results[0].lineSetDisplay;
+          lineSetDescription = ' (' + lineSetName + ')';
+        }
+      } else if (state.mode === 'Multi' && results.length > 0) {
+        // For multi-zone, show count of indoor units
+        var validSkus = results.filter(function(r) { return r.sku && r.sku !== 'N/A' && !r.sku.includes('⚠️'); });
+        if (validSkus.length > 0) {
+          indoorSkuDisplay = ' (' + validSkus.length + ' indoor unit' + (validSkus.length > 1 ? 's' : '') + ')';
+        }
+        outdoorSkuDisplay = ' (see above)';
+        // For multi-zone line sets - strip price from display
+        var lineSetDescriptions = results.map(function(r) { 
+          var display = r.lineSetDisplay || '15 ft';
+          return display.split(' - $')[0] || display;
+        });
+        var allSame = lineSetDescriptions.every(function(d) { return d === lineSetDescriptions[0]; });
+        if (allSame) {
+          lineSetDescription = ' (' + results.length + ' × ' + lineSetDescriptions[0] + ')';
+        } else {
+          lineSetDescription = ' (' + results.length + ' line sets)';
+        }
+      }
+      
+      // Order Summary (with placeholders to be updated when products load)
+      html.push(
+        '<div id="order-summary-box" class="total-load-box order-summary" data-lineset-total="'+ totalLineSetPrice +'">',
+          '<div class="summary-title">Order Summary</div>',
+          '<div class="summary-row"><span>Indoor Unit'+ indoorSkuDisplay +':</span> <span id="summary-indoor-price">Loading...</span></div>',
+          '<div class="summary-row"><span>Outdoor Unit'+ outdoorSkuDisplay +':</span> <span id="summary-outdoor-price">Loading...</span></div>',
+          '<div class="summary-row"><span>Line Set'+ lineSetDescription +':</span> <span>$'+ totalLineSetPrice.toFixed(2) +'</span></div>',
+          '<div class="summary-row summary-total"><span>Total:</span> <span id="summary-total-price">Loading...</span></div>',
+        '</div>',
+        '<button id="add-all-to-cart-btn" class="add-to-cart-btn calculate-button" style="margin-top:15px;" disabled>',
+          'Loading...',
+        '</button>'
+      );
 
       resultsBox.innerHTML = html.join('');
       resultsBox.style.display = '';
@@ -743,7 +1110,22 @@ function loadLineSetPrices(callback) {
         if (r.sku && r.sku !== 'N/A' && !r.sku.includes('⚠️')) {
           displayProductCard(r.sku, 'product-details-' + i);
         }
+        // Fetch condenser product card for single-zone
+        if (state.mode === 'Single' && r.outdoorSku) {
+          displayProductCard(r.outdoorSku, 'condenser-details-' + i);
+        }
       });
+      
+      // Fetch product cards for multi-zone outdoor units
+      if (state.mode === 'Multi') {
+        var outdoorContainers = resultsBox.querySelectorAll('[id^="outdoor-product-details-"]');
+        outdoorContainers.forEach(function(container) {
+          var sku = container.getAttribute('data-outdoor-sku');
+          if (sku) {
+            displayProductCard(sku, container.id);
+          }
+        });
+      }
     }
 
     // ----- Reset / Clear -----
@@ -892,14 +1274,18 @@ function loadLineSetPrices(callback) {
     document.addEventListener('DOMContentLoaded', function(){
       loadHvacConfig(function() {
         loadLineSetPrices(function() {
-          initAll();
+          loadMultiZoneLineSets(function() {
+            initAll();
+          });
         });
       });
     });
   } else { 
     loadHvacConfig(function() {
       loadLineSetPrices(function() {
-        initAll();
+        loadMultiZoneLineSets(function() {
+          initAll();
+        });
       });
     });
   }  // Theme editor lifecycle
